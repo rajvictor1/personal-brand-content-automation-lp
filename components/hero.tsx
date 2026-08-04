@@ -58,17 +58,17 @@ export function Hero() {
 
           <Reveal delay={0.1}>
             <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
-              Stay visible without{" "}
+              AI builds your content.{" "}
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                losing control
+                You own the publish button.
               </span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.2}>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-              BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter —
-              researched, written, designed, and gated by your approval before anything goes live.
+              BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter,
+              researched by Firecrawl, written by OpenAI, approved by you.
             </p>
           </Reveal>
 

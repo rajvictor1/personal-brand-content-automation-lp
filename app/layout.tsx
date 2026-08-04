@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s — BrandOps",
   },
   description:
-    "A review-first content system for generating LinkedIn carousels and newsletters from current research. Built for solo operators who want speed without losing control.",
+    "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter, researched by Firecrawl, written by OpenAI, approved by you.",
   keywords: [
     "LinkedIn automation",
     "personal brand",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "BrandOps",
     title: "BrandOps",
     description:
-      "A review-first content system for generating LinkedIn carousels and newsletters from current research.",
+      "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter, researched by Firecrawl, written by OpenAI, approved by you.",
     url: "https://brandops.site",
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BrandOps",
     description:
-      "A review-first content system for generating LinkedIn carousels and newsletters from current research.",
+      "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter, researched by Firecrawl, written by OpenAI, approved by you.",
     images: ["https://brandops.site/og.png"],
   },
   robots: "index, follow",
