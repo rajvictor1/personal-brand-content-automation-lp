@@ -75,8 +75,12 @@ export async function POST(request: Request) {
       );
     }
     console.error("[contact] error", error);
+    const message =
+      error instanceof Error
+        ? error.message
+        : "Something went wrong. Please try again.";
     return NextResponse.json(
-      { success: false, message: "Something went wrong. Please try again." },
+      { success: false, message },
       { status: 500 }
     );
   }
