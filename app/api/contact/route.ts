@@ -17,11 +17,26 @@ export async function POST(request: Request) {
     const data = schema.parse(json);
 
     const keyPath = process.env.GOOGLE_SERVICE_ACCOUNT_PATH;
+    const keyJson = process.env.GOOGLE_SERVICE_ACCOUNT;
     const sheetId = process.env.GOOGLE_SHEET_ID;
     const sheetName = process.env.GOOGLE_SHEET_NAME || "Sheet1";
 
-    if (!keyPath || !sheetId || !existsSync(keyPath)) {
-      console.error("[contact] missing credentials", { keyPath, sheetId });
+    let credentials;
+
+    if (keyJson) {
+      try {
+        credentials = JSON.parse(keyJson);
+      } catch {
+        return NextResponse.json(
+          { success: false, message: "Invalid service account JSON." },
+          { status: 500 }
+        );
+      }
+    } else if (keyPath && existsSync(keyPath)) {
+      const file = await import("fs/promises");
+      credentials = JSON.parse(await file.readFile(keyPath, "utf8"));
+    } else {
+      console.error("[contact] missing credentials");
       return NextResponse.json(
         {
           success: false,
@@ -32,7 +47,7 @@ export async function POST(request: Request) {
     }
 
     const auth = new google.auth.GoogleAuth({
-      keyFile: keyPath,
+      credentials,
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
 
