@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Brand Content Automation — Landing Pages
 
-## Getting Started
+A world-class, dark-mode-first marketing website for the Personal Brand Content Automation concept.
 
-First, run the development server:
+## What is included
+
+- **5 functional pages:** Home, Features, Pipeline, Pricing, Contact
+- **Dark theme:** deep charcoal background, indigo/cyan accents, Inter font
+- **Animations:** scroll reveal + staggered node animations via Framer Motion
+- **Responsive:** mobile sheet nav, 2–3 column grids that collapse
+- **Lead capture:** validated contact form with Zod + toast feedback
+- **SEO:** per-page metadata, sitemap, robots, manifest, OpenGraph, Twitter card
+- **Static export:** ready to deploy to Vercel/Netlify/Cloudflare Pages
+
+## Tech stack
+
+- Next.js 14 + React 18 + TypeScript
+- Tailwind CSS 3 + custom HSL color tokens
+- shadcn/ui (Button, Card, Input, Textarea, Label, Badge, Sheet, Accordion, Sonner)
+- Framer Motion
+- Lucide React + inline SVG social icons
+- Zod
+
+## Run locally
 
 ```bash
+cd /Users/mac/Desktop/personal-brand-content-automation-lp
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Output goes to `dist/`.
 
-To learn more about Next.js, take a look at the following resources:
+## Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/` — Hero, stats, feature grid, CTA
+- `/features` — 6 feature cards
+- `/pipeline` — 6-step node workflow
+- `/pricing` — Solo free / Operator paid cards
+- `/contact` — validated early-access form
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
+- This is a marketing surface, not the product dashboard.
+- Contact form POSTs to `/api/contact` and logs server-side.
+- Replace the brand name, URLs, and pricing as needed.
+- If you want to connect real email delivery, wire the `/api/contact` route to Resend, Loops, or your provider.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx vercel --yes --prod
+```
+
+Remember to update `metadata.metadataBase` and the canonical URLs in `app/layout.tsx`, `app/sitemap.ts`, and `app/robots.ts` to your real domain.
