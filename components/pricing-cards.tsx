@@ -54,7 +54,7 @@ export function PricingCards() {
           >
             Pricing
           </Badge>
-          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Simple, operator-first pricing
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
@@ -66,12 +66,17 @@ export function PricingCards() {
           {plans.map((plan, i) => (
             <Reveal key={plan.name} delay={i * 0.15}>
               <Card
-                className={`relative flex flex-col border-border/50 bg-card/40 backdrop-blur-sm ${
+                className={`relative flex flex-col overflow-hidden border-border/50 bg-card/40 backdrop-blur-sm ${
                   plan.primary
                     ? "border-primary/40 ring-1 ring-primary/30"
                     : ""
                 }`}
               >
+                {plan.primary && (
+                  <div className="absolute top-0 right-0 rounded-bl-lg bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                    Recommended
+                  </div>
+                )}
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-between">
                     <CardTitle className="text-2xl">{plan.name}</CardTitle>

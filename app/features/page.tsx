@@ -1,16 +1,16 @@
-import { FeatureGrid } from "@/components/feature-grid";
+import { BentoFeatures } from "@/components/bento-features";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "Explore BrandOps carousel generation, newsletter creation, OpenAI Image artwork, review gates, and streaming pipeline progress.",
+    "Explore BrandOps: timely research, LinkedIn carousel generation, cited newsletters, review gates, AI artwork, and a live streaming pipeline.",
 };
 
 export default function FeaturesPage() {
   return (
     <div className="pt-16">
-      <FeatureGrid />
+      <BentoFeatures />
     </div>
   );
 }

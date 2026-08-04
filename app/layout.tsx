@@ -33,12 +33,21 @@ export const metadata: Metadata = {
     description:
       "A review-first content system for generating LinkedIn carousels and newsletters from current research.",
     url: "https://brandops.site",
+    images: [
+      {
+        url: "https://brandops.site/og.png",
+        width: 1200,
+        height: 630,
+        alt: "BrandOps — review-first content automation for LinkedIn carousels and newsletters",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "BrandOps",
     description:
       "A review-first content system for generating LinkedIn carousels and newsletters from current research.",
+    images: ["https://brandops.site/og.png"],
   },
   robots: "index, follow",
   metadataBase: new URL("https://brandops.site"),
