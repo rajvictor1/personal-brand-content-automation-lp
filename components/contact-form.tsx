@@ -49,11 +49,17 @@ export function ContactForm() {
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error("Request failed");
-      toast.success("Message received. We will be in touch soon.");
+      const json = await res.json().catch(() => ({ message: "Request failed" }));
+
+      if (!res.ok) {
+        throw new Error(json.message || "Request failed");
+      }
+
+      toast.success("Thank you — we'll be in touch soon.");
       (e.target as HTMLFormElement).reset();
-    } catch {
-      toast.error("Something went wrong. Please try again.");
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      toast.error(message);
     } finally {
       setLoading(false);
     }

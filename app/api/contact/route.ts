@@ -3,6 +3,7 @@ import { z } from "zod";
 import { google } from "googleapis";
 import { existsSync } from "fs";
 
+export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const schema = z.object({
