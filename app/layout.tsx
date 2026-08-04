@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Personal Brand Content Automation",
     description:
       "A review-first content system for generating LinkedIn carousels and newsletters from current research.",
-    url: "https://personal-brand-content-automation.vercel.app",
+    url: "https://personal-brand-content-automation-l.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "A review-first content system for generating LinkedIn carousels and newsletters from current research.",
   },
   robots: "index, follow",
-  metadataBase: new URL("https://personal-brand-content-automation.vercel.app"),
+  metadataBase: new URL("https://personal-brand-content-automation-l.vercel.app"),
 };
 
 export default function RootLayout({

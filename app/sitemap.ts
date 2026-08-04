@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://personal-brand-content-automation.vercel.app";
+  const base = "https://personal-brand-content-automation-l.vercel.app";
   return [
     { url: `${base}/`, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: `${base}/features`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
