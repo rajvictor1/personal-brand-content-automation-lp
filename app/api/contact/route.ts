@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     const data = schema.parse(json);
 
     const keyPath = process.env.GOOGLE_SERVICE_ACCOUNT_PATH;
-    const keyJson = process.env.GOOGLE_SERVICE_ACCOUNT;
+    const keyJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
     const sheetId = process.env.GOOGLE_SHEET_ID;
     const sheetName = process.env.GOOGLE_SHEET_NAME || "Sheet1";
 
