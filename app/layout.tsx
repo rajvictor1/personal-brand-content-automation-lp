@@ -51,6 +51,9 @@ export const metadata: Metadata = {
   },
   robots: "index, follow",
   metadataBase: new URL("https://brandops.site"),
+  verification: {
+    google: "cInk3EUPRK-PDfJjionGjl7uvZ2f0LVL2aHMqY60Ti8",
+  },
 };
 
 export default function RootLayout({
