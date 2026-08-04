@@ -45,14 +45,21 @@ export function ContactForm() {
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify(data),
+        redirect: "follow",
       });
 
-      const json = await res.json().catch(() => ({ message: "Request failed" }));
+      const text = await res.text();
+      let json: { success?: boolean; message?: string } = {};
+      try {
+        json = JSON.parse(text);
+      } catch {
+        // ignore parse errors
+      }
 
       if (!res.ok) {
-        throw new Error(json.message || "Request failed");
+        throw new Error(json.message || `Server error (${res.status})`);
       }
 
       toast.success("Thank you — we'll be in touch soon.");
