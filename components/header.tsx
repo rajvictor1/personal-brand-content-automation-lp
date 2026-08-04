@@ -32,7 +32,7 @@ export function Header() {
             <Sparkles className="h-5 w-5" />
           </span>
           <span className="hidden text-lg font-semibold tracking-tight sm:inline">
-            PBCA
+            BrandOps
           </span>
         </Link>
 

@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Solo free plan and Operator paid plan for personal-brand content automation.",
+    "BrandOps Solo free plan and Operator paid plan for personal-brand content automation.",
 };
 
 export default function PricingPage() {

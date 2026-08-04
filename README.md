@@ -1,6 +1,6 @@
-# Personal Brand Content Automation — Landing Pages
+# BrandOps — Landing Pages
 
-A world-class, dark-mode-first marketing website for the Personal Brand Content Automation concept.
+A world-class, dark-mode-first marketing website for **BrandOps**, a review-first content workspace for solo operators.
 
 ## What is included
 
@@ -50,13 +50,23 @@ Output goes to `dist/`.
 
 - This is a marketing surface, not the product dashboard.
 - Contact form POSTs to `/api/contact` and logs server-side.
-- Replace the brand name, URLs, and pricing as needed.
+- Replace the pricing or copy as needed.
 - If you want to connect real email delivery, wire the `/api/contact` route to Resend, Loops, or your provider.
+
+## Domain
+
+Production domain: **https://brandops.site**
 
 ## Deployment
 
-```bash
-npx vercel --yes --prod
-```
+The project auto-deploys from GitHub to Vercel on every push to `main`.
 
-Remember to update `metadata.metadataBase` and the canonical URLs in `app/layout.tsx`, `app/sitemap.ts`, and `app/robots.ts` to your real domain.
+To add the custom domain in Vercel:
+1. Go to your Vercel project dashboard
+2. Click **Settings → Domains**
+3. Add `brandops.site` and follow DNS instructions
+4. Wait for SSL provisioning (usually 1–5 minutes)
+
+## Repository
+
+https://github.com/rajvictor1/personal-brand-content-automation-lp

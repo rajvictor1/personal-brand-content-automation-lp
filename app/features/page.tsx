@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "Explore carousel generation, newsletter creation, OpenAI Image artwork, review gates, and streaming pipeline progress.",
+    "Explore BrandOps carousel generation, newsletter creation, OpenAI Image artwork, review gates, and streaming pipeline progress.",
 };
 
 export default function FeaturesPage() {

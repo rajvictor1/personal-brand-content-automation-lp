@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Request early access to the Personal Brand Content Automation workspace.",
+    "Request early access to BrandOps, the review-first content workspace for solo operators.",
 };
 
 export default function ContactPage() {

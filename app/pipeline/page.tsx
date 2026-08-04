@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pipeline",
   description:
-    "See how Firecrawl, OpenAI, review gates, and publishing connect in the content automation workflow.",
+    "See how BrandOps connects Firecrawl, OpenAI, review gates, and publishing into one content workflow.",
 };
 
 export default function PipelinePage() {

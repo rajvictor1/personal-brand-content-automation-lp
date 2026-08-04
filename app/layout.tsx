@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
-    default: "Personal Brand Content Automation",
-    template: "%s — Personal Brand Content Automation",
+    default: "BrandOps",
+    template: "%s — BrandOps",
   },
   description:
     "A review-first content system for generating LinkedIn carousels and newsletters from current research. Built for solo operators who want speed without losing control.",
@@ -28,20 +28,20 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Personal Brand Content Automation",
-    title: "Personal Brand Content Automation",
+    siteName: "BrandOps",
+    title: "BrandOps",
     description:
       "A review-first content system for generating LinkedIn carousels and newsletters from current research.",
-    url: "https://personal-brand-content-automation-l.vercel.app",
+    url: "https://brandops.site",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Personal Brand Content Automation",
+    title: "BrandOps",
     description:
       "A review-first content system for generating LinkedIn carousels and newsletters from current research.",
   },
   robots: "index, follow",
-  metadataBase: new URL("https://personal-brand-content-automation-l.vercel.app"),
+  metadataBase: new URL("https://brandops.site"),
 };
 
 export default function RootLayout({

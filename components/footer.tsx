@@ -46,7 +46,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold tracking-tight">Personal Brand Content Automation</h3>
+            <h3 className="text-lg font-semibold tracking-tight">BrandOps</h3>
             <p className="max-w-xs text-sm text-muted-foreground">
               A review-first content system for operators who want speed without losing control.
             </p>
@@ -87,7 +87,7 @@ export function Footer() {
         <Separator className="my-8 bg-border/50" />
 
         <div className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
-          <p>© {new Date().getFullYear()} Personal Brand Content Automation. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} BrandOps. All rights reserved.</p>
           <p>Built for solo operators. Dark mode first.</p>
         </div>
       </div>
