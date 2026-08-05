@@ -77,20 +77,16 @@ export default function ResourcesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal delay={0.3} className="mb-10">
             <div className="flex flex-wrap justify-center gap-2">
-              <Link
-                href="/resources"
-                className="rounded-full border border-primary bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
-              >
+              <span className="rounded-full border border-primary bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">
                 All
-              </Link>
+              </span>
               {categories.map((cat) => (
-                <Link
+                <span
                   key={cat}
-                  href={`/resources/category/${cat.toLowerCase()}`}
-                  className="rounded-full border border-border/50 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:bg-primary/10"
+                  className="rounded-full border border-border/50 px-4 py-2 text-sm font-medium text-muted-foreground"
                 >
                   {cat}
-                </Link>
+                </span>
               ))}
             </div>
           </Reveal>

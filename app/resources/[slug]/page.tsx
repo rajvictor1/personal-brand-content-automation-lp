@@ -2,6 +2,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Calendar, Clock, User } from "lucide-react";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { readFileSync } from "fs";
+import { join } from "path";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Reveal } from "@/components/animations";
@@ -35,21 +38,21 @@ export async function generateMetadata({ params }: ResourcePageProps): Promise<M
   };
 }
 
-async function loadMDX(slug: string) {
-  try {
-    const { default: Content } = await import(`@/content/resources/${slug}.mdx`);
-    return Content;
-  } catch {
-    return null;
-  }
+function loadMDXSource(slug: string): string {
+  const filePath = join(process.cwd(), "content", "resources", `${slug}.mdx`);
+  return readFileSync(filePath, "utf-8");
 }
 
 export default async function ResourcePostPage({ params }: ResourcePageProps) {
   const post = getResourceBySlug(params.slug);
   if (!post) notFound();
 
-  const Content = await loadMDX(params.slug);
-  if (!Content) notFound();
+  let source: string;
+  try {
+    source = loadMDXSource(params.slug);
+  } catch {
+    notFound();
+  }
 
   return (
     <div className="relative">
@@ -106,7 +109,7 @@ export default async function ResourcePostPage({ params }: ResourcePageProps) {
 
         <Reveal delay={0.3}>
           <div className="prose prose-invert prose-lg max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-li:text-muted-foreground prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground">
-            <Content components={components} />
+            <MDXRemote source={source} components={components} />
           </div>
         </Reveal>
       </article>
