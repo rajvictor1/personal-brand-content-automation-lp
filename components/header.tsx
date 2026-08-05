@@ -24,9 +24,9 @@ const nav = [
     href: "/features",
     type: "dropdown" as const,
     items: [
-      { label: "Carousel workflow", href: "/features", description: "Research to LinkedIn carousel" },
-      { label: "Newsletter workflow", href: "/features", description: "Cited newsletter drafts" },
-      { label: "Review-first publishing", href: "/features", description: "Approve before anything goes live" },
+      { label: "Carousel workflow", href: "/features/carousel-workflow", description: "Research to LinkedIn carousel" },
+      { label: "Newsletter workflow", href: "/features/newsletter-workflow", description: "Cited newsletter drafts" },
+      { label: "Review-first publishing", href: "/features/review-first-publishing", description: "Approve before anything goes live" },
     ],
   },
   {
