@@ -12,7 +12,19 @@ export const metadata: Metadata = {
     "Guides, templates, and workflow playbooks for personal-brand content automation. Built for creators, trainers, and solo operators.",
 };
 
-const categories: ResourceCategory[] = ["Guides", "Templates", "Glossary"];
+const categories: (ResourceCategory | "Videos" | "Cheat Sheets")[] = [
+  "Guides",
+  "Templates",
+  "Glossary",
+  "Videos",
+  "Cheat Sheets",
+];
+
+function categoryHref(cat: ResourceCategory | "Videos" | "Cheat Sheets"): string {
+  if (cat === "Videos") return "/resources/videos";
+  if (cat === "Cheat Sheets") return "/resources/cheat-sheets";
+  return `/resources/category/${cat.toLowerCase()}`;
+}
 
 function ResourceCard({ post }: { post: ResourcePost }) {
   return (
@@ -86,7 +98,7 @@ export default function ResourcesPage() {
               {categories.map((cat) => (
                 <Link
                   key={cat}
-                  href={`/resources/category/${cat.toLowerCase()}`}
+                  href={categoryHref(cat)}
                   className="rounded-full border border-border/50 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:bg-primary/10"
                 >
                   {cat}
