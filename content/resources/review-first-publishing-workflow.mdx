@@ -1,0 +1,58 @@
+---
+title: The review-first publishing workflow
+description: Why every AI-assisted content system needs a human approval gate, and how to build one without slowing down your publishing cadence.
+category: Guides
+publishedAt: 2026-08-04
+readingTime: 5
+---
+
+# The review-first publishing workflow
+
+AI can draft content in seconds. That speed is also its biggest risk. A single unreviewed post can damage trust, misrepresent a source, or publish off-brand messaging.
+
+The review-first workflow keeps speed and adds a safety layer.
+
+## What review-first means
+
+Every generated asset goes through a human review step before any publish action. The machine handles research, drafting, and design. The human handles editing, fact-checking, and approval.
+
+This is different from a fully manual workflow and different from auto-publishing.
+
+| Workflow | Speed | Control | Risk |
+| --- | --- | --- | --- |
+| Manual | Slow | High | Low |
+| Auto-publish | Fast | Low | High |
+| Review-first | Fast | High | Low |
+
+## Separate generation from publishing
+
+The key architectural decision is isolation. The system that creates content should not be the system that publishes it.
+
+In practice that means:
+
+- Generation routes return drafts, not live posts
+- Publishing routes require explicit confirmation
+- Credentials for publishing never live in the browser
+
+## Build the review UI
+
+A good review screen shows everything the human needs in one place:
+
+- Generated text with inline edit capability
+- Source links tied to every citation
+- Preview of generated images
+- A publish button that requires a second confirmation
+
+## Add a duplicate-prevention ledger
+
+Before a live post goes out, the system checks whether the same asset was already published. This prevents accidental double-posting, especially when automation runs on a schedule.
+
+A simple ledger can be a GitHub issue, a database row, or a spreadsheet entry. The important part is that the check happens before the live API call.
+
+## Why this matters for personal brands
+
+For a solo operator, trust is the product. One wrong post costs more than ten good posts earn. Review-first keeps you fast without making you careless.
+
+## How BrandOps implements this
+
+BrandOps generates carousels and newsletters in isolated routes, displays them in a review dashboard, and only calls the LinkedIn or email API after you confirm twice.
