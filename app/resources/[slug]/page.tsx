@@ -43,16 +43,22 @@ function loadMDXSource(slug: string): string {
   return readFileSync(filePath, "utf-8");
 }
 
+function stripFrontmatter(source: string): string {
+  return source.replace(/^---\s*[\r\n]+[\s\S]*?[\r\n]+---\s*[\r\n]*/, "");
+}
+
 export default async function ResourcePostPage({ params }: ResourcePageProps) {
   const post = getResourceBySlug(params.slug);
   if (!post) notFound();
 
-  let source: string;
+  let rawSource: string;
   try {
-    source = loadMDXSource(params.slug);
+    rawSource = loadMDXSource(params.slug);
   } catch {
     notFound();
   }
+
+  const source = stripFrontmatter(rawSource);
 
   return (
     <div className="relative">
@@ -108,7 +114,7 @@ export default async function ResourcePostPage({ params }: ResourcePageProps) {
         <Separator className="my-8" />
 
         <Reveal delay={0.3}>
-          <div className="prose prose-invert prose-lg max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-h1:text-4xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3 prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-li:text-muted-foreground prose-li:leading-relaxed prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:p-4 prose-blockquote:rounded-r-lg prose-table:border-border prose-th:border-border prose-th:bg-muted/30 prose-td:border-border prose-img:rounded-xl">
+          <div className="prose prose-invert prose-lg max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-h1:text-4xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-border/50 prose-h2:pb-2 prose-h3:mt-8 prose-h3:mb-3 prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-li:text-muted-foreground prose-li:leading-relaxed prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:p-4 prose-blockquote:rounded-r-lg prose-table:border-border prose-th:border-border prose-th:bg-muted/30 prose-td:border-border prose-img:rounded-xl">
             <MDXRemote source={source} components={components} />
           </div>
         </Reveal>
