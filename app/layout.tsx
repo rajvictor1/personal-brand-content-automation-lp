@@ -24,7 +24,24 @@ export const metadata: Metadata = {
     "Firecrawl",
     "OpenAI",
   ],
-  authors: [{ name: "Rajesh Kumar" }],
+  authors: [{ name: "Rajesh Kumar", url: "https://brandops.site" }],
+  creator: "Rajesh Kumar",
+  publisher: "BrandOps",
+  metadataBase: new URL("https://brandops.site"),
+  alternates: {
+    canonical: "./",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -49,8 +66,6 @@ export const metadata: Metadata = {
       "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter, researched by Firecrawl, written by OpenAI, approved by you.",
     images: ["https://brandops.site/og.png"],
   },
-  robots: "index, follow",
-  metadataBase: new URL("https://brandops.site"),
   verification: {
     google: "cInk3EUPRK-PDfJjionGjl7uvZ2f0LVL2aHMqY60Ti8",
   },
