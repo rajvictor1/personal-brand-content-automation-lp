@@ -13,40 +13,42 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
-const simpleNav = [
-  { label: "Home", href: "/" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Contact", href: "/contact" },
-];
-
-const dropdownNav = [
+const nav = [
+  {
+    label: "Home",
+    href: "/",
+    type: "simple" as const,
+  },
   {
     label: "Features",
     href: "/features",
+    type: "dropdown" as const,
     items: [
-      { label: "Carousel workflow", href: "/features", description: "Research to LinkedIn carousel in one flow" },
-      { label: "Newsletter workflow", href: "/features", description: "Cited newsletter drafts from current sources" },
-      { label: "Review-first publishing", href: "/features", description: "Human approval before anything goes live" },
+      { label: "Carousel workflow", href: "/features", description: "Research to LinkedIn carousel" },
+      { label: "Newsletter workflow", href: "/features", description: "Cited newsletter drafts" },
+      { label: "Review-first publishing", href: "/features", description: "Approve before anything goes live" },
     ],
   },
   {
     label: "Resources",
     href: "/resources",
+    type: "dropdown" as const,
     items: [
-      { label: "All resources", href: "/resources", description: "Guides, cheat sheets, templates, and glossary" },
+      { label: "All resources", href: "/resources", description: "Guides, cheat sheets, and videos" },
       { label: "Guides", href: "/resources/category/guides", description: "Step-by-step workflows" },
       { label: "Cheat Sheets", href: "/resources/cheat-sheets", description: "Quick-reference one-pagers" },
       { label: "Videos", href: "/resources/videos", description: "Tutorials and walkthroughs" },
-      { label: "Templates", href: "/resources/category/templates", description: "Ready-to-use frameworks" },
-      { label: "Glossary", href: "/resources/category/glossary", description: "Terms and definitions" },
     ],
   },
   {
     label: "Company",
     href: "/about",
+    type: "dropdown" as const,
     items: [
-      { label: "About us", href: "/about", description: "Mission, story, and values" },
-      { label: "Careers", href: "/careers", description: "Join the BrandOps team" },
+      { label: "About", href: "/about", description: "Mission and values" },
+      { label: "Careers", href: "/careers", description: "Join our team" },
+      { label: "Pricing", href: "/pricing", description: "Simple plans" },
+      { label: "Contact", href: "/contact", description: "Get in touch" },
     ],
   },
 ];
@@ -62,7 +64,15 @@ const mobileNav = [
   { label: "Contact", href: "/contact" },
 ];
 
-function NavDropdown({ section }: { section: typeof dropdownNav[number] }) {
+function NavDropdown({
+  section,
+}: {
+  section: {
+    label: string;
+    href: string;
+    items: { label: string; href: string; description: string }[];
+  };
+}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -80,7 +90,7 @@ function NavDropdown({ section }: { section: typeof dropdownNav[number] }) {
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 z-50 mt-1 w-[280px] rounded-xl border border-border/50 bg-card/95 p-3 shadow-xl backdrop-blur-xl">
+        <div className="absolute top-full left-0 z-50 mt-1 w-[240px] rounded-xl border border-border/50 bg-card/95 p-2 shadow-xl backdrop-blur-xl">
           <ul className="space-y-1">
             {section.items.map((item) => (
               <li key={item.label}>
@@ -90,7 +100,7 @@ function NavDropdown({ section }: { section: typeof dropdownNav[number] }) {
                   onClick={() => setOpen(false)}
                 >
                   <div className="text-sm font-semibold text-foreground">{item.label}</div>
-                  <p className="mt-1 text-xs text-muted-foreground">{item.description}</p>
+                  <p className="mt-0.5 text-xs text-muted-foreground">{item.description}</p>
                 </Link>
               </li>
             ))}
@@ -115,23 +125,19 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          <Link href="/" className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">
-            Home
-          </Link>
-
-          {dropdownNav.map((section) => (
-            <NavDropdown key={section.label} section={section} />
-          ))}
-
-          {simpleNav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) =>
+            item.type === "simple" ? (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <NavDropdown key={item.label} section={item} />
+            )
+          )}
         </nav>
 
         <div className="flex items-center gap-3">
