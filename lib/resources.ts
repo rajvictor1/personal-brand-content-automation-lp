@@ -13,6 +13,17 @@ export interface ResourcePost {
 
 export const resources: ResourcePost[] = [
   {
+    slug: "linkedin-carousel-newsletter-one-hour-workflow",
+    title: "How to turn one research topic into a LinkedIn carousel and newsletter in one hour",
+    description:
+      "A one-hour workflow to research once and publish both a LinkedIn carousel and a newsletter. Includes time-boxing, structure, and review.",
+    category: "Guides",
+    publishedAt: "2026-08-05",
+    readingTime: 7,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
     slug: "automate-linkedin-carousels-from-research",
     title: "How to create LinkedIn carousels from current research",
     description:
