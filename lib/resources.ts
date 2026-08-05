@@ -1,4 +1,4 @@
-export type ResourceCategory = "Guides" | "Templates" | "Glossary";
+export type ResourceCategory = "Guides" | "Templates" | "Glossary" | "Cheat Sheets";
 
 export interface ResourcePost {
   slug: string;
@@ -64,6 +64,28 @@ export const resources: ResourcePost[] = [
     category: "Glossary",
     publishedAt: "2026-08-04",
     readingTime: 4,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "linkedin-carousel-cheat-sheet",
+    title: "LinkedIn Carousel Cheat Sheet",
+    description:
+      "A one-page reference for building five-slide LinkedIn carousels from research. Includes slide structure, word counts, and a pre-publish checklist.",
+    category: "Cheat Sheets",
+    publishedAt: "2026-08-05",
+    readingTime: 2,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "ai-newsletter-cheat-sheet",
+    title: "AI Newsletter Cheat Sheet",
+    description:
+      "A one-page reference for writing cited, AI-assisted newsletters. Includes structure, citation rules, subject-line formulas, and a pre-send checklist.",
+    category: "Cheat Sheets",
+    publishedAt: "2026-08-05",
+    readingTime: 2,
     author: "Rajesh Kumar",
     authorRole: "Founder, BrandOps",
   },

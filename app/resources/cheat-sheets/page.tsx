@@ -1,20 +1,24 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { Clock, FileText } from "lucide-react";
 import { Reveal } from "@/components/animations";
+import { getResourcesByCategory } from "@/lib/resources";
 
 export const metadata: Metadata = {
   title: "Cheat Sheets — Resources",
-  description: "Quick-reference cheat sheets for personal-brand content automation. Coming soon.",
+  description: "Quick-reference cheat sheets for LinkedIn carousels, AI newsletters, and review-first publishing.",
 };
 
 export default function CheatSheetsPage() {
+  const cheatSheets = getResourcesByCategory("Cheat Sheets");
+
   return (
     <div className="relative">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
       </div>
 
-      <section className="mx-auto max-w-3xl px-4 pt-24 pb-20 text-center sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-5xl px-4 pt-24 pb-20 sm:px-6 lg:px-8">
         <Reveal>
           <Link href="/resources" className="text-sm font-medium text-primary hover:underline">
             ← Back to resources
@@ -28,19 +32,36 @@ export default function CheatSheetsPage() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-            Quick-reference cheat sheets for carousel structure, newsletter writing, and review-first publishing. Coming soon.
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            One-page references you can bookmark, print, or keep open while building content.
           </p>
         </Reveal>
 
-        <Reveal delay={0.3}>
-          <Link
-            href="/resources"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
-          >
-            Browse resources
-          </Link>
-        </Reveal>
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
+          {cheatSheets.map((sheet, index) => (
+            <Reveal key={sheet.slug} delay={0.1 + index * 0.1}>
+              <div className="group flex h-full flex-col rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <FileText className="h-6 w-6" />
+                </div>
+                <h2 className="text-xl font-semibold text-foreground group-hover:text-primary">
+                  {sheet.title}
+                </h2>
+                <p className="mt-2 flex-1 text-sm text-muted-foreground">{sheet.description}</p>
+                <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
+                  <Clock className="h-3.5 w-3.5" />
+                  <span>{sheet.readingTime} min read</span>
+                </div>
+                <Link
+                  href={`/resources/${sheet.slug}`}
+                  className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                >
+                  Open cheat sheet
+                </Link>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </section>
     </div>
   );
