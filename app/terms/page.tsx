@@ -3,8 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "BrandOps terms of service for the review-first content workspace.",
+  title: "Terms of Service | BrandOps Content Platform Agreement",
+  description:
+    "Read the BrandOps terms of service. Learn the rules for using our review-first AI content platform for LinkedIn carousels and newsletters.",
+  alternates: { canonical: "https://brandops.site/terms" },
 };
 
 export default function TermsPage() {

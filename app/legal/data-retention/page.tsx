@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "Data Retention — BrandOps",
+  title: "Data Retention Policy | How Long BrandOps Keeps Data",
   description:
-    "BrandOps data retention policy. How long we keep contact, usage, and generated data, and how to request deletion.",
+    "Read the BrandOps data retention policy. Learn how long we keep form submissions, generated content, logs, and how to request deletion.",
   alternates: { canonical: "https://brandops.site/legal/data-retention" },
 };
 

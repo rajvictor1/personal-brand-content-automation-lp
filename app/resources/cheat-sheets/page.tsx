@@ -5,8 +5,10 @@ import { Reveal } from "@/components/animations";
 import { getResourcesByCategory } from "@/lib/resources";
 
 export const metadata: Metadata = {
-  title: "Cheat Sheets — Resources",
-  description: "Quick-reference cheat sheets for LinkedIn carousels, AI newsletters, and review-first publishing.",
+  title: "Free Content Cheat Sheets | LinkedIn & Newsletters | BrandOps",
+  description:
+    "Download quick-reference cheat sheets for LinkedIn carousels, AI newsletters, and review-first publishing. Save time and publish better content.",
+  alternates: { canonical: "https://brandops.site/resources/cheat-sheets" },
 };
 
 export default function CheatSheetsPage() {

@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "Security — BrandOps",
+  title: "Security Practices | How BrandOps Protects Your Data",
   description:
-    "BrandOps security practices: HTTPS, security headers, server-side credentials, responsible disclosure, and hardening notes.",
+    "Learn how BrandOps keeps your data safe: HTTPS, server-side API keys, review-first controls, limited access, and honest security commitments.",
   alternates: { canonical: "https://brandops.site/legal/security" },
 };
 

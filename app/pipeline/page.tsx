@@ -2,9 +2,10 @@ import { Pipeline } from "@/components/pipeline";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pipeline",
+  title: "Content Pipeline | Research to LinkedIn Publish | BrandOps",
   description:
-    "See how BrandOps connects Firecrawl, OpenAI, review gates, and publishing into one content workflow.",
+    "See the BrandOps pipeline: research with Firecrawl, draft with OpenAI, review everything, and publish to LinkedIn only when you approve.",
+  alternates: { canonical: "https://brandops.site/pipeline" },
 };
 
 export default function PipelinePage() {

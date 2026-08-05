@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "GDPR — BrandOps",
+  title: "GDPR | BrandOps Data Protection & Your Privacy Rights",
   description:
-    "BrandOps GDPR compliance overview. Data subject rights, lawful basis, processor details, and contact information.",
+    "Learn how BrandOps respects your GDPR rights. Request access, correction, or deletion of your personal data and understand how we process it.",
   alternates: { canonical: "https://brandops.site/legal/gdpr" },
 };
 

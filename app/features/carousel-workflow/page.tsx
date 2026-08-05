@@ -4,9 +4,9 @@ import { Search, PenTool, ImageIcon, Eye, ShieldCheck, Zap, ArrowRight } from "l
 import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "Carousel Workflow — Features",
+  title: "LinkedIn Carousel Generator | AI Research to 5 Slides",
   description:
-    "Turn one research topic into a five-slide LinkedIn carousel. Research, write, render, review, and publish with a hard approval gate.",
+    "Turn one research topic into a 5-slide LinkedIn carousel with BrandOps. Firecrawl finds current sources, OpenAI writes and designs every slide, you approve.",
   alternates: { canonical: "https://brandops.site/features/carousel-workflow" },
 };
 

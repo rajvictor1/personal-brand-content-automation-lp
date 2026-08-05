@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "Legal",
+  title: "BrandOps Legal Hub | Privacy, Security & GDPR Policies",
   description:
-    "BrandOps legal hub: privacy policy, terms of service, GDPR, security practices, and data retention.",
+    "Find BrandOps legal documents in one place: privacy policy, terms of service, GDPR, security practices, and data retention information.",
   alternates: { canonical: "https://brandops.site/legal" },
 };
 

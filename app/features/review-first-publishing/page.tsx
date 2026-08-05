@@ -4,9 +4,9 @@ import { ShieldCheck, Eye, Lock, CheckCircle, AlertTriangle, Zap, ArrowRight } f
 import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "Review-First Publishing — Features",
+  title: "Review-First Publishing | Approve Before LinkedIn Posts",
   description:
-    "Keep full editorial control over AI-assisted content. Review every asset, confirm twice, and maintain a duplicate-prevention ledger.",
+    "BrandOps never auto-publishes. Review every slide, paragraph, citation, and visual before sending a newsletter or posting to LinkedIn from your workspace.",
   alternates: { canonical: "https://brandops.site/features/review-first-publishing" },
 };
 

@@ -7,11 +7,11 @@ import { Reveal } from "@/components/animations";
 import { resources, ResourcePost, ResourceCategory } from "@/lib/resources";
 
 export const metadata: Metadata = {
-  title: "Resources",
+  title: "BrandOps Resources | Guides & Cheat Sheets for Creators",
   description:
-    "Guides, templates, and workflow playbooks for personal-brand content automation. Built for creators, trainers, and solo operators.",
+    "Free guides, cheat sheets, and templates to help solo founders and trainers build a review-first LinkedIn and newsletter content system with AI.",
+  alternates: { canonical: "https://brandops.site/resources" },
 };
-
 const categories: ResourceCategory[] = ["Guides", "Templates", "Glossary", "Cheat Sheets"];
 const extraCategories = ["Videos"];
 

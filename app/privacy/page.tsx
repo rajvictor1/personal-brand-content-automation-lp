@@ -3,8 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "BrandOps privacy policy for the review-first content workspace.",
+  title: "Privacy Policy | How BrandOps Handles Your Data",
+  description:
+    "Read the BrandOps privacy policy. Learn what data we collect, how we use it, who we share it with, and how to request deletion or access.",
+  alternates: { canonical: "https://brandops.site/privacy" },
 };
 
 export default function PrivacyPage() {

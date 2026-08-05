@@ -22,20 +22,20 @@ import { Reveal } from "@/components/animations";
 import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
-  title: "Founder — BrandOps",
+  title: "Meet Rajesh Kumar | Founder of BrandOps",
   description:
-    "Meet the operator behind BrandOps. Rajesh Kumar builds demand-gen, GTM, and review-first content systems for solo founders, trainers, and consultants.",
+    "Rajesh Kumar is a demand-gen and GTM expert building BrandOps, a review-first AI content workspace for trainers, founders, and consultants.",
   alternates: { canonical: "https://brandops.site/founder" },
   openGraph: {
-    title: "Founder — BrandOps",
-    description: "Meet the operator behind BrandOps.",
+    title: "Meet Rajesh Kumar | Founder of BrandOps",
+    description: "Demand-gen and GTM expert behind the BrandOps content workspace.",
     url: "https://brandops.site/founder",
     images: [{ url: "https://brandops.site/founder-rk.png", width: 512, height: 512, alt: "Rajesh Kumar" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Founder — BrandOps",
-    description: "Meet the operator behind BrandOps.",
+    title: "Meet Rajesh Kumar | Founder of BrandOps",
+    description: "Demand-gen and GTM expert behind the BrandOps content workspace.",
     images: ["https://brandops.site/founder-rk.png"],
   },
 };

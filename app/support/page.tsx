@@ -17,9 +17,9 @@ import { Reveal } from "@/components/animations";
 import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
-  title: "24/7 Support — BrandOps",
+  title: "24/7 BrandOps Support | Email support@brandops.site",
   description:
-    "Get help with BrandOps anytime. Email support@brandops.site for personalized assistance with setup, generation, publishing, billing, and account questions.",
+    "Get fast, human support for BrandOps. Email support@brandops.site for help with setup, carousel generation, newsletter delivery, LinkedIn publishing, and billing.",
   alternates: { canonical: "https://brandops.site/support" },
 };
 

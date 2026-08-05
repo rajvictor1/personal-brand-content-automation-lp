@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "Careers",
+  title: "Careers at BrandOps | Join Our Content Automation Team",
   description:
-    "Join BrandOps. We are hiring interns who want to learn personal-brand marketing, AI workflows, and product-led growth.",
+    "Explore internships and roles at BrandOps. Work on AI-assisted LinkedIn content, newsletter workflows, and review-first publishing for solo operators.",
   alternates: { canonical: "https://brandops.site/careers" },
 };
 

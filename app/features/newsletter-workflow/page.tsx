@@ -4,9 +4,9 @@ import { Search, FileText, ImageIcon, MailCheck, ShieldCheck, Zap, ArrowRight } 
 import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "Newsletter Workflow — Features",
+  title: "AI Newsletter Generator | Cited Research to Inbox",
   description:
-    "Generate cited, AI-assisted newsletters from current research. Pull sources, write the draft, add a lead visual, and send only after review.",
+    "Generate cited newsletters from current research with BrandOps. Firecrawl finds sources, OpenAI writes the draft, and you review before sending.",
   alternates: { canonical: "https://brandops.site/features/newsletter-workflow" },
 };
 
