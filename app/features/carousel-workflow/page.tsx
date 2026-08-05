@@ -74,9 +74,7 @@ export default function CarouselWorkflowPage() {
           <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">Carousel Workflow</span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Turn one research topic into a LinkedIn carousel
-          </h1>
+          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Turn one research topic into a LinkedIn{" "}<span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">carousel</span></h1>
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">

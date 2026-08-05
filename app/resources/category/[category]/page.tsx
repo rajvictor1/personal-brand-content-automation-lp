@@ -71,9 +71,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
             </Link>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              {category}
-            </h1>
+            <h1 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl"><span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">{category}</span></h1>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">

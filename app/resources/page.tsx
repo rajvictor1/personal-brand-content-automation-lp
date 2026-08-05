@@ -68,9 +68,7 @@ export default function ResourcesPage() {
             </Badge>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Build a citable personal brand
-            </h1>
+            <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Build a citable personal{" "}<span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">brand</span></h1>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">

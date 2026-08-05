@@ -45,7 +45,7 @@ export default function GDPRPage() {
           <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">Legal / GDPR</span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">GDPR compliance</h1>
+          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">GDPR{" "}<span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">compliance</span></h1>
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mt-6 text-lg text-muted-foreground">

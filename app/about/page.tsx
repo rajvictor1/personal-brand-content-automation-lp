@@ -51,8 +51,10 @@ export default function AboutPage() {
         <Reveal delay={0.1}>
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             AI builds your content.
-            <br />
-            You own the publish button.
+            {" "}
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              You own the publish button.
+            </span>
           </h1>
         </Reveal>
         <Reveal delay={0.2}>

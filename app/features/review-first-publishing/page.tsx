@@ -74,9 +74,7 @@ export default function ReviewFirstPublishingPage() {
           <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">Review-First Publishing</span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            You own the publish button
-          </h1>
+          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">You own the publish{" "}<span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">button</span></h1>
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">

@@ -55,7 +55,7 @@ export default function LegalHubPage() {
           <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">Legal</span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Policies and procedures</h1>
+          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Policies and{" "}<span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">procedures</span></h1>
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
