@@ -35,8 +35,12 @@ const footerGroups = [
   {
     title: "Legal",
     links: [
+      { label: "Legal hub", href: "/legal" },
       { label: "Terms of Service", href: "/terms" },
       { label: "Privacy Policy", href: "/privacy" },
+      { label: "GDPR", href: "/legal/gdpr" },
+      { label: "Security", href: "/legal/security" },
+      { label: "Data Retention", href: "/legal/data-retention" },
     ],
   },
 ];
