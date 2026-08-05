@@ -30,6 +30,13 @@ export const metadata: Metadata = {
     title: "Founder — BrandOps",
     description: "Meet the operator behind BrandOps.",
     url: "https://brandops.site/founder",
+    images: [{ url: "https://brandops.site/founder-rk.png", width: 512, height: 512, alt: "Rajesh Kumar" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Founder — BrandOps",
+    description: "Meet the operator behind BrandOps.",
+    images: ["https://brandops.site/founder-rk.png"],
   },
 };
 
@@ -72,10 +79,12 @@ export default function FounderPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="mx-auto mb-8 h-28 w-28 overflow-hidden rounded-full border-2 border-border/50 bg-muted/30">
-              <div className="flex h-full w-full items-center justify-center text-4xl font-bold text-muted-foreground">
-                RK
-              </div>
+            <div className="mx-auto mb-8 h-32 w-32 overflow-hidden rounded-full border-2 border-border/50 bg-muted/30 sm:h-40 sm:w-40">
+              <img
+                src="/founder-rk.png"
+                alt="Rajesh Kumar"
+                className="h-full w-full object-cover"
+              />
             </div>
           </Reveal>
 
