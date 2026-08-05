@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, Sparkles } from "lucide-react";
+import { Menu, Sparkles, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -13,17 +13,96 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
-const nav = [
+const simpleNav = [
+  { label: "Home", href: "/" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
+];
+
+const dropdownNav = [
+  {
+    label: "Features",
+    href: "/features",
+    items: [
+      { label: "Carousel workflow", href: "/features", description: "Research to LinkedIn carousel in one flow" },
+      { label: "Newsletter workflow", href: "/features", description: "Cited newsletter drafts from current sources" },
+      { label: "Review-first publishing", href: "/features", description: "Human approval before anything goes live" },
+    ],
+  },
+  {
+    label: "Resources",
+    href: "/resources",
+    items: [
+      { label: "All resources", href: "/resources", description: "Guides, cheat sheets, templates, and glossary" },
+      { label: "Guides", href: "/resources/category/guides", description: "Step-by-step workflows" },
+      { label: "Cheat Sheets", href: "/resources/cheat-sheets", description: "Quick-reference one-pagers" },
+      { label: "Videos", href: "/resources/videos", description: "Tutorials and walkthroughs" },
+      { label: "Templates", href: "/resources/category/templates", description: "Ready-to-use frameworks" },
+      { label: "Glossary", href: "/resources/category/glossary", description: "Terms and definitions" },
+    ],
+  },
+  {
+    label: "Company",
+    href: "/about",
+    items: [
+      { label: "About us", href: "/about", description: "Mission, story, and values" },
+      { label: "Careers", href: "/careers", description: "Join the BrandOps team" },
+    ],
+  },
+];
+
+const mobileNav = [
   { label: "Home", href: "/" },
   { label: "Features", href: "/features" },
   { label: "Pipeline", href: "/pipeline" },
   { label: "Resources", href: "/resources" },
   { label: "Pricing", href: "/pricing" },
+  { label: "About", href: "/about" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
-export function Header() {
+function NavDropdown({ section }: { section: typeof dropdownNav[number] }) {
   const [open, setOpen] = useState(false);
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+        onClick={() => setOpen(!open)}
+      >
+        <Link href={section.href} className="hover:text-foreground">{section.label}</Link>
+        <ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} />
+      </button>
+
+      {open && (
+        <div className="absolute top-full left-0 z-50 mt-1 w-[280px] rounded-xl border border-border/50 bg-card/95 p-3 shadow-xl backdrop-blur-xl">
+          <ul className="space-y-1">
+            {section.items.map((item) => (
+              <li key={item.label}>
+                <Link
+                  href={item.href}
+                  className="block rounded-md p-3 transition-colors hover:bg-secondary"
+                  onClick={() => setOpen(false)}
+                >
+                  <div className="text-sm font-semibold text-foreground">{item.label}</div>
+                  <p className="mt-1 text-xs text-muted-foreground">{item.description}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/70 backdrop-blur-xl">
@@ -32,19 +111,23 @@ export function Header() {
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground">
             <Sparkles className="h-5 w-5" />
           </span>
-          <span className="hidden text-lg font-semibold tracking-tight sm:inline">
-            BrandOps
-          </span>
+          <span className="hidden text-lg font-semibold tracking-tight sm:inline">BrandOps</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {nav.map((item) => (
+          <Link href="/" className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">
+            Home
+          </Link>
+
+          {dropdownNav.map((section) => (
+            <NavDropdown key={section.label} section={section} />
+          ))}
+
+          {simpleNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={cn(
-                "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-              )}
+              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
             >
               {item.label}
             </Link>
@@ -59,7 +142,7 @@ export function Header() {
             Get early access
           </Link>
 
-          <Sheet open={open} onOpenChange={setOpen}>
+          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger className="md:hidden">
               <Button variant="ghost" size="icon">
                 <Menu className="h-5 w-5" />
@@ -70,11 +153,11 @@ export function Header() {
                 <SheetTitle className="text-left">Menu</SheetTitle>
               </SheetHeader>
               <nav className="mt-8 flex flex-col gap-2">
-                {nav.map((item) => (
+                {mobileNav.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    onClick={() => setOpen(false)}
+                    onClick={() => setMobileOpen(false)}
                     className="rounded-md px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary"
                   >
                     {item.label}
@@ -82,7 +165,7 @@ export function Header() {
                 ))}
                 <Link
                   href="/contact"
-                  onClick={() => setOpen(false)}
+                  onClick={() => setMobileOpen(false)}
                   className="mt-4 rounded-full bg-primary px-4 py-3 text-center text-base font-semibold text-primary-foreground"
                 >
                   Get early access

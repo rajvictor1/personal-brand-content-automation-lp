@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
+import { CookieConsent } from "@/components/cookie-consent";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -83,6 +84,7 @@ export default function RootLayout({
         <main className="relative overflow-hidden">{children}</main>
         <Footer />
         <Toaster position="bottom-right" richColors />
+        <CookieConsent />
       </body>
     </html>
   );
