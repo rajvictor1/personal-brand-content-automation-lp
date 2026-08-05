@@ -47,6 +47,7 @@ const nav = [
     items: [
       { label: "About", href: "/about", description: "Mission and values" },
       { label: "Careers", href: "/careers", description: "Join our team" },
+      { label: "Support", href: "/support", description: "24/7 help" },
       { label: "Pricing", href: "/pricing", description: "Simple plans" },
       { label: "Contact", href: "/contact", description: "Get in touch" },
     ],
@@ -61,6 +62,7 @@ const mobileNav = [
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },
+  { label: "Support", href: "/support" },
   { label: "Contact", href: "/contact" },
 ];
 
