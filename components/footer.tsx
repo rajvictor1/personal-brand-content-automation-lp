@@ -1,20 +1,51 @@
 import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
+import { Sparkles } from "lucide-react";
 
-const links = [
-  { label: "Home", href: "/" },
-  { label: "Features", href: "/features" },
-  { label: "Pipeline", href: "/pipeline" },
-  { label: "Resources", href: "/resources" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "About", href: "/about" },
-  { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/contact" },
+const footerGroups = [
+  {
+    title: "Product",
+    links: [
+      { label: "Features", href: "/features" },
+      { label: "Carousel workflow", href: "/features/carousel-workflow" },
+      { label: "Newsletter workflow", href: "/features/newsletter-workflow" },
+      { label: "Review-first publishing", href: "/features/review-first-publishing" },
+      { label: "Pipeline", href: "/pipeline" },
+      { label: "Pricing", href: "/pricing" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { label: "All resources", href: "/resources" },
+      { label: "Guides", href: "/resources/category/guides" },
+      { label: "Cheat Sheets", href: "/resources/cheat-sheets" },
+      { label: "Videos", href: "/resources/videos" },
+      { label: "Templates", href: "/resources/category/templates" },
+      { label: "Glossary", href: "/resources/category/glossary" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Terms of Service", href: "/terms" },
+      { label: "Privacy Policy", href: "/privacy" },
+    ],
+  },
 ];
 
-const legal = [
-  { label: "Terms of Service", href: "/terms" },
-  { label: "Privacy Policy", href: "/privacy" },
+const socials = [
+  { label: "Twitter", href: "https://twitter.com" },
+  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "YouTube", href: "https://youtube.com" },
+  { label: "GitHub", href: "https://github.com" },
 ];
 
 const SocialIcon = ({ label }: { label: string }) => {
@@ -50,25 +81,20 @@ const SocialIcon = ({ label }: { label: string }) => {
   );
 };
 
-const socials = [
-  { label: "Twitter", href: "https://twitter.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "YouTube", href: "https://youtube.com" },
-  { label: "GitHub", href: "https://github.com" },
-];
-
 export function Footer() {
   return (
     <footer className="border-t border-border/50 bg-muted/20">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-4">
-          <div className="space-y-4 md:col-span-2">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-12">
+          <div className="space-y-5 lg:col-span-4">
             <Link href="/" className="inline-flex items-center gap-2 text-lg font-semibold tracking-tight">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground">B</span>
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground">
+                <Sparkles className="h-5 w-5" />
+              </span>
               BrandOps
             </Link>
-            <p className="max-w-xs text-sm text-muted-foreground">
-              A review-first content system for operators who want speed without losing control.
+            <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
+              A review-first content workspace for solo operators, trainers, and founders who want to publish more without losing control.
             </p>
             <div className="flex items-center gap-3">
               {socials.map((social) => (
@@ -86,38 +112,27 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Pages</h4>
-            <ul className="space-y-2">
-              {links.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-foreground/80 hover:text-primary">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Legal</h4>
-            <ul className="space-y-2">
-              {legal.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-foreground/80 hover:text-primary">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-8">
+            {footerGroups.map((group) => (
+              <div key={group.title} className="space-y-4">
+                <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">{group.title}</h4>
+                <ul className="space-y-2.5">
+                  {group.links.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-primary">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
 
-        <Separator className="my-8 bg-border/50" />
-
-        <div className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 text-sm text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} BrandOps. All rights reserved.</p>
-          <p>Built for solo operators. Dark mode first.</p>
+          <p>Built for solo operators. Review-first.</p>
         </div>
       </div>
     </footer>
