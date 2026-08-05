@@ -30,6 +30,11 @@ const nav = [
     ],
   },
   {
+    label: "Pipeline",
+    href: "/pipeline",
+    type: "simple" as const,
+  },
+  {
     label: "Resources",
     href: "/resources",
     type: "dropdown" as const,
@@ -46,6 +51,7 @@ const nav = [
     type: "dropdown" as const,
     items: [
       { label: "About", href: "/about", description: "Mission and values" },
+      { label: "Founder", href: "/founder", description: "Meet the operator" },
       { label: "Careers", href: "/careers", description: "Join our team" },
       { label: "Support", href: "/support", description: "24/7 help" },
       { label: "Pricing", href: "/pricing", description: "Simple plans" },
@@ -63,6 +69,7 @@ const mobileNav = [
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },
   { label: "Support", href: "/support" },
+  { label: "Founder", href: "/founder" },
   { label: "Contact", href: "/contact" },
 ];
 

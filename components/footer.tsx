@@ -24,10 +24,11 @@ const footerGroups = [
       { label: "Glossary", href: "/resources/category/glossary" },
     ],
   },
-  {
+    {
     title: "Company",
     links: [
       { label: "About", href: "/about" },
+      { label: "Founder", href: "/founder" },
       { label: "Careers", href: "/careers" },
       { label: "Contact", href: "/contact" },
       { label: "Support", href: "/support" },
