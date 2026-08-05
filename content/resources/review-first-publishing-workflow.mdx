@@ -1,9 +1,9 @@
 ---
 title: The review-first publishing workflow
-description: Why every AI-assisted content system needs a human approval gate, and how to build one without slowing down your publishing cadence.
+description: Learn why every AI-assisted content system needs a human approval gate. Includes a comparison of workflows, review UI tips, and a duplicate-prevention ledger.
 category: Guides
 publishedAt: 2026-08-04
-readingTime: 5
+readingTime: 6
 ---
 
 # The review-first publishing workflow
@@ -12,9 +12,9 @@ AI can draft content in seconds. That speed is also its biggest risk. A single u
 
 The review-first workflow keeps speed and adds a safety layer.
 
-## What review-first means
+## What does review-first mean?
 
-Every generated asset goes through a human review step before any publish action. The machine handles research, drafting, and design. The human handles editing, fact-checking, and approval.
+Every generated asset goes through a human review step before any publish action. The machine handles research, drafting, and design. The human handles editing, fact-checking, and final approval.
 
 This is different from a fully manual workflow and different from auto-publishing.
 
@@ -24,7 +24,7 @@ This is different from a fully manual workflow and different from auto-publishin
 | Auto-publish | Fast | Low | High |
 | Review-first | Fast | High | Low |
 
-## Separate generation from publishing
+## Why separate generation from publishing
 
 The key architectural decision is isolation. The system that creates content should not be the system that publishes it.
 
@@ -32,9 +32,11 @@ In practice that means:
 
 - Generation routes return drafts, not live posts
 - Publishing routes require explicit confirmation
-- Credentials for publishing never live in the browser
+- Provider credentials stay on the server only
 
-## Build the review UI
+This separation prevents accidental publication and keeps API keys out of the browser.
+
+## What to include in a review UI
 
 A good review screen shows everything the human needs in one place:
 
@@ -43,16 +45,46 @@ A good review screen shows everything the human needs in one place:
 - Preview of generated images
 - A publish button that requires a second confirmation
 
-## Add a duplicate-prevention ledger
+The second confirmation is important. It stops the "click by accident" problem.
 
-Before a live post goes out, the system checks whether the same asset was already published. This prevents accidental double-posting, especially when automation runs on a schedule.
+## How to prevent duplicate posts
 
-A simple ledger can be a GitHub issue, a database row, or a spreadsheet entry. The important part is that the check happens before the live API call.
+Before a live post goes out, the system checks whether the same asset was already published. This is especially important when automation runs on a schedule.
 
-## Why this matters for personal brands
+A simple ledger can be:
 
-For a solo operator, trust is the product. One wrong post costs more than ten good posts earn. Review-first keeps you fast without making you careless.
+- A GitHub issue entry
+- A database row
+- A spreadsheet entry
 
-## How BrandOps implements this
+The important part is that the check happens before the live API call.
 
-BrandOps generates carousels and newsletters in isolated routes, displays them in a review dashboard, and only calls the LinkedIn or email API after you confirm twice.
+## Why review-first matters for personal brands
+
+For a solo operator, trust is the product. One wrong post can cost more than ten good posts earn. Review-first keeps you fast without making you careless.
+
+## FAQ
+
+### What is review-first publishing?
+
+Review-first publishing is a workflow where AI creates content drafts, and a human reviews and approves every draft before it is published.
+
+### Is review-first slower than auto-publishing?
+
+It adds one manual step, but the generation itself is still fast. The extra time is the cost of protecting your brand.
+
+### What should I check during review?
+
+Check facts, tone, spelling, source accuracy, brand voice, and whether the post is appropriate for your audience.
+
+### How do I stop accidental duplicate posts?
+
+Use a ledger. Record every published post before calling the live API, and check the ledger before each new publication.
+
+## Key takeaway
+
+Speed without review is a liability. Review without speed is inefficient. Review-first publishing gives you both.
+
+---
+
+Ready to see this in action? Learn how to [create LinkedIn carousels from current research](/resources/automate-linkedin-carousels-from-research).
