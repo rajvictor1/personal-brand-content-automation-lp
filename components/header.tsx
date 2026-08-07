@@ -152,6 +152,12 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <Link
+            href="/demo"
+            className="hidden rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary transition-transform hover:scale-105 md:block"
+          >
+            Book a demo
+          </Link>
+          <Link
             href="/contact"
             className="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105 md:block"
           >
