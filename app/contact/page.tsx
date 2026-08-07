@@ -2,8 +2,6 @@ import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/animations";
 import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
-import Link from "next/link";
-import { Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact BrandOps | Get Help With Your Content Workflow",
@@ -14,18 +12,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="relative py-24">
+    <section className="py-24">
       <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
-        <div className="absolute right-4 top-24 hidden sm:block">
-          <Link
-            href="/demo"
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-border/50 bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-          >
-            <Calendar className="h-4 w-4" />
-            Book a demo
-          </Link>
-        </div>
-
         <Reveal className="mb-10 text-center">
           <Badge
             variant="outline"
