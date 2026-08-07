@@ -65,7 +65,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "Thank you — we'll be in touch soon.",
+      message: "Thank you. We will be in touch soon.",
     });
   } catch (error) {
     if (error instanceof z.ZodError) {

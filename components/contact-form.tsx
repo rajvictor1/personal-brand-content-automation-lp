@@ -52,7 +52,7 @@ export function ContactForm() {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "n4OeXbwa_zVHVMPml"
       );
 
-      toast.success("Thank you — we'll be in touch soon.");
+      toast.success("Thank you. We will be in touch soon.");
       form.reset();
     } catch {
       toast.error("Something went wrong. Please try again or email us directly at support@brandops.site.");

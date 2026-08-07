@@ -15,9 +15,9 @@ const founderQuote = {
 };
 
 const placeholderSlots = [
-  "First user testimonial — coming soon",
-  "Operator success story — coming soon",
-  "Creator case study — coming soon",
+  "First user testimonial. Coming soon",
+  "Operator success story. Coming soon",
+  "Creator case study. Coming soon",
 ];
 
 export function Testimonials() {

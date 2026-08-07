@@ -7,7 +7,7 @@ const steps = [
   { title: "Topic", desc: "Enter a topic or let BrandOps scan the latest signal." },
   { title: "Research", desc: "Firecrawl gathers current sources in seconds." },
   { title: "Draft", desc: "OpenAI writes copy and BrandOps renders the visuals." },
-  { title: "Review", desc: "You edit, approve, and publish — nothing goes live alone." },
+  { title: "Review", desc: "You edit, approve, and publish. Nothing goes live alone." },
 ];
 
 function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {

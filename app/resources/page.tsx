@@ -113,7 +113,7 @@ export default function ResourcesPage() {
             <div className="mb-12 rounded-2xl border border-border/50 bg-gradient-to-br from-primary/10 to-card/40 p-8">
               <div className="flex flex-col gap-6 md:flex-row md:items-center">
                 <div className="flex-1">
-                  <Badge className="mb-3 border-primary/30 bg-primary/10 text-primary">Featured — {featured.category}</Badge>
+                  <Badge className="mb-3 border-primary/30 bg-primary/10 text-primary">Featured: {featured.category}</Badge>
                   <Link href={`/resources/${featured.slug}`}>
                     <h2 className="text-2xl font-bold text-foreground hover:text-primary">{featured.title}</h2>
                   </Link>

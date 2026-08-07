@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const label = params.category.charAt(0).toUpperCase() + params.category.slice(1);
   return {
-    title: `${label} — Resources`,
+    title: `${label} | Resources`,
     description: `BrandOps ${label.toLowerCase()} for personal-brand builders.`,
   };
 }

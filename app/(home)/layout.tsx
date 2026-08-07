@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { Person, Organization, WebSite, WithContext } from "schema-dts";
 
 export const metadata: Metadata = {
-  title: "BrandOps — Review-First Personal Brand Content Automation",
+  title: "BrandOps | Review-First Personal Brand Content Automation",
   description:
-    "BrandOps helps solo operators, trainers, and founders build a citable personal brand with AI-assisted research, review-first publishing, and LinkedIn-ready workflows.",
+    "AI builds your content. You own the publish button. Generate LinkedIn carousels and cited newsletters from one research topic, then review and publish manually.",
   keywords: [
     "personal brand automation",
     "LinkedIn carousel workflow",
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://brandops.site" },
   openGraph: {
-    title: "BrandOps — Review-First Personal Brand Content Automation",
+    title: "BrandOps | Review-First Personal Brand Content Automation",
     description:
-      "AI builds your content. You own the publish button.",
+      "AI builds your content. You own the publish button. Generate LinkedIn carousels and cited newsletters from one research topic, then review and publish manually.",
     url: "https://brandops.site",
     siteName: "BrandOps",
     locale: "en_US",
@@ -24,8 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrandOps — Review-First Personal Brand Content Automation",
-    description: "AI builds your content. You own the publish button.",
+    title: "BrandOps | Review-First Personal Brand Content Automation",
+    description:
+      "AI builds your content. You own the publish button. Generate LinkedIn carousels and cited newsletters from one research topic, then review and publish manually.",
   },
 };
 

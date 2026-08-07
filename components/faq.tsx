@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "What does BrandOps actually do?",
     answer:
-      "BrandOps is a review-first content workspace. It takes one research topic, finds current sources via Firecrawl, then uses OpenAI to generate a LinkedIn carousel and a cited newsletter — both ready for your review before any publish action.",
+      "BrandOps is a review-first content workspace. It takes one research topic, finds current sources via Firecrawl, then uses OpenAI to generate a LinkedIn carousel and a cited newsletter. Both are ready for your review before any publish action.",
   },
   {
     question: "Does it post to LinkedIn automatically?",

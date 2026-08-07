@@ -12,7 +12,7 @@ import {
 const faqs = [
   {
     q: "What exactly does BrandOps create?",
-    a: "BrandOps generates LinkedIn carousel slide decks and cited newsletters from a research topic. It does not auto-publish — every output stops at a review gate until you approve it.",
+    a: "BrandOps generates LinkedIn carousel slide decks and cited newsletters from a research topic. It does not auto-publish. Every output stops at a review gate until you approve it.",
   },
   {
     q: "Do I need API keys to try the landing page?",

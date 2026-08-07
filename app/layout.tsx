@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   title: {
     default: "BrandOps",
-    template: "%s — BrandOps",
+    template: "%s | BrandOps",
   },
   description:
     "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter, researched by Firecrawl, written by OpenAI, approved by you.",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         url: "https://brandops.site/og.png",
         width: 1200,
         height: 630,
-        alt: "BrandOps — review-first content automation for LinkedIn carousels and newsletters",
+        alt: "BrandOps | review-first content automation for LinkedIn carousels and newsletters",
       },
     ],
   },

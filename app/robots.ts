@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       // General rule: allow all crawlers everywhere
       { userAgent: "*", allow: "/" },
 
-      // LLM / AI assistant crawlers — explicitly allow all pages
+      // LLM / AI assistant crawlers - explicitly allow all pages
       { userAgent: "ChatGPT-User", allow: "/" },
       { userAgent: "GPTBot", allow: "/" },
       { userAgent: "Claude-Web", allow: "/" },

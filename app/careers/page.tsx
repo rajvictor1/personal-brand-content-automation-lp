@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const openings = [
   {
     id: "marketing-intern",
-    title: "Marketing Intern — Personal Brand Content",
+    title: "Marketing Intern | Personal Brand Content",
     type: "Internship",
     location: "Remote",
     commitment: "3 months, 15–20 hrs/week",
@@ -36,7 +36,7 @@ const openings = [
   },
   {
     id: "product-intern",
-    title: "Product Intern — AI Workflow Research",
+    title: "Product Intern | AI Workflow Research",
     type: "Internship",
     location: "Remote",
     commitment: "3 months, 15–20 hrs/week",
@@ -58,7 +58,7 @@ const openings = [
   },
   {
     id: "design-intern",
-    title: "Design Intern — UI and Visual Content",
+    title: "Design Intern | UI and Visual Content",
     type: "Internship",
     location: "Remote",
     commitment: "3 months, 10–15 hrs/week",

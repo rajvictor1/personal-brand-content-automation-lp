@@ -17,7 +17,7 @@ export function Cta() {
             Ready to stop chasing content?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Join the early-access list and be the first to use BrandOps — the review-first
+            Join the early-access list and be the first to use BrandOps, the review-first
             content workspace for solo operators.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
