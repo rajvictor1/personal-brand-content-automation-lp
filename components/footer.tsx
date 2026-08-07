@@ -30,8 +30,9 @@ const footerGroups = [
       { label: "About", href: "/about" },
       { label: "Founder", href: "/founder" },
       { label: "Careers", href: "/careers" },
-      { label: "Contact", href: "/contact" },
       { label: "Support", href: "/support" },
+      { label: "Contact", href: "/contact" },
+      { label: "Book a Demo", href: "/demo" },
     ],
   },
   {

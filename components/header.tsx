@@ -54,8 +54,8 @@ const nav = [
       { label: "Founder", href: "/founder", description: "Meet the operator" },
       { label: "Careers", href: "/careers", description: "Join our team" },
       { label: "Support", href: "/support", description: "24/7 help" },
-      { label: "Pricing", href: "/pricing", description: "Simple plans" },
       { label: "Contact", href: "/contact", description: "Get in touch" },
+      { label: "Book a Demo", href: "/demo", description: "30-min walkthrough" },
     ],
   },
 ];
@@ -71,6 +71,7 @@ const mobileNav = [
   { label: "Support", href: "/support" },
   { label: "Founder", href: "/founder" },
   { label: "Contact", href: "/contact" },
+  { label: "Book Demo", href: "/demo" },
 ];
 
 function NavDropdown({
