@@ -89,6 +89,61 @@ export const resources: ResourcePost[] = [
     author: "Rajesh Kumar",
     authorRole: "Founder, BrandOps",
   },
+  {
+    slug: "best-ai-tools-linkedin-carousels-newsletters-2026",
+    title: "Best AI Tools for LinkedIn Carousels and Newsletters in 2026",
+    description:
+      "Compare the best AI tools for LinkedIn carousels and newsletters in 2026. Includes features, pricing, review control, and when BrandOps is the right fit.",
+    category: "Guides",
+    publishedAt: "2026-08-12",
+    readingTime: 12,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "one-topic-many-formats-content-system",
+    title: "One-Topic-to-Many-Formats Content System for Personal Brands",
+    description:
+      "Turn one research topic into a LinkedIn carousel, newsletter, short posts, and video scripts. A repeatable workflow for solo founders and trainers.",
+    category: "Guides",
+    publishedAt: "2026-08-12",
+    readingTime: 10,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "linkedin-carousel-design-framework-non-designers",
+    title: "LinkedIn Carousel Design Framework for Non-Designers",
+    description:
+      "The 5-slide LinkedIn carousel formula for non-designers. Includes slide structure, word counts, and a pre-publish checklist.",
+    category: "Guides",
+    publishedAt: "2026-08-12",
+    readingTime: 7,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "how-to-write-cited-ai-newsletter",
+    title: "How to Write a Cited AI Newsletter That Builds Trust",
+    description:
+      "Write newsletters that cite real sources, add human commentary, and avoid the AI-generic tone. Includes structure, checklist, and example breakdown.",
+    category: "Guides",
+    publishedAt: "2026-08-12",
+    readingTime: 8,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "ai-safety-personal-brands-review-first-publishing",
+    title: "AI Safety for Personal Brands: Publish Fast Without Losing Control",
+    description:
+      "A review-first framework for using AI in your personal brand content. Learn what can go wrong, how to review AI output, and how to stay brand-safe at speed.",
+    category: "Guides",
+    publishedAt: "2026-08-12",
+    readingTime: 9,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
 ];
 
 export function getResourceBySlug(slug: string): ResourcePost | undefined {
