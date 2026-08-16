@@ -79,6 +79,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("font-sans", inter.variable)}>
+      <head>
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "y3bzxqkijz");`,
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white">
         <Header />
         <main className="relative overflow-hidden">{children}</main>
