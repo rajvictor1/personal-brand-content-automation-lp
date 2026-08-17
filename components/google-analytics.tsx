@@ -1,15 +1,9 @@
 "use client";
 
 import Script from "next/script";
-import { Suspense } from "react";
 import { useGAPageView } from "@/lib/analytics";
 
-function PageViewTracker() {
-  useGAPageView();
-  return null;
-}
-
-export function GoogleAnalytics() {
+export function GoogleAnalyticsScripts() {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   if (!gaId) return null;
 
@@ -24,16 +18,18 @@ export function GoogleAnalytics() {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${gaId}', { send_page_view: false });
-            `,
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gaId}', { send_page_view: false });
+          `,
         }}
       />
-      <Suspense fallback={null}>
-        <PageViewTracker />
-      </Suspense>
     </>
   );
+}
+
+export function GoogleAnalyticsPageView() {
+  useGAPageView();
+  return null;
 }
