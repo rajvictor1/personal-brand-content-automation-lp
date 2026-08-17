@@ -1,7 +1,6 @@
 "use client";
 
 import Script from "next/script";
-import { Suspense } from "react";
 import { useGAPageView } from "@/lib/analytics";
 
 export function GoogleAnalyticsScripts() {
@@ -30,15 +29,7 @@ export function GoogleAnalyticsScripts() {
   );
 }
 
-function PageViewTracker() {
+export function GoogleAnalyticsPageView() {
   useGAPageView();
   return null;
-}
-
-export function GoogleAnalyticsPageView() {
-  return (
-    <Suspense fallback={null}>
-      <PageViewTracker />
-    </Suspense>
-  );
 }
