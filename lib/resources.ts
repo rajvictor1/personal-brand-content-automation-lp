@@ -13,6 +13,17 @@ export interface ResourcePost {
 
 export const resources: ResourcePost[] = [
   {
+    slug: "ai-newsletter-subject-line-formulas",
+    title: "AI Newsletter Subject Line Formulas That Get Opens",
+    description:
+      "14 AI newsletter subject line formulas with real examples. Increase open rates without sounding spammy or generic.",
+    category: "Guides",
+    publishedAt: "2026-08-18",
+    readingTime: 7,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
     slug: "linkedin-carousel-hook-formulas",
     title: "LinkedIn Carousel Hook Formulas That Stop the Scroll",
     description:

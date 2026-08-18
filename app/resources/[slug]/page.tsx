@@ -22,6 +22,7 @@ const FAQ_POSTS: string[] = [
   "linkedin-carousel-design-framework-non-designers",
   "ai-safety-personal-brands-review-first-publishing",
   "linkedin-carousel-hook-formulas",
+  "ai-newsletter-subject-line-formulas",
 ];
 
 function extractFaqs(source: string): Array<{ question: string; answer: string }> {
