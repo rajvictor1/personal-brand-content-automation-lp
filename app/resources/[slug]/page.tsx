@@ -10,10 +10,51 @@ import { Separator } from "@/components/ui/separator";
 import { Reveal } from "@/components/animations";
 import { getResourceBySlug, resources } from "@/lib/resources";
 import { components } from "@/components/mdx-components";
-import { Article, WithContext } from "schema-dts";
+import { Article, FAQPage, WithContext } from "schema-dts";
 
 interface ResourcePageProps {
   params: { slug: string };
+}
+
+const FAQ_POSTS: string[] = [
+  "best-ai-tools-linkedin-carousels-newsletters-2026",
+  "how-to-write-cited-ai-newsletter",
+  "linkedin-carousel-design-framework-non-designers",
+  "ai-safety-personal-brands-review-first-publishing",
+  "linkedin-carousel-hook-formulas",
+];
+
+function extractFaqs(source: string): Array<{ question: string; answer: string }> {
+  const faqs: Array<{ question: string; answer: string }> = [];
+  const regex = /^###\s+(.*?)(?=\n)\n+([\s\S]*?)(?=\n^#{1,3}\s|\Z)/gm;
+  let match;
+  while ((match = regex.exec(source)) !== null) {
+    const question = match[1].trim();
+    const answer = match[2].trim().replace(/\n+/g, " ").replace(/\*\*/g, "");
+    if (question.endsWith("?") && answer.length > 20) {
+      faqs.push({ question, answer });
+    }
+  }
+  return faqs.slice(0, 8);
+}
+
+function buildFaqSchema(
+  post: { title: string; slug: string; description: string },
+  faqs: Array<{ question: string; answer: string }>
+): WithContext<FAQPage> | null {
+  if (faqs.length === 0) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer,
+      },
+    })),
+  };
 }
 
 export async function generateStaticParams() {
@@ -92,11 +133,17 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
     },
   };
 
+  const faqs = FAQ_POSTS.includes(post.slug) ? extractFaqs(source) : [];
+  const faqSchema = buildFaqSchema(post, faqs);
+  const ldJson = faqSchema
+    ? JSON.stringify([structuredData, faqSchema])
+    : JSON.stringify(structuredData);
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: ldJson }}
       />
       <div className="relative">
         <div className="pointer-events-none absolute inset-0 -z-10">

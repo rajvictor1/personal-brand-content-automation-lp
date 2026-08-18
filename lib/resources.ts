@@ -13,6 +13,17 @@ export interface ResourcePost {
 
 export const resources: ResourcePost[] = [
   {
+    slug: "linkedin-carousel-hook-formulas",
+    title: "LinkedIn Carousel Hook Formulas That Stop the Scroll",
+    description:
+      "12 proven LinkedIn carousel hook formulas with examples for founders, trainers, and consultants. Stop the scroll and get more swipes.",
+    category: "Guides",
+    publishedAt: "2026-08-18",
+    readingTime: 8,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
     slug: "ai-workflows-linkedin-personal-brands",
     title: "10 AI Workflows for LinkedIn Personal Brands in 2026",
     description:
@@ -91,9 +102,9 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "best-ai-tools-linkedin-carousels-newsletters-2026",
-    title: "Best AI Tools for LinkedIn Carousels and Newsletters in 2026",
+    title: "Best AI LinkedIn Carousel Generator and Newsletter Tools in 2026",
     description:
-      "Compare the best AI tools for LinkedIn carousels and newsletters in 2026. Includes features, pricing, review control, and when BrandOps is the right fit.",
+      "Discover the best AI LinkedIn carousel generator and newsletter tools for 2026. Compare features, pricing, review control, and find the right fit for your personal brand.",
     category: "Guides",
     publishedAt: "2026-08-12",
     readingTime: 12,
