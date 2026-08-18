@@ -31,6 +31,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Twitterbot", allow: "/" },
       { userAgent: "LinkedInBot", allow: "/" },
     ],
-    sitemap: "https://brandops.site/sitemap.xml",
+    sitemap: "https://www.brandops.site/sitemap.xml",
   };
 }

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "24/7 BrandOps Support | Email support@brandops.site",
   description:
     "Get fast, human support for BrandOps. Email support@brandops.site for help with setup, carousel generation, newsletter delivery, LinkedIn publishing, and billing.",
-  alternates: { canonical: "https://brandops.site/support" },
+  alternates: { canonical: "https://www.brandops.site/support" },
 };
 
 const supportChannels = [

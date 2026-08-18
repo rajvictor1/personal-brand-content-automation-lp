@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     "Firecrawl",
     "OpenAI",
   ],
-  authors: [{ name: "Rajesh Kumar", url: "https://brandops.site" }],
+  authors: [{ name: "Rajesh Kumar", url: "https://www.brandops.site" }],
   creator: "Rajesh Kumar",
   publisher: "BrandOps",
-  metadataBase: new URL("https://brandops.site"),
+  metadataBase: new URL("https://www.brandops.site"),
   alternates: {
     canonical: "./",
   },
@@ -51,10 +51,10 @@ export const metadata: Metadata = {
     title: "BrandOps",
     description:
       "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter, researched by Firecrawl, written by OpenAI, approved by you.",
-    url: "https://brandops.site",
+    url: "https://www.brandops.site",
     images: [
       {
-        url: "https://brandops.site/og.png",
+        url: "https://www.brandops.site/og.png",
         width: 1200,
         height: 630,
         alt: "BrandOps | review-first content automation for LinkedIn carousels and newsletters",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "BrandOps",
     description:
       "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter, researched by Firecrawl, written by OpenAI, approved by you.",
-    images: ["https://brandops.site/og.png"],
+    images: ["https://www.brandops.site/og.png"],
   },
   verification: {
     google: "cInk3EUPRK-PDfJjionGjl7uvZ2f0LVL2aHMqY60Ti8",

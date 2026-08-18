@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Careers at BrandOps | Join Our Content Automation Team",
   description:
     "Explore internships and roles at BrandOps. Work on AI-assisted LinkedIn content, newsletter workflows, and review-first publishing for solo operators.",
-  alternates: { canonical: "https://brandops.site/careers" },
+  alternates: { canonical: "https://www.brandops.site/careers" },
 };
 
 const openings = [

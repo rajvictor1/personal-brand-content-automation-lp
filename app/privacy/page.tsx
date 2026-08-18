@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | How BrandOps Handles Your Data",
   description:
     "Read the BrandOps privacy policy. Learn what data we collect, how we use it, who we share it with, and how to request deletion or access.",
-  alternates: { canonical: "https://brandops.site/privacy" },
+  alternates: { canonical: "https://www.brandops.site/privacy" },
 };
 
 export default function PrivacyPage() {

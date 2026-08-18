@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Terms of Service | BrandOps Content Platform Agreement",
   description:
     "Read the BrandOps terms of service. Learn the rules for using our review-first AI content platform for LinkedIn carousels and newsletters.",
-  alternates: { canonical: "https://brandops.site/terms" },
+  alternates: { canonical: "https://www.brandops.site/terms" },
 };
 
 export default function TermsPage() {

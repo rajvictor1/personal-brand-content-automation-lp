@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "BrandOps Resources | Guides & Cheat Sheets for Creators",
   description:
     "Free guides, cheat sheets, and templates to help solo founders and trainers build a review-first LinkedIn and newsletter content system with AI.",
-  alternates: { canonical: "https://brandops.site/resources" },
+  alternates: { canonical: "https://www.brandops.site/resources" },
 };
 const categories: ResourceCategory[] = ["Guides", "Templates", "Glossary", "Cheat Sheets"];
 const extraCategories = ["Videos"];

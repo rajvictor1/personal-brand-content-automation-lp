@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "AI Newsletter Generator | Cited Research to Inbox",
   description:
     "Generate cited newsletters from current research with BrandOps. Firecrawl finds sources, OpenAI writes the draft, and you review before sending.",
-  alternates: { canonical: "https://brandops.site/features/newsletter-workflow" },
+  alternates: { canonical: "https://www.brandops.site/features/newsletter-workflow" },
 };
 
 const features = [

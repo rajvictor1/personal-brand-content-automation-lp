@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Security Practices | How BrandOps Protects Your Data",
   description:
     "Learn how BrandOps keeps your data safe: HTTPS, server-side API keys, review-first controls, limited access, and honest security commitments.",
-  alternates: { canonical: "https://brandops.site/legal/security" },
+  alternates: { canonical: "https://www.brandops.site/legal/security" },
 };
 
 const practices = [

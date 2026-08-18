@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "BrandOps Video Tutorials | Learn LinkedIn Content Automation",
   description:
     "Watch tutorials on carousel generation, newsletter workflows, review-first publishing, and setting up the BrandOps content system.",
-  alternates: { canonical: "https://brandops.site/resources/videos" },
+  alternates: { canonical: "https://www.brandops.site/resources/videos" },
 };
 
 const videos = [

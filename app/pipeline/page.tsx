@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Content Pipeline | Research to LinkedIn Publish | BrandOps",
   description:
     "See the BrandOps pipeline: research with Firecrawl, draft with OpenAI, review everything, and publish to LinkedIn only when you approve.",
-  alternates: { canonical: "https://brandops.site/pipeline" },
+  alternates: { canonical: "https://www.brandops.site/pipeline" },
 };
 
 export default function PipelinePage() {

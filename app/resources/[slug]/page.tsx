@@ -27,11 +27,11 @@ export async function generateMetadata({ params }: ResourcePageProps): Promise<M
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `https://brandops.site/resources/${post.slug}` },
+    alternates: { canonical: `https://www.brandops.site/resources/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://brandops.site/resources/${post.slug}`,
+      url: `https://www.brandops.site/resources/${post.slug}`,
       type: "article",
       publishedTime: post.publishedAt,
       authors: [post.author],
@@ -68,21 +68,21 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
     author: {
       "@type": "Person",
       name: post.author,
-      url: "https://brandops.site",
+      url: "https://www.brandops.site",
     },
     publisher: {
       "@type": "Organization",
       name: "BrandOps",
       logo: {
         "@type": "ImageObject",
-        url: "https://brandops.site/logo.png",
+        url: "https://www.brandops.site/logo.png",
       },
     },
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://brandops.site/resources/${post.slug}`,
+      "@id": `https://www.brandops.site/resources/${post.slug}`,
     },
   };
 

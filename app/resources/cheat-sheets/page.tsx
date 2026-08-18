@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Free Content Cheat Sheets | LinkedIn & Newsletters | BrandOps",
   description:
     "Download quick-reference cheat sheets for LinkedIn carousels, AI newsletters, and review-first publishing. Save time and publish better content.",
-  alternates: { canonical: "https://brandops.site/resources/cheat-sheets" },
+  alternates: { canonical: "https://www.brandops.site/resources/cheat-sheets" },
 };
 
 export default function CheatSheetsPage() {

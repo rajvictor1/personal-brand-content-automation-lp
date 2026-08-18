@@ -25,18 +25,18 @@ export const metadata: Metadata = {
   title: "Meet Rajesh Kumar | Founder of BrandOps",
   description:
     "Rajesh Kumar is a demand-gen and GTM expert building BrandOps, a review-first AI content workspace for trainers, founders, and consultants.",
-  alternates: { canonical: "https://brandops.site/founder" },
+  alternates: { canonical: "https://www.brandops.site/founder" },
   openGraph: {
     title: "Meet Rajesh Kumar | Founder of BrandOps",
     description: "Demand-gen and GTM expert behind the BrandOps content workspace.",
-    url: "https://brandops.site/founder",
-    images: [{ url: "https://brandops.site/founder-rk.png", width: 512, height: 512, alt: "Rajesh Kumar" }],
+    url: "https://www.brandops.site/founder",
+    images: [{ url: "https://www.brandops.site/founder-rk.png", width: 512, height: 512, alt: "Rajesh Kumar" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Meet Rajesh Kumar | Founder of BrandOps",
     description: "Demand-gen and GTM expert behind the BrandOps content workspace.",
-    images: ["https://brandops.site/founder-rk.png"],
+    images: ["https://www.brandops.site/founder-rk.png"],
   },
 };
 

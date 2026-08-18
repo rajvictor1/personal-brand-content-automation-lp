@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "BrandOps Legal Hub | Privacy, Security & GDPR Policies",
   description:
     "Find BrandOps legal documents in one place: privacy policy, terms of service, GDPR, security practices, and data retention information.",
-  alternates: { canonical: "https://brandops.site/legal" },
+  alternates: { canonical: "https://www.brandops.site/legal" },
 };
 
 const legalSections = [

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Contact BrandOps | Get Help With Your Content Workflow",
   description:
     "Reach the BrandOps team for setup help, feature questions, or partnership inquiries. We read every message and reply with clear next steps.",
-  alternates: { canonical: "https://brandops.site/contact" },
+  alternates: { canonical: "https://www.brandops.site/contact" },
 };
 
 export default function ContactPage() {

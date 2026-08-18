@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "About BrandOps | AI Content Platform for Personal Brands",
   description:
     "BrandOps is a review-first content workspace that helps solo founders and trainers turn research into LinkedIn carousels and newsletters. You approve every post.",
-  alternates: { canonical: "https://brandops.site/about" },
+  alternates: { canonical: "https://www.brandops.site/about" },
 };
 
 const values = [

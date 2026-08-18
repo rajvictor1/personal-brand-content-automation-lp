@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "GDPR | BrandOps Data Protection & Your Privacy Rights",
   description:
     "Learn how BrandOps respects your GDPR rights. Request access, correction, or deletion of your personal data and understand how we process it.",
-  alternates: { canonical: "https://brandops.site/legal/gdpr" },
+  alternates: { canonical: "https://www.brandops.site/legal/gdpr" },
 };
 
 const rights = [

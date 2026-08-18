@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     "review-first publishing",
     "BrandOps",
   ],
-  alternates: { canonical: "https://brandops.site" },
+  alternates: { canonical: "https://www.brandops.site" },
   openGraph: {
     title: "BrandOps | Review-First Personal Brand Content Automation",
     description:
       "AI builds your content. You own the publish button. Generate LinkedIn carousels and cited newsletters from one research topic, then review and publish manually.",
-    url: "https://brandops.site",
+    url: "https://www.brandops.site",
     siteName: "BrandOps",
     locale: "en_US",
     type: "website",
@@ -36,7 +36,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: "BrandOps",
-      url: "https://brandops.site",
+      url: "https://www.brandops.site",
       description:
         "Review-first personal brand content automation for LinkedIn carousels, newsletters, and AI-assisted research.",
       inLanguage: "en",
@@ -45,8 +45,8 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "BrandOps",
-      url: "https://brandops.site",
-      logo: "https://brandops.site/logo.png",
+      url: "https://www.brandops.site",
+      logo: "https://www.brandops.site/logo.png",
       sameAs: [
         "https://www.linkedin.com/in/rajeshkumar-rajvictor/",
       ],
@@ -55,7 +55,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Rajesh Kumar",
-      url: "https://brandops.site",
+      url: "https://www.brandops.site",
       jobTitle: "Founder, BrandOps",
       sameAs: ["https://www.linkedin.com/in/rajeshkumar-rajvictor/"],
     },

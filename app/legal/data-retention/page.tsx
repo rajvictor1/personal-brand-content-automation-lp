@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Data Retention Policy | How Long BrandOps Keeps Data",
   description:
     "Read the BrandOps data retention policy. Learn how long we keep form submissions, generated content, logs, and how to request deletion.",
-  alternates: { canonical: "https://brandops.site/legal/data-retention" },
+  alternates: { canonical: "https://www.brandops.site/legal/data-retention" },
 };
 
 const retentionItems = [
