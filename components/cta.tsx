@@ -28,6 +28,12 @@ export function Cta() {
               Request early access
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
+            <Link
+              href="/demo"
+              className="inline-flex items-center gap-2 rounded-full border border-border/50 px-8 py-4 text-lg font-semibold text-foreground transition-colors hover:border-primary/30 hover:bg-primary/10"
+            >
+              Book a 30-minute demo
+            </Link>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
             <span className="flex items-center gap-1.5">

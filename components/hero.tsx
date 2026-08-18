@@ -82,10 +82,10 @@ export function Hero() {
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href="/pipeline"
+                href="/demo"
                 className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/50 px-8 py-4 text-lg font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-secondary"
               >
-                See how it works
+                Book a demo
               </Link>
             </div>
           </Reveal>

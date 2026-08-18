@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Calendar, Clock, User } from "lucide-react";
+import { ArrowRight, Calendar, Clock, Mail, User, Video } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { readFileSync } from "fs";
 import { join } from "path";
@@ -59,6 +59,12 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
   const related = resources
     .filter((r) => r.category === post.category && r.slug !== post.slug)
     .slice(0, 2);
+
+  const relatedWorkflows = [
+    { href: "/features/carousel-workflow", label: "LinkedIn carousel workflow", desc: "Research to five-slide carousel" },
+    { href: "/features/newsletter-workflow", label: "Newsletter workflow", desc: "Cited newsletter drafts" },
+    { href: "/features/review-first-publishing", label: "Review-first publishing", desc: "Approve before anything goes live" },
+  ];
 
   const structuredData: WithContext<Article> = {
     "@context": "https://schema.org",
@@ -169,6 +175,55 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
               </div>
             </Reveal>
           )}
+
+          <Reveal delay={0.5}>
+            <div className="mt-8 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 to-card/40 p-6">
+              <h3 className="text-xl font-semibold text-foreground">Try it in BrandOps</h3>
+              <p className="mt-2 text-muted-foreground">
+                These workflows are built into the BrandOps content workspace. Pick one to see how research turns into a ready-to-review asset.
+              </p>
+              <ul className="mt-4 space-y-3">
+                {relatedWorkflows.map((w) => (
+                  <li key={w.href}>
+                    <Link href={w.href} className="group inline-flex items-center font-medium text-primary hover:underline">
+                      {w.label}
+                      <span className="ml-2 text-xs text-muted-foreground">— {w.desc}</span>
+                      <ArrowRight className="ml-1 inline h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.6}>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <Link
+                href="/demo"
+                className="flex items-center gap-3 rounded-2xl border border-border/50 bg-card/40 p-5 transition-colors hover:border-primary/30 hover:bg-card/60"
+              >
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Video className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Book a demo</p>
+                  <p className="text-xs text-muted-foreground">30-minute walkthrough</p>
+                </div>
+              </Link>
+              <Link
+                href="/contact"
+                className="flex items-center gap-3 rounded-2xl border border-border/50 bg-card/40 p-5 transition-colors hover:border-primary/30 hover:bg-card/60"
+              >
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Mail className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Get early access</p>
+                  <p className="text-xs text-muted-foreground">Join the waitlist</p>
+                </div>
+              </Link>
+            </div>
+          </Reveal>
         </article>
       </div>
     </>

@@ -142,12 +142,20 @@ export default function ResourcesPage() {
             <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
               New guides, templates, and workflow playbooks are added regularly. Join early access to get them before anyone else.
             </p>
-            <Link
-              href="/contact"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
-            >
-              Join early access
-            </Link>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
+              >
+                Join early access
+              </Link>
+              <Link
+                href="/demo"
+                className="inline-flex items-center gap-2 rounded-full border border-border/50 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/30 hover:bg-primary/10"
+              >
+                Book a demo
+              </Link>
+            </div>
           </Reveal>
         </div>
       </section>
