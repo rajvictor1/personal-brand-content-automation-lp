@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.brandops.site";
   const staticPages = [
     { url: `${base}/`, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
+    { url: `${base}/features`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/features/carousel-workflow`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/features/newsletter-workflow`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/features/review-first-publishing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
@@ -14,6 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/resources`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/resources/videos`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/resources/cheat-sheets`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/resources/category/guides`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
+    { url: `${base}/resources/category/templates`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
+    { url: `${base}/resources/category/glossary`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
     { url: `${base}/pricing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/careers`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
