@@ -14,7 +14,7 @@ export interface ResourcePost {
 export const resources: ResourcePost[] = [
   {
     slug: "ai-workflows-linkedin-personal-brands",
-    title: "AI Tools for LinkedIn Personal Brands: 10 Workflows That Save Time in 2026",
+    title: "10 AI Workflows for LinkedIn Personal Brands in 2026",
     description:
       "Discover 10 practical AI workflows for LinkedIn personal brands, from research to carousel design to newsletter writing. Includes comparison tables and a decision guide.",
     category: "Guides",
@@ -25,7 +25,7 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "linkedin-carousel-newsletter-one-hour-workflow",
-    title: "How to turn one research topic into a LinkedIn carousel and newsletter in one hour",
+    title: "LinkedIn Carousel + Newsletter in One Hour",
     description:
       "A one-hour workflow to research once and publish both a LinkedIn carousel and a newsletter. Includes time-boxing, structure, and review.",
     category: "Guides",
@@ -135,7 +135,7 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "ai-safety-personal-brands-review-first-publishing",
-    title: "AI Safety for Personal Brands: Publish Fast Without Losing Control",
+    title: "AI Safety for Personal Brands: Publish Fast, Stay in Control",
     description:
       "A review-first framework for using AI in your personal brand content. Learn what can go wrong, how to review AI output, and how to stay brand-safe at speed.",
     category: "Guides",

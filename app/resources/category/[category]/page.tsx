@@ -16,9 +16,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const label = params.category.charAt(0).toUpperCase() + params.category.slice(1);
+  const labelLower = label.toLowerCase();
   return {
-    title: `${label} | Resources`,
-    description: `BrandOps ${label.toLowerCase()} for personal-brand builders.`,
+    title: `${label} for Personal Brands | BrandOps Resources`,
+    description: `Free ${labelLower}, playbooks, and workflow guides for solo founders and trainers building a review-first LinkedIn and newsletter content system.`,
+    alternates: { canonical: `https://www.brandops.site/resources/category/${params.category}` },
   };
 }
 

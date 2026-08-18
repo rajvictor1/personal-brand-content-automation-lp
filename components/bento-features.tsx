@@ -65,9 +65,9 @@ export function BentoFeatures() {
           <span className="mb-3 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
             Product
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Everything you need to stay visible
-          </h2>
+          </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
             One workspace. Two workflows. Full editorial control.
           </p>
