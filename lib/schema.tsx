@@ -3,6 +3,7 @@ import {
   BreadcrumbList,
   CollectionPage,
   FAQPage,
+  ItemAvailability,
   Organization,
   Person,
   Product,
@@ -222,6 +223,33 @@ export function buildOffers(): WithContext<Product> {
         url: `${BRANDOPS_URL}/contact`,
       },
     ],
+  };
+}
+
+export function buildProduct(
+  name: string,
+  description: string,
+  url: string,
+  offer: { price: number; priceCurrency: string; availability: string }
+): WithContext<Product> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name,
+    description,
+    url,
+    brand: {
+      "@type": "Organization",
+      name: "BrandOps",
+      url: BRANDOPS_URL,
+    },
+    offers: {
+      "@type": "Offer",
+      price: offer.price.toString(),
+      priceCurrency: offer.priceCurrency,
+      availability: offer.availability as ItemAvailability,
+      url,
+    },
   };
 }
 
