@@ -17,6 +17,7 @@ export interface Webinar {
   calendlyLink: string;
   replayLink?: string;
   ctaText: string;
+  formWebinarLabel?: string;
   learningPoints: string[];
   audience: string[];
   agenda: { title: string; description: string }[];
@@ -44,6 +45,7 @@ export const webinars: Webinar[] = [
     googleMeetLink: "https://meet.google.com/hwj-gpgy-ggk",
     calendlyLink: "https://calendly.com/rkrajeshk2018/brandops-strategy-call",
     ctaText: "Save My Seat — Free Live Training",
+    formWebinarLabel: "September 10: Personal Brand Content System",
     learningPoints: [
       "Stop starting from a blank page every morning.",
       "Produce 30 days of content from one 90-minute founder session.",
@@ -109,10 +111,11 @@ export const webinars: Webinar[] = [
     timezone: "IST",
     duration: "60 min + Q&A",
     status: "upcoming",
-    registrationFormUrl: "https://forms.gle/PLACEHOLDER_OCTOBER_WEBINAR",
-    googleMeetLink: "https://meet.google.com/PLACEHOLDER",
+    registrationFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdJUmDDO5jbDUG5XRG6m671DIJr7tct5Qc1rUE7t4p6Dqihxw/viewform",
+    googleMeetLink: "https://meet.google.com/hwj-gpgy-ggk",
     calendlyLink: "https://calendly.com/rkrajeshk2018/content-repurposing-audit",
     ctaText: "Register Now — Free Live Training",
+    formWebinarLabel: "October 8: LinkedIn Content Repurposing Engine",
     learningPoints: [
       "Stop letting good ideas die after one post.",
       "Turn one long-form piece into 30+ micro-assets.",
@@ -178,10 +181,11 @@ export const webinars: Webinar[] = [
     timezone: "IST",
     duration: "60 min + Q&A",
     status: "upcoming",
-    registrationFormUrl: "https://forms.gle/PLACEHOLDER_NOVEMBER_WEBINAR",
-    googleMeetLink: "https://meet.google.com/PLACEHOLDER",
+    registrationFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdJUmDDO5jbDUG5XRG6m671DIJr7tct5Qc1rUE7t4p6Dqihxw/viewform",
+    googleMeetLink: "https://meet.google.com/hwj-gpgy-ggk",
     calendlyLink: "https://calendly.com/rkrajeshk2018/marketing-os-strategy-call",
     ctaText: "Register Now — Free Live Training",
+    formWebinarLabel: "November 12: Marketing Systems for Founders",
     learningPoints: [
       "Design marketing around your strengths, not someone else's playbook.",
       "Remove the marketing tasks you hate through automation and delegation.",
@@ -247,10 +251,11 @@ export const webinars: Webinar[] = [
     timezone: "IST",
     duration: "60 min + Q&A",
     status: "upcoming",
-    registrationFormUrl: "https://forms.gle/PLACEHOLDER_DECEMBER_WEBINAR",
-    googleMeetLink: "https://meet.google.com/PLACEHOLDER",
+    registrationFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdJUmDDO5jbDUG5XRG6m671DIJr7tct5Qc1rUE7t4p6Dqihxw/viewform",
+    googleMeetLink: "https://meet.google.com/hwj-gpgy-ggk",
     calendlyLink: "https://calendly.com/rkrajeshk2018/newsletter-conversion-audit",
     ctaText: "Register Now — Free Live Training",
+    formWebinarLabel: "December 10: Founder Newsletter That Converts",
     learningPoints: [
       "Turn subscribers into buyers with the right structure.",
       "Place your offer without feeling salesy.",
