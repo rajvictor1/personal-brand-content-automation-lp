@@ -273,7 +273,7 @@ export default function WebinarPage() {
                 <h2 className="text-3xl font-bold text-foreground">Save your seat before spots fill.</h2>
                 <p className="mt-3 text-muted-foreground">September 10, 2026 · 7:00 PM IST · Google Meet</p>
                 <div className="mt-8">
-                  <Link href="https://docs.google.com/forms/d/1y2DKXmeI4Jz6iOoqA5sCxr9xhEIYcdLZBrvvhz5u5mE/preview" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdJUmDDO5jbDUG5XRG6m671DIJr7tct5Qc1rUE7t4p6Dqihxw/viewform" target="_blank" rel="noopener noreferrer">
                     <Button size="lg" className="rounded-full bg-primary px-8 py-6 text-lg font-semibold text-primary-foreground hover:opacity-90">
                       Register Now — It is Free <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
