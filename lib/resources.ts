@@ -15,7 +15,7 @@ export interface ResourcePost {
 export const resources: ResourcePost[] = [
   {
     slug: "ai-newsletter-subject-line-formulas",
-    title: "AI Newsletter Subject Line Formulas That Get Opens",
+    title: "AI Newsletter Subject Lines That Get Opens",
     description:
       "14 AI newsletter subject line formulas with real examples. Increase open rates without sounding spammy or generic.",
     category: "Guides",
@@ -39,9 +39,9 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "ai-workflows-linkedin-personal-brands",
-    title: "10 AI Workflows for LinkedIn Personal Brands in 2026",
+    title: "10 AI Workflows for LinkedIn Personal Brands",
     description:
-      "Discover 10 practical AI workflows for LinkedIn personal brands, from research to carousel design to newsletter writing. Includes comparison tables and a decision guide.",
+      "Discover 10 practical AI workflows for LinkedIn personal brands, from research to carousel design and newsletter writing.",
     category: "Guides",
     publishedAt: "2026-08-05",
     updatedAt: "2026-08-05",

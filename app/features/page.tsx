@@ -9,7 +9,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "BrandOps Features | LinkedIn Carousels + Newsletters",
+  title: "BrandOps Features | LinkedIn + Newsletters",
   description:
     "Explore BrandOps features: AI research, LinkedIn carousel generation, cited newsletters, and review-first publishing.",
   alternates: { canonical: "https://www.brandops.site/features" },
