@@ -21,7 +21,7 @@ import {
 import { LeadCapture } from "@/components/lead-capture";
 
 export const metadata: Metadata = {
-  title: "LinkedIn Content System for Personal Brands | BrandOps",
+  title: "LinkedIn Content System | Personal Brands",
   description:
     "A complete LinkedIn content system for founders and trainers: research, carousel hooks, design, newsletter writing, and review-first publishing.",
   alternates: { canonical: "https://www.brandops.site/resources/linkedin-content-system" },
