@@ -12,6 +12,12 @@ import {
   WithContext,
 } from "schema-dts";
 
+function toISODate(date: string): string {
+  const d = new Date(date);
+  if (isNaN(d.getTime())) return date;
+  return d.toISOString();
+}
+
 export const BRANDOPS_URL = "https://www.brandops.site";
 export const LOGO_URL = `${BRANDOPS_URL}/logo.png`;
 export const OG_IMAGE_URL = `${BRANDOPS_URL}/og.png`;
@@ -131,8 +137,8 @@ export function buildArticle(
         url: LOGO_URL,
       },
     },
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt,
+    datePublished: toISODate(post.publishedAt),
+    dateModified: toISODate(post.updatedAt),
     timeRequired: `PT${post.readingTime}M`,
     articleSection: post.category,
     keywords: post.category,
