@@ -15,10 +15,10 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "BrandOps Resources | Guides & Cheat Sheets for Creators",
+  title: "BrandOps Resources | Guides for Creators",
   description:
-    "Free guides, cheat sheets, and templates to help solo founders and trainers build a review-first LinkedIn and newsletter content system with AI.",
-  alternates: { canonical: `${BRANDOPS_URL}/resources` },
+    "Free guides, cheat sheets, and templates for solo founders and trainers building a review-first LinkedIn and newsletter content system.",
+  alternates: { canonical: "https://www.brandops.site/resources" },
 };
 const categories: ResourceCategory[] = ["Guides", "Templates", "Glossary", "Cheat Sheets"];
 const extraCategories = ["Videos", "Webinars"];

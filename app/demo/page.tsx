@@ -8,10 +8,10 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Book a BrandOps Demo | 30-Min Personalized Walkthrough",
+  title: "Book a BrandOps Demo | 30-Min Walkthrough",
   description:
-    "Book a 30-minute demo with BrandOps. See how AI turns research into LinkedIn carousels and newsletters, and how review-first publishing keeps you in control.",
-  alternates: { canonical: `${BRANDOPS_URL}/demo` },
+    "Book a 30-minute demo with BrandOps. See how AI turns research into LinkedIn carousels and newsletters.",
+  alternates: { canonical: "https://www.brandops.site/demo" },
 };
 
 export default function DemoPage() {

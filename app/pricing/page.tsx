@@ -9,10 +9,10 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "BrandOps Pricing | Simple Plans for Personal Brands",
+  title: "BrandOps Pricing | Free and Operator Plans",
   description:
-    "Choose a BrandOps plan for AI-assisted LinkedIn carousels and newsletters. Start free or upgrade for more research, drafts, and support.",
-  alternates: { canonical: `${BRANDOPS_URL}/pricing` },
+    "Choose a BrandOps plan for AI-assisted LinkedIn carousels and newsletters. Start free or join the Operator waitlist.",
+  alternates: { canonical: "https://www.brandops.site/pricing" },
 };
 
 export default function PricingPage() {

@@ -14,9 +14,9 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "LinkedIn Carousel Generator | AI Research to 5 Slides",
+  title: "LinkedIn Carousel Generator | AI Research to Slides",
   description:
-    "Turn one research topic into a 5-slide LinkedIn carousel with BrandOps. Firecrawl finds current sources, OpenAI writes and designs every slide, you approve.",
+    "Turn one research topic into a 5-slide LinkedIn carousel with BrandOps.",
   alternates: { canonical: "https://www.brandops.site/features/carousel-workflow" },
 };
 

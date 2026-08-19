@@ -12,11 +12,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
-    default: "BrandOps",
+    default: "BrandOps | Review-First Personal Brand Content Automation",
     template: "%s | BrandOps",
   },
   description:
-    "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter, researched by Firecrawl, written by OpenAI, approved by you.",
+    "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter.",
   keywords: [
     "LinkedIn automation",
     "personal brand",
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "BrandOps",
-    title: "BrandOps",
+    title: "BrandOps | Review-First Personal Brand Content Automation",
     description:
-      "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter, researched by Firecrawl, written by OpenAI, approved by you.",
+      "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter.",
     url: "https://www.brandops.site",
     images: [
       {
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrandOps",
+    title: "BrandOps | Review-First Personal Brand Content Automation",
     description:
-      "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter, researched by Firecrawl, written by OpenAI, approved by you.",
+      "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter.",
     images: ["https://www.brandops.site/og.png"],
   },
   verification: {

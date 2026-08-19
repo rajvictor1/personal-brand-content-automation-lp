@@ -11,9 +11,9 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "About BrandOps | AI Content Platform for Personal Brands",
+  title: "About BrandOps | AI Content Workspace",
   description:
-    "BrandOps is a review-first content workspace that helps solo founders and trainers turn research into LinkedIn carousels and newsletters. You approve every post.",
+    "BrandOps is a review-first content workspace that turns one research topic into a LinkedIn carousel and cited newsletter for solo founders and trainers.",
   alternates: { canonical: "https://www.brandops.site/about" },
 };
 

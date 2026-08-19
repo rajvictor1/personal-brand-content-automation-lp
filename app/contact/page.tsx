@@ -11,10 +11,10 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Contact BrandOps | Get Help With Your Content Workflow",
+  title: "Contact BrandOps | Content Workflow Help",
   description:
-    "Reach the BrandOps team for setup help, feature questions, or partnership inquiries. We read every message and reply with clear next steps.",
-  alternates: { canonical: `${BRANDOPS_URL}/contact` },
+    "Reach the BrandOps team for setup help, feature questions, or partnership inquiries.",
+  alternates: { canonical: "https://www.brandops.site/contact" },
 };
 
 export default function ContactPage() {

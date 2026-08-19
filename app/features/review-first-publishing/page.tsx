@@ -13,9 +13,9 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Review-First Publishing | Approve Before LinkedIn Posts",
+  title: "Review-First Publishing | Approve LinkedIn Posts",
   description:
-    "BrandOps never auto-publishes. Review every slide, paragraph, citation, and visual before sending a newsletter or posting to LinkedIn from your workspace.",
+    "BrandOps never auto-publishes. Review every slide, paragraph, citation, and visual before publishing.",
   alternates: { canonical: "https://www.brandops.site/features/review-first-publishing" },
 };
 

@@ -123,9 +123,9 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "best-ai-tools-linkedin-carousels-newsletters-2026",
-    title: "Best AI LinkedIn Carousel Generator and Newsletter Tools in 2026",
+    title: "Best AI LinkedIn Carousel Generator Tools in 2026",
     description:
-      "Discover the best AI LinkedIn carousel generator and newsletter tools for 2026. Compare features, pricing, review control, and find the right fit for your personal brand.",
+      "Compare the best AI LinkedIn carousel generator and newsletter tools for 2026. Review features, pricing, and publishing control for personal brands.",
     category: "Guides",
     publishedAt: "2026-08-12",
     updatedAt: "2026-08-12",
