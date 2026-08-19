@@ -2,6 +2,15 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ShieldCheck, Eye, Lock, CheckCircle, AlertTriangle, Zap, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/animations";
+import { WithContext, Thing } from "schema-dts";
+import {
+  BRANDOPS_URL,
+  buildBreadcrumbList,
+  buildFAQPage,
+  buildService,
+  buildWebPage,
+  renderSchemas,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Review-First Publishing | Approve Before LinkedIn Posts",
@@ -63,8 +72,32 @@ const faq = [
 ];
 
 export default function ReviewFirstPublishingPage() {
+  const url = `${BRANDOPS_URL}/features/review-first-publishing`;
+  const breadcrumb = buildBreadcrumbList([
+    { name: "Home", url: BRANDOPS_URL },
+    { name: "Features", url: `${BRANDOPS_URL}/features` },
+    { name: "Review-first publishing", url },
+  ]);
+  const faqSchema = buildFAQPage(faq);
+  const schemas: WithContext<Thing>[] = [
+    buildService(
+      "Review-First Publishing",
+      "Review every slide, paragraph, citation, and visual before sending a newsletter or posting to LinkedIn from your workspace.",
+      url
+    ),
+    buildWebPage(
+      "Review-First Publishing | Approve Before LinkedIn Posts",
+      "BrandOps never auto-publishes. Review every slide, paragraph, citation, and visual before publishing.",
+      url
+    ),
+    breadcrumb,
+  ];
+  if (faqSchema) schemas.push(faqSchema);
+
   return (
-    <div className="relative">
+    <>
+      {renderSchemas(schemas)}
+      <div className="relative">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
       </div>
@@ -135,5 +168,6 @@ export default function ReviewFirstPublishingPage() {
         </Reveal>
       </section>
     </div>
+    </>
   );
 }

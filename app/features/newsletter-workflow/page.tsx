@@ -2,6 +2,15 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Search, FileText, ImageIcon, MailCheck, ShieldCheck, Zap, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/animations";
+import { WithContext, Thing } from "schema-dts";
+import {
+  BRANDOPS_URL,
+  buildBreadcrumbList,
+  buildFAQPage,
+  buildService,
+  buildWebPage,
+  renderSchemas,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "AI Newsletter Generator | Cited Research to Inbox",
@@ -63,8 +72,32 @@ const faq = [
 ];
 
 export default function NewsletterWorkflowPage() {
+  const url = `${BRANDOPS_URL}/features/newsletter-workflow`;
+  const breadcrumb = buildBreadcrumbList([
+    { name: "Home", url: BRANDOPS_URL },
+    { name: "Features", url: `${BRANDOPS_URL}/features` },
+    { name: "Newsletter workflow", url },
+  ]);
+  const faqSchema = buildFAQPage(faq);
+  const schemas: WithContext<Thing>[] = [
+    buildService(
+      "AI Newsletter Generator",
+      "Generate cited newsletters from current research with bounded sources, structured drafts, and review-before-send controls.",
+      url
+    ),
+    buildWebPage(
+      "AI Newsletter Generator | Cited Research to Inbox",
+      "Generate cited newsletters from current research with BrandOps.",
+      url
+    ),
+    breadcrumb,
+  ];
+  if (faqSchema) schemas.push(faqSchema);
+
   return (
-    <div className="relative">
+    <>
+      {renderSchemas(schemas)}
+      <div className="relative">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
       </div>
@@ -135,5 +168,6 @@ export default function NewsletterWorkflowPage() {
         </Reveal>
       </section>
     </div>
+    </>
   );
 }

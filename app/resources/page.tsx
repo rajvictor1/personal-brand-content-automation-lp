@@ -5,12 +5,19 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Reveal } from "@/components/animations";
 import { resources, ResourcePost, ResourceCategory } from "@/lib/resources";
+import {
+  BRANDOPS_URL,
+  buildBreadcrumbList,
+  buildCollectionPage,
+  buildOrganization,
+  renderSchemas,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "BrandOps Resources | Guides & Cheat Sheets for Creators",
   description:
     "Free guides, cheat sheets, and templates to help solo founders and trainers build a review-first LinkedIn and newsletter content system with AI.",
-  alternates: { canonical: "https://www.brandops.site/resources" },
+  alternates: { canonical: `${BRANDOPS_URL}/resources` },
 };
 const categories: ResourceCategory[] = ["Guides", "Templates", "Glossary", "Cheat Sheets"];
 const extraCategories = ["Videos"];
@@ -53,9 +60,26 @@ function ResourceCard({ post }: { post: ResourcePost }) {
 export default function ResourcesPage() {
   const featured = resources[0];
   const rest = resources.slice(1);
+  const url = `${BRANDOPS_URL}/resources`;
+  const itemUrls = resources.map((r) => `${BRANDOPS_URL}/resources/${r.slug}`);
+  const breadcrumb = buildBreadcrumbList([
+    { name: "Home", url: BRANDOPS_URL },
+    { name: "Resources", url },
+  ]);
 
   return (
-    <div className="relative">
+    <>
+      {renderSchemas([
+        buildOrganization(),
+        buildCollectionPage(
+          "BrandOps Resources",
+          "Free guides, cheat sheets, and templates for solo founders and trainers building a review-first LinkedIn and newsletter content system.",
+          url,
+          itemUrls
+        ),
+        breadcrumb,
+      ])}
+      <div className="relative">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
       </div>
@@ -160,5 +184,6 @@ export default function ResourcesPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

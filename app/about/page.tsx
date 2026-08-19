@@ -2,6 +2,13 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Target, Shield, Zap, Users } from "lucide-react";
 import { Reveal } from "@/components/animations";
+import {
+  BRANDOPS_URL,
+  buildBreadcrumbList,
+  buildOrganization,
+  buildWebPage,
+  renderSchemas,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About BrandOps | AI Content Platform for Personal Brands",
@@ -38,8 +45,25 @@ const values = [
 ];
 
 export default function AboutPage() {
+  const url = `${BRANDOPS_URL}/about`;
+  const breadcrumb = buildBreadcrumbList([
+    { name: "Home", url: BRANDOPS_URL },
+    { name: "About", url },
+  ]);
+  const schemas = [
+    buildOrganization(),
+    buildWebPage(
+      "About BrandOps",
+      "BrandOps is a review-first content workspace that helps solo founders and trainers turn research into LinkedIn carousels and newsletters.",
+      url
+    ),
+    breadcrumb,
+  ];
+
   return (
-    <div className="relative">
+    <>
+      {renderSchemas(schemas)}
+      <div className="relative">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
       </div>
@@ -95,5 +119,6 @@ export default function AboutPage() {
         </Reveal>
       </section>
     </div>
+    </>
   );
 }

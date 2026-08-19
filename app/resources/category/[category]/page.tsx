@@ -5,6 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Reveal } from "@/components/animations";
 import { resources, ResourcePost, ResourceCategory } from "@/lib/resources";
+import {
+  BRANDOPS_URL,
+  buildBreadcrumbList,
+  buildCollectionPage,
+  renderSchemas,
+} from "@/lib/schema";
 
 interface CategoryPageProps {
   params: { category: string };
@@ -20,7 +26,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   return {
     title: `${label} for Personal Brands | BrandOps Resources`,
     description: `Free ${labelLower}, playbooks, and workflow guides for solo founders and trainers building a review-first LinkedIn and newsletter content system.`,
-    alternates: { canonical: `https://www.brandops.site/resources/category/${params.category}` },
+    alternates: { canonical: `${BRANDOPS_URL}/resources/category/${params.category}` },
   };
 }
 
@@ -58,9 +64,26 @@ function ResourceCard({ post }: { post: ResourcePost }) {
 export default function CategoryPage({ params }: CategoryPageProps) {
   const category = params.category.charAt(0).toUpperCase() + params.category.slice(1) as ResourceCategory;
   const filtered = resources.filter((r) => r.category === category);
+  const url = `${BRANDOPS_URL}/resources/category/${params.category}`;
+  const itemUrls = filtered.map((r) => `${BRANDOPS_URL}/resources/${r.slug}`);
+  const breadcrumb = buildBreadcrumbList([
+    { name: "Home", url: BRANDOPS_URL },
+    { name: "Resources", url: `${BRANDOPS_URL}/resources` },
+    { name: category, url },
+  ]);
 
   return (
-    <div className="relative">
+    <>
+      {renderSchemas([
+        buildCollectionPage(
+          `${category} for Personal Brands`,
+          `Free ${category.toLowerCase()}, playbooks, and workflow guides for solo founders and trainers building a review-first LinkedIn and newsletter content system.`,
+          url,
+          itemUrls
+        ),
+        breadcrumb,
+      ])}
+      <div className="relative">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
       </div>
@@ -122,5 +145,6 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         </div>
       </section>
     </div>
+    </>
   );
 }

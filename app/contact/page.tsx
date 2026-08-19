@@ -2,17 +2,40 @@ import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/animations";
 import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
+import {
+  BRANDOPS_URL,
+  buildBreadcrumbList,
+  buildOrganization,
+  buildWebPage,
+  renderSchemas,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Contact BrandOps | Get Help With Your Content Workflow",
   description:
     "Reach the BrandOps team for setup help, feature questions, or partnership inquiries. We read every message and reply with clear next steps.",
-  alternates: { canonical: "https://www.brandops.site/contact" },
+  alternates: { canonical: `${BRANDOPS_URL}/contact` },
 };
 
 export default function ContactPage() {
+  const url = `${BRANDOPS_URL}/contact`;
+  const breadcrumb = buildBreadcrumbList([
+    { name: "Home", url: BRANDOPS_URL },
+    { name: "Contact", url },
+  ]);
+
   return (
-    <section className="py-24">
+    <>
+      {renderSchemas([
+        buildOrganization(),
+        buildWebPage(
+          "Contact BrandOps",
+          "Reach the BrandOps team for setup help, feature questions, or partnership inquiries.",
+          url
+        ),
+        breadcrumb,
+      ])}
+      <section className="py-24">
       <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-10 text-center">
           <Badge
@@ -36,5 +59,6 @@ export default function ContactPage() {
         </Reveal>
       </div>
     </section>
+    </>
   );
 }

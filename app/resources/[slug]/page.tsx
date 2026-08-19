@@ -10,7 +10,14 @@ import { Separator } from "@/components/ui/separator";
 import { Reveal } from "@/components/animations";
 import { getResourceBySlug, resources } from "@/lib/resources";
 import { components } from "@/components/mdx-components";
-import { Article, FAQPage, WithContext } from "schema-dts";
+import {
+  BRANDOPS_URL,
+  buildArticle,
+  buildBreadcrumbList,
+  buildFAQPage,
+  buildWebPage,
+  renderSchemas,
+} from "@/lib/schema";
 
 interface ResourcePageProps {
   params: { slug: string };
@@ -39,23 +46,14 @@ function extractFaqs(source: string): Array<{ question: string; answer: string }
   return faqs.slice(0, 8);
 }
 
-function buildFaqSchema(
-  post: { title: string; slug: string; description: string },
-  faqs: Array<{ question: string; answer: string }>
-): WithContext<FAQPage> | null {
-  if (faqs.length === 0) return null;
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: f.answer,
-      },
-    })),
-  };
+function countWords(source: string): number {
+  const text = source
+    .replace(/```[\s\S]*?```/g, "")
+    .replace(/`[^`]*`/g, "")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[#*_\-|`]/g, "")
+    .trim();
+  return text.split(/\s+/).filter(Boolean).length;
 }
 
 export async function generateStaticParams() {
@@ -76,6 +74,7 @@ export async function generateMetadata({ params }: ResourcePageProps): Promise<M
       url: `https://www.brandops.site/resources/${post.slug}`,
       type: "article",
       publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
       authors: [post.author],
       tags: [post.category],
     },
@@ -96,7 +95,8 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
   if (!post) return notFound();
 
   const filePath = join(process.cwd(), "content/resources", `${post.slug}.mdx`);
-  const source = stripFrontmatter(readFileSync(filePath, "utf-8"));
+  const rawSource = readFileSync(filePath, "utf-8");
+  const source = stripFrontmatter(rawSource);
 
   const related = resources
     .filter((r) => r.category === post.category && r.slug !== post.slug)
@@ -108,45 +108,26 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
     { href: "/features/review-first-publishing", label: "Review-first publishing", desc: "Approve before anything goes live" },
   ];
 
-  const structuredData: WithContext<Article> = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    author: {
-      "@type": "Person",
-      name: post.author,
-      url: "https://github.com/rajvictor1",
-      sameAs: ["https://github.com/rajvictor1"],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "BrandOps",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.brandops.site/logo.png",
-      },
-    },
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://www.brandops.site/resources/${post.slug}`,
-    },
-  };
+  const wordCount = countWords(source);
+  const articleUrl = `${BRANDOPS_URL}/resources/${post.slug}`;
+  const breadcrumb = buildBreadcrumbList([
+    { name: "Home", url: BRANDOPS_URL },
+    { name: "Resources", url: `${BRANDOPS_URL}/resources` },
+    { name: post.title, url: articleUrl },
+  ]);
 
+  const articleSchema = buildArticle(post, wordCount);
   const faqs = FAQ_POSTS.includes(post.slug) ? extractFaqs(source) : [];
-  const faqSchema = buildFaqSchema(post, faqs);
-  const ldJson = faqSchema
-    ? JSON.stringify([structuredData, faqSchema])
-    : JSON.stringify(structuredData);
+  const faqSchema = buildFAQPage(faqs);
+  const webPageSchema = buildWebPage(post.title, post.description, articleUrl);
+
+  const schemas = faqSchema
+    ? [webPageSchema, articleSchema, breadcrumb, faqSchema]
+    : [webPageSchema, articleSchema, breadcrumb];
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: ldJson }}
-      />
+      {renderSchemas(schemas)}
       <div className="relative">
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>

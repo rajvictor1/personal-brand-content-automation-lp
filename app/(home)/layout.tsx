@@ -1,5 +1,12 @@
 import { Metadata } from "next";
-import { Person, Organization, WebSite, WithContext } from "schema-dts";
+import {
+  BRANDOPS_URL,
+  buildBreadcrumbList,
+  buildOrganization,
+  buildPerson,
+  buildWebPage,
+  renderSchemas,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "BrandOps | Review-First Personal Brand Content Automation",
@@ -12,12 +19,12 @@ export const metadata: Metadata = {
     "review-first publishing",
     "BrandOps",
   ],
-  alternates: { canonical: "https://www.brandops.site" },
+  alternates: { canonical: BRANDOPS_URL },
   openGraph: {
     title: "BrandOps | Review-First Personal Brand Content Automation",
     description:
       "AI builds your content. You own the publish button. Generate LinkedIn carousels and cited newsletters from one research topic, then review and publish manually.",
-    url: "https://www.brandops.site",
+    url: BRANDOPS_URL,
     siteName: "BrandOps",
     locale: "en_US",
     type: "website",
@@ -31,45 +38,20 @@ export const metadata: Metadata = {
 };
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
-  const structuredData: WithContext<WebSite | Organization | Person>[] = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "BrandOps",
-      url: "https://www.brandops.site",
-      description:
-        "Review-first personal brand content automation for LinkedIn carousels, newsletters, and AI-assisted research.",
-      inLanguage: "en",
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "BrandOps",
-      url: "https://www.brandops.site",
-      logo: "https://www.brandops.site/logo.png",
-      sameAs: [
-        "https://www.linkedin.com/in/rajeshkumar-rajvictor/",
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Rajesh Kumar",
-      "url": "https://github.com/rajvictor1",
-      "jobTitle": "Founder, BrandOps",
-      "sameAs": ["https://github.com/rajvictor1"],
-    },
+  const schemas = [
+    buildOrganization(),
+    buildPerson(),
+    buildBreadcrumbList([{ name: "Home", url: BRANDOPS_URL }]),
+    buildWebPage(
+      "BrandOps",
+      "Review-first personal brand content automation for LinkedIn carousels, newsletters, and AI-assisted research.",
+      BRANDOPS_URL
+    ),
   ];
 
   return (
     <>
-      {structuredData.map((data, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-        />
-      ))}
+      {renderSchemas(schemas)}
       {children}
     </>
   );
