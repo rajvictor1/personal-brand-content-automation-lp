@@ -34,9 +34,9 @@ export default function HomePage() {
       <ProblemSolution />
       <FeatureGrid />
       <Walkthrough />
-      <Pipeline />
+      <Pipeline headingLevel="h2" />
       <CaseStudy />
-      <PricingCards />
+      <PricingCards headingLevel="h2" />
       <Testimonials />
       <Faq />
       <Cta />

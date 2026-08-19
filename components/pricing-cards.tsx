@@ -43,7 +43,12 @@ const plans = [
   },
 ];
 
-export function PricingCards() {
+interface PricingCardsProps {
+  headingLevel?: "h1" | "h2";
+}
+
+export function PricingCards({ headingLevel = "h1" }: PricingCardsProps) {
+  const HeadingTag = headingLevel;
   return (
     <section className="py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -54,9 +59,9 @@ export function PricingCards() {
           >
             Pricing
           </Badge>
-          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <HeadingTag className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Simple, operator-first pricing
-          </h1>
+          </HeadingTag>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
             Start free. Upgrade when you are ready to run the workflow at scale.
           </p>
