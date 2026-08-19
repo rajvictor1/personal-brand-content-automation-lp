@@ -116,7 +116,8 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
     author: {
       "@type": "Person",
       name: post.author,
-      url: "https://www.brandops.site",
+      url: "https://github.com/rajvictor1",
+      sameAs: ["https://github.com/rajvictor1"],
     },
     publisher: {
       "@type": "Organization",
@@ -185,7 +186,9 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
                 <User className="h-4 w-4" />
               </div>
               <div>
-                <p className="font-medium text-foreground">{post.author}</p>
+                <Link href="https://github.com/rajvictor1" target="_blank" rel="noopener noreferrer" className="font-medium text-foreground hover:text-primary hover:underline">
+                  {post.author}
+                </Link>
                 <p className="text-xs">{post.authorRole}</p>
               </div>
               <span className="ml-auto flex items-center gap-1">

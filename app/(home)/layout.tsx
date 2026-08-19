@@ -55,9 +55,9 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Rajesh Kumar",
-      url: "https://www.brandops.site",
-      jobTitle: "Founder, BrandOps",
-      sameAs: ["https://www.linkedin.com/in/rajeshkumar-rajvictor/"],
+      "url": "https://github.com/rajvictor1",
+      "jobTitle": "Founder, BrandOps",
+      "sameAs": ["https://github.com/rajvictor1"],
     },
   ];
 
