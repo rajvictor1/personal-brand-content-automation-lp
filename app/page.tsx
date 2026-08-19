@@ -7,6 +7,7 @@ import { Cta } from "@/components/cta";
 import { Testimonials } from "@/components/testimonials";
 import { Walkthrough } from "@/components/walkthrough";
 import { CaseStudy } from "@/components/case-study";
+import { ToolsGrid } from "@/components/tools-grid";
 import {
   BRANDOPS_URL,
   buildBreadcrumbList,
@@ -30,6 +31,7 @@ export default function HomePage() {
         ),
       ])}
       <Hero />
+      <ToolsGrid />
       <Outcomes />
       <ProblemSolution />
       <FeatureGrid />

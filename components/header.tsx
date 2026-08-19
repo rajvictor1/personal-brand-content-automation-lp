@@ -27,6 +27,9 @@ const nav = [
       { label: "Carousel workflow", href: "/features/carousel-workflow", description: "Research to LinkedIn carousel" },
       { label: "Newsletter workflow", href: "/features/newsletter-workflow", description: "Cited newsletter drafts" },
       { label: "Review-first publishing", href: "/features/review-first-publishing", description: "Approve before anything goes live" },
+      { label: "LinkedIn carousel generator", href: "/linkedin-carousel-generator", description: "Free AI carousel generator" },
+      { label: "AI newsletter generator", href: "/ai-newsletter-generator", description: "Free AI newsletter generator" },
+      { label: "LinkedIn automation tool", href: "/linkedin-automation-tool", description: "Automate LinkedIn content" },
     ],
   },
   {
