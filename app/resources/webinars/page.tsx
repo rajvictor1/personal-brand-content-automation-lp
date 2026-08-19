@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Reveal } from "@/components/animations";
+import { webinars, getUpcomingWebinars, getPastWebinars, Webinar } from "@/lib/webinars";
 import {
   BRANDOPS_URL,
   buildBreadcrumbList,
@@ -20,22 +21,53 @@ export const metadata: Metadata = {
   alternates: { canonical: `${BRANDOPS_URL}/resources/webinars` },
 };
 
-const webinars = [
-  {
-    slug: "personal-brand-content-system",
-    title: "How to Build a Personal Brand Content System That Runs 90% Without You",
-    description:
-      "Learn the 5-part BrandOps Content System to produce 30 days of content from one 90-minute founder session.",
-    date: "September 10, 2026",
-    time: "7:00 PM IST",
-    status: "Upcoming",
-    duration: "60 min + Q\u0026A",
-    href: "/webinar",
-  },
-];
+function WebinarCard({ webinar, isUpcoming }: { webinar: Webinar; isUpcoming: boolean }) {
+  return (
+    <Card className="group flex h-full flex-col border-border/50 bg-card/40 transition-all hover:border-primary/30 hover:bg-card/60">
+      <CardContent className="flex h-full flex-col p-6">
+        <div className="mb-4 flex items-center justify-between">
+          <Badge
+            variant="outline"
+            className={
+              isUpcoming
+                ? "border-green-500/30 bg-green-500/10 text-green-500"
+                : "border-primary/30 bg-primary/10 text-primary"
+            }
+          >
+            {isUpcoming ? "Upcoming" : "Replay Available"}
+          </Badge>
+          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+            <PlayCircle className="h-3 w-3" /> {webinar.duration}
+          </span>
+        </div>
+        <Link href={`/webinars/${webinar.slug}`} className="group-hover:text-primary">
+          <h3 className="text-xl font-semibold text-foreground">{webinar.title}</h3>
+        </Link>
+        <p className="mt-2 flex-1 text-sm text-muted-foreground">{webinar.description}</p>
+        <div className="mt-4 flex flex-col gap-1 text-xs text-muted-foreground">
+          <span className="flex items-center gap-1">
+            <Calendar className="h-3 w-3" /> {webinar.date}
+          </span>
+          <span className="flex items-center gap-1">
+            <Clock className="h-3 w-3" /> {webinar.time} {webinar.timezone}
+          </span>
+        </div>
+        <div className="mt-6">
+          <Link href={`/webinars/${webinar.slug}`}>
+            <Button variant="outline" className="w-full rounded-full border-primary/30 text-primary hover:bg-primary/10">
+              {isUpcoming ? "Register Now" : "Watch Replay"} <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
 
-export default function WebinarsPage() {
+export default function WebinarsListingPage() {
   const url = `${BRANDOPS_URL}/resources/webinars`;
+  const upcoming = getUpcomingWebinars();
+  const past = getPastWebinars();
 
   return (
     <>
@@ -45,7 +77,7 @@ export default function WebinarsPage() {
           "BrandOps Webinars",
           "Free live webinars on personal brand content systems, LinkedIn growth, and founder marketing.",
           url,
-          webinars.map((w) => `${BRANDOPS_URL}${w.href}`)
+          webinars.map((w) => `${BRANDOPS_URL}/webinars/${w.slug}`)
         ),
         buildBreadcrumbList([
           { name: "Home", url: BRANDOPS_URL },
@@ -83,50 +115,47 @@ export default function WebinarsPage() {
 
         <section className="pb-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Reveal delay={0.1}>
+              <div className="mb-8 flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                <h2 className="text-2xl font-bold text-foreground">Upcoming Webinars</h2>
+              </div>
+            </Reveal>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {webinars.map((webinar, i) => (
-                <Reveal key={webinar.slug} delay={0.1 * i}>
-                  <Card className="group flex h-full flex-col border-border/50 bg-card/40 transition-all hover:border-primary/30 hover:bg-card/60">
-                    <CardContent className="flex h-full flex-col p-6">
-                      <div className="mb-4 flex items-center justify-between">
-                        <Badge
-                          variant="outline"
-                          className={
-                            webinar.status === "Upcoming"
-                              ? "border-green-500/30 bg-green-500/10 text-green-500"
-                              : "border-primary/30 bg-primary/10 text-primary"
-                          }
-                        >
-                          {webinar.status}
-                        </Badge>
-                        <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                          <PlayCircle className="h-3 w-3" /> {webinar.duration}
-                        </span>
-                      </div>
-                      <Link href={webinar.href} className="group-hover:text-primary">
-                        <h3 className="text-xl font-semibold text-foreground">{webinar.title}</h3>
-                      </Link>
-                      <p className="mt-2 flex-1 text-sm text-muted-foreground">{webinar.description}</p>
-                      <div className="mt-4 flex flex-col gap-1 text-xs text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <Calendar className="h-3 w-3" /> {webinar.date}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="h-3 w-3" /> {webinar.time}
-                        </span>
-                      </div>
-                      <div className="mt-6">
-                        <Link href={webinar.href}>
-                          <Button variant="outline" className="w-full rounded-full border-primary/30 text-primary hover:bg-primary/10">
-                            {webinar.status === "Upcoming" ? "Register Now" : "Watch Replay"} <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </Link>
-                      </div>
+              {upcoming.length > 0 ? (
+                upcoming.map((webinar, i) => (
+                  <Reveal key={webinar.id} delay={0.1 * i}>
+                    <WebinarCard webinar={webinar} isUpcoming={true} />
+                  </Reveal>
+                ))
+              ) : (
+                <Reveal delay={0.1}>
+                  <Card className="border-border/50 bg-card/40">
+                    <CardContent className="p-6">
+                      <p className="text-muted-foreground">No upcoming webinars scheduled. Check back soon or watch our replays below.</p>
                     </CardContent>
                   </Card>
                 </Reveal>
-              ))}
+              )}
             </div>
+
+            {past.length > 0 && (
+              <>
+                <Reveal delay={0.1}>
+                  <div className="mb-8 mt-16 flex items-center gap-3">
+                    <div className="h-2 w-2 rounded-full bg-primary"></div>
+                    <h2 className="text-2xl font-bold text-foreground">Past Webinars & Replays</h2>
+                  </div>
+                </Reveal>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {past.map((webinar, i) => (
+                    <Reveal key={webinar.id} delay={0.1 * i}>
+                      <WebinarCard webinar={webinar} isUpcoming={false} />
+                    </Reveal>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </section>
       </div>
