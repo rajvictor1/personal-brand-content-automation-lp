@@ -39,8 +39,9 @@ const nav = [
     href: "/resources",
     type: "dropdown" as const,
     items: [
-      { label: "All resources", href: "/resources", description: "Guides, cheat sheets, and videos" },
+      { label: "All resources", href: "/resources", description: "Guides, webinars, cheat sheets, and videos" },
       { label: "Guides", href: "/resources/category/guides", description: "Step-by-step workflows" },
+      { label: "Webinars", href: "/resources/webinars", description: "Live trainings and replays" },
       { label: "Cheat Sheets", href: "/resources/cheat-sheets", description: "Quick-reference one-pagers" },
       { label: "Videos", href: "/resources/videos", description: "Tutorials and walkthroughs" },
     ],

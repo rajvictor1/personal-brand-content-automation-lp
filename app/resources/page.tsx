@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Calendar, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Reveal } from "@/components/animations";
 import { resources, ResourcePost, ResourceCategory } from "@/lib/resources";
@@ -20,11 +21,12 @@ export const metadata: Metadata = {
   alternates: { canonical: `${BRANDOPS_URL}/resources` },
 };
 const categories: ResourceCategory[] = ["Guides", "Templates", "Glossary", "Cheat Sheets"];
-const extraCategories = ["Videos"];
+const extraCategories = ["Videos", "Webinars"];
 
-function categoryHref(cat: ResourceCategory | "Videos"): string {
+function categoryHref(cat: ResourceCategory | "Videos" | "Webinars"): string {
   if (cat === "Cheat Sheets") return "/resources/cheat-sheets";
   if (cat === "Videos") return "/resources/videos";
+  if (cat === "Webinars") return "/resources/webinars";
   return `/resources/category/${cat.toLowerCase()}`;
 }
 
@@ -124,7 +126,7 @@ export default function ResourcesPage() {
               {extraCategories.map((cat) => (
                 <Link
                   key={cat}
-                  href={categoryHref(cat as "Videos")}
+                  href={categoryHref(cat as "Videos" | "Webinars")}
                   className="rounded-full border border-border/50 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:bg-primary/10"
                 >
                   {cat}
@@ -149,6 +151,38 @@ export default function ResourcesPage() {
                     <span>{new Date(featured.publishedAt).toLocaleDateString()}</span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.45}>
+            <div className="mb-12 rounded-2xl border border-border/50 bg-gradient-to-br from-accent/10 to-card/40 p-8">
+              <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <div className="flex-1">
+                  <Badge className="mb-3 border-primary/30 bg-primary/10 text-primary">Upcoming Webinar
+                  </Badge>
+                  <Link href="/webinar">
+                    <h2 className="text-2xl font-bold text-foreground hover:text-primary">
+                      How to Build a Personal Brand Content System That Runs 90% Without You
+                    </h2>
+                  </Link>
+                  <p className="mt-2 text-muted-foreground">
+                    Free live webinar for founders. Learn the 5-part BrandOps Content System and produce 30 days of content from one 90-minute session.
+                  </p>
+                  <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="h-4 w-4" /> September 10, 2026
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="h-4 w-4" /> 7:00 PM IST
+                    </span>
+                  </div>
+                </div>
+                <Link href="/webinar">
+                  <Button className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90">
+                    Register Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </Reveal>
