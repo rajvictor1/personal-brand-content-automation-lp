@@ -14,7 +14,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "AI LinkedIn Carousel Generator | Research to Slides",
+  title: "AI Carousel Generator | Research to Slides",
   description:
     "Turn one research topic into a 5-slide LinkedIn carousel with BrandOps.",
   alternates: { canonical: "https://www.brandops.site/features/carousel-workflow" },
