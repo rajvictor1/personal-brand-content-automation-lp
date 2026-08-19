@@ -22,7 +22,7 @@ import {
 import { LeadCapture } from "@/components/lead-capture";
 
 export const metadata: Metadata = {
-  title: "Free LinkedIn Carousel Generator | AI 5-Slide Drafts",
+  title: "Free LinkedIn Carousel Generator | AI Slides",
   description:
     "Generate cited, review-ready LinkedIn carousels from one research topic. AI finds sources, writes slides, and renders artwork. Free Solo plan.",
   alternates: { canonical: "https://www.brandops.site/linkedin-carousel-generator" },
