@@ -7,10 +7,28 @@ import { Cta } from "@/components/cta";
 import { Testimonials } from "@/components/testimonials";
 import { Walkthrough } from "@/components/walkthrough";
 import { CaseStudy } from "@/components/case-study";
+import {
+  BRANDOPS_URL,
+  buildBreadcrumbList,
+  buildOrganization,
+  buildPerson,
+  buildWebPage,
+  renderSchemas,
+} from "@/lib/schema";
 
 export default function HomePage() {
   return (
     <>
+      {renderSchemas([
+        buildOrganization(),
+        buildPerson(),
+        buildBreadcrumbList([{ name: "Home", url: BRANDOPS_URL }]),
+        buildWebPage(
+          "BrandOps",
+          "Review-first personal brand content automation for LinkedIn carousels, newsletters, and AI-assisted research.",
+          BRANDOPS_URL
+        ),
+      ])}
       <Hero />
       <Outcomes />
       <ProblemSolution />
