@@ -174,6 +174,38 @@ export default function LinkedInAutomationToolPage() {
           </div>
         </section>
 
+        <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">Automation that stays safe and useful</h2>
+          </Reveal>
+          <div className="grid gap-6 md:grid-cols-2">
+            <Reveal delay={0.1}>
+              <Link href="/resources/linkedin-automation-safety" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">LinkedIn automation safety guide</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What is safe, what is risky, and why review-first automation protects your account.</p>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <Link href="/resources/review-first-publishing-workflow" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Review-first publishing workflow</h3>
+                <p className="mt-2 text-sm text-muted-foreground">How to build a human approval gate that does not slow down your publishing cadence.</p>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <Link href="/resources/ai-workflows-linkedin-personal-brands" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">10 AI workflows for LinkedIn</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Practical workflows for research, drafting, design, and publishing review.</p>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.4}>
+              <Link href="/resources/linkedin-content-calendar-template" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">30-day content calendar</h3>
+                <p className="mt-2 text-sm text-muted-foreground">A ready-to-use calendar that keeps your automated workflow full of post ideas.</p>
+              </Link>
+            </Reveal>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
           <Reveal>
             <div className="rounded-2xl border border-border/50 bg-card/40 p-6 sm:p-8">

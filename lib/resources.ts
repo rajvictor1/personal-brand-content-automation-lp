@@ -181,6 +181,78 @@ export const resources: ResourcePost[] = [
     author: "Rajesh Kumar",
     authorRole: "Founder, BrandOps",
   },
+  {
+    slug: "linkedin-carousel-templates",
+    title: "LinkedIn Carousel Templates: 7 Ready-to-Use Frameworks",
+    description:
+      "Free LinkedIn carousel templates you can copy today. Seven proven frameworks for founders, coaches, and consultants with slide structure and examples.",
+    category: "Templates",
+    publishedAt: "2026-08-21",
+    updatedAt: "2026-08-21",
+    readingTime: 6,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "linkedin-carousel-size-specs-2026",
+    title: "LinkedIn Carousel Size and Specs 2026",
+    description:
+      "The exact LinkedIn carousel size, aspect ratio, file format, and slide count for 2026. Stop guessing and publish carousels that look professional.",
+    category: "Guides",
+    publishedAt: "2026-08-21",
+    updatedAt: "2026-08-21",
+    readingTime: 5,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "newsletter-examples-founders",
+    title: "Newsletter Examples for Founders: 5 Formats That Build Trust",
+    description:
+      "Five proven newsletter formats for founders, consultants, and coaches — with real examples, structure, and when to use each one.",
+    category: "Guides",
+    publishedAt: "2026-08-21",
+    updatedAt: "2026-08-21",
+    readingTime: 6,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "linkedin-content-calendar-template",
+    title: "LinkedIn Content Calendar Template: A 30-Day Plan",
+    description:
+      "Free LinkedIn content calendar template for founders and coaches. A 30-day plan with post types, hooks, and daily themes you can copy today.",
+    category: "Templates",
+    publishedAt: "2026-08-21",
+    updatedAt: "2026-08-21",
+    readingTime: 7,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "linkedin-automation-safety",
+    title: "LinkedIn Automation Safety: Stay in Control and Avoid Account Risk",
+    description:
+      "A practical guide to safe LinkedIn automation for founders, coaches, and consultants — plus the review-first approach that reduces risk.",
+    category: "Guides",
+    publishedAt: "2026-08-21",
+    updatedAt: "2026-08-21",
+    readingTime: 6,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "ai-linkedin-post-generator",
+    title: "AI LinkedIn Post Generator: Write Faster Without Losing Your Voice",
+    description:
+      "How to use an AI LinkedIn post generator the right way. Keep your voice, add real insight, and publish posts that feel human.",
+    category: "Guides",
+    publishedAt: "2026-08-21",
+    updatedAt: "2026-08-21",
+    readingTime: 6,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
 ];
 
 export function getResourceBySlug(slug: string): ResourcePost | undefined {

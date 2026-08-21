@@ -1,0 +1,55 @@
+Most SEOs are still optimizing for one keyword per page.
+
+Google has already moved on.
+
+Google now uses "query fan-out." One search gets split into 10+ related searches, and AI Mode / AI Overviews combine answers from the best pages across all of them.
+
+If you only target the head keyword, you are invisible.
+
+Here is exactly what I built for BrandOps.
+
+Keyword: "best AI LinkedIn carousel generator"
+
+Fan-out queries Google actually runs:
+• free linkedin carousel generator
+• AI carousel generator with citations
+• best carousel generator for founders
+• LinkedIn carousel design tool
+• carousel generator vs Canva
+• how to make LinkedIn carousels fast
+
+I did not guess these.
+
+I built a Python script that calls Gemini API with Google Search Grounding. It returns the exact sub-queries Google uses to build its AI answer.
+
+Here is the core prompt pattern:
+
+"Using Google Search Grounding, what sub-questions would you need to answer to give a complete response to: [main keyword]? List the exact search queries."
+
+Then I map every fan-out query to a BrandOps page.
+
+So instead of one page, I built a full topic cluster:
+
+→ /linkedin-carousel-generator (landing page)
+→ /resources/linkedin-carousel-design-framework
+→ /resources/linkedin-carousel-hook-formulas
+→ /resources/linkedin-carousel-cheat-sheet
+→ /resources/ai-workflows-linkedin-personal-brands
+
+Each page answers a different fan-out query. Each page links to the others. Google sees a complete topic, not a one-off article.
+
+This is how I approach SEO now:
+1. Find the main keyword
+2. Use Gemini API + Google Search Grounding to extract real fan-out queries
+3. Build or expand pages for each sub-question
+4. Internally link everything into a cluster
+5. Add schema, FAQ, and conversion paths
+
+Old SEO: one page, one keyword.
+New SEO: own the entire cluster.
+
+The sites that own the cluster get cited by AI. The rest get buried.
+
+If your SEO strategy still starts and ends with keyword volume, you are building for 2020, not 2026.
+
+#SEO #AISearch #QueryFanOut #GEO #ContentClusters #TechnicalSEO #LinkedInMarketing #BrandOps

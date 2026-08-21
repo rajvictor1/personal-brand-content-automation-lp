@@ -180,6 +180,38 @@ export default function LinkedInCarouselGeneratorPage() {
 
         <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
           <Reveal>
+            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">Everything you need to build LinkedIn carousels</h2>
+          </Reveal>
+          <div className="grid gap-6 md:grid-cols-2">
+            <Reveal delay={0.1}>
+              <Link href="/resources/linkedin-carousel-templates" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">7 carousel templates</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Copy-ready frameworks for lists, stories, comparisons, data breakdowns, and more.</p>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <Link href="/resources/linkedin-carousel-size-specs-2026" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Size & specs 2026</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Exact dimensions, aspect ratio, file format, and font size for professional carousels.</p>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <Link href="/resources/linkedin-carousel-hook-formulas" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Hook formulas</h3>
+                <p className="mt-2 text-sm text-muted-foreground">12 proven opening lines that stop the scroll and get more swipes.</p>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.4}>
+              <Link href="/resources/linkedin-carousel-design-framework-non-designers" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Design framework for non-designers</h3>
+                <p className="mt-2 text-sm text-muted-foreground">The 5-slide formula: structure, word counts, colors, and layout rules.</p>
+              </Link>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+          <Reveal>
             <h2 className="mb-8 text-center text-2xl font-bold text-foreground">BrandOps vs. doing it manually</h2>
           </Reveal>
           <div className="rounded-2xl border border-border/50 bg-card/40 p-6 sm:p-8">

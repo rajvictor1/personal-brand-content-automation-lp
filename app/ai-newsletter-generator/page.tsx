@@ -180,6 +180,38 @@ export default function AINewsletterGeneratorPage() {
 
         <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
           <Reveal>
+            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">Everything you need to write better newsletters</h2>
+          </Reveal>
+          <div className="grid gap-6 md:grid-cols-2">
+            <Reveal delay={0.1}>
+              <Link href="/resources/newsletter-examples-founders" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">5 newsletter examples for founders</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Proven formats: one-lesson, curated roundup, behind-the-scenes, cited research, and product breakdown.</p>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <Link href="/resources/ai-newsletter-subject-line-formulas" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Subject line formulas</h3>
+                <p className="mt-2 text-sm text-muted-foreground">14 AI newsletter subject line formulas with real examples that increase open rates.</p>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <Link href="/resources/how-to-write-cited-ai-newsletter" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">How to write a cited AI newsletter</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Structure, citation rules, and a pre-send checklist for newsletters that build trust.</p>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.4}>
+              <Link href="/resources/ai-newsletter-cheat-sheet" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Newsletter cheat sheet</h3>
+                <p className="mt-2 text-sm text-muted-foreground">One-page reference for structure, citations, subject lines, and pre-send checks.</p>
+              </Link>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+          <Reveal>
             <h2 className="mb-8 text-center text-2xl font-bold text-foreground">BrandOps vs. writing newsletters manually</h2>
           </Reveal>
           <div className="rounded-2xl border border-border/50 bg-card/40 p-6 sm:p-8">
