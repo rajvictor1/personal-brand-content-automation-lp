@@ -12,13 +12,6 @@ const testimonials = [
     role: "Founder, Meena Homeopath",
     initials: "DV",
   },
-  {
-    quote:
-      "Working with BrandOps helped us think about content more strategically. For a healthcare practice, communication needs to be clear, trustworthy, and patient-friendly. BrandOps helped us shape our ideas into content that feels professional, educational, and aligned with the values of Meena Homeopath.",
-    name: "Dr. Baijnath Prasad",
-    role: "Co-Founder, Meena Homeopath",
-    initials: "DB",
-  },
 ];
 
 export function Testimonials() {
@@ -37,7 +30,7 @@ export function Testimonials() {
           </p>
         </Reveal>
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="mx-auto max-w-3xl">
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={0.1 + i * 0.1}>
               <Card className="h-full border-border/50 bg-card/40 transition-all hover:border-primary/30 hover:bg-card/60">
