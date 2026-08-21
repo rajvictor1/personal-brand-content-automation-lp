@@ -1,4 +1,5 @@
 import { PricingCards } from "@/components/pricing-cards";
+import { Testimonials } from "@/components/testimonials";
 import { Metadata } from "next";
 import {
   BRANDOPS_URL,
@@ -35,6 +36,7 @@ export default function PricingPage() {
       ])}
       <div className="pt-16">
         <PricingCards />
+        <Testimonials />
       </div>
     </>
   );

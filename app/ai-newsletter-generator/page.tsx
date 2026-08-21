@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/animations";
 import { WithContext, Thing } from "schema-dts";
+import { Testimonials } from "@/components/testimonials";
 import {
   BRANDOPS_URL,
   buildBreadcrumbList,
@@ -236,6 +237,8 @@ export default function AINewsletterGeneratorPage() {
         <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
           <LeadCapture />
         </section>
+
+        <Testimonials />
 
         <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
           <Reveal>

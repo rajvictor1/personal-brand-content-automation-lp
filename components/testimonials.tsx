@@ -3,21 +3,22 @@
 import { Quote } from "lucide-react";
 import { Reveal } from "@/components/animations";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
 
-const founderQuote = {
-  quote:
-    "I built BrandOps because I was spending my weekends doing what should take minutes: finding current stories, writing carousel copy, designing slides, and drafting newsletters. I wanted speed without losing control. This is that workspace.",
-  name: "Rajesh Kumar",
-  role: "Founder, BrandOps",
-  avatar: "RK",
-};
-
-const placeholderSlots = [
-  "First user testimonial. Coming soon",
-  "Operator success story. Coming soon",
-  "Creator case study. Coming soon",
+const testimonials = [
+  {
+    quote:
+      "BrandOps helped us bring more structure and clarity to our digital presence. Instead of creating random content, we now have a more organized way to communicate our expertise, educate patients, and strengthen our brand message. The biggest value is that BrandOps understands how to turn professional knowledge into simple, useful content without losing the credibility and trust required in healthcare.",
+    name: "Dr. Vishal",
+    role: "Founder, Meena Homeopath",
+    initials: "DV",
+  },
+  {
+    quote:
+      "Working with BrandOps helped us think about content more strategically. For a healthcare practice, communication needs to be clear, trustworthy, and patient-friendly. BrandOps helped us shape our ideas into content that feels professional, educational, and aligned with the values of Meena Homeopath.",
+    name: "Dr. Baijnath Prasad",
+    role: "Co-Founder, Meena Homeopath",
+    initials: "DB",
+  },
 ];
 
 export function Testimonials() {
@@ -25,62 +26,44 @@ export function Testimonials() {
     <section className="border-y border-border/50 bg-muted/20 py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
-          <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
-            Voices
-          </Badge>
+          <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+            Customer voices
+          </span>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Built by an operator, for operators
+            Trusted by founders and operators
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Real user stories will appear here once early access users start sharing their results.
+            Real teams use BrandOps to turn expertise into consistent, trustworthy content.
           </p>
         </Reveal>
 
-        <div className="grid gap-6 lg:grid-cols-3">
-          <Reveal className="lg:col-span-1">
-            <Card className="h-full border-primary/30 bg-gradient-to-br from-primary/10 to-card/40">
-              <CardContent className="flex h-full flex-col justify-between p-6">
-                <div>
-                  <Quote className="h-8 w-8 text-primary/60" />
-                  <p className="mt-4 text-lg font-medium leading-relaxed text-foreground">
-                    {founderQuote.quote}
-                  </p>
-                </div>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
-                    {founderQuote.avatar}
-                  </div>
+        <div className="grid gap-6 lg:grid-cols-2">
+          {testimonials.map((t, i) => (
+            <Reveal key={t.name} delay={0.1 + i * 0.1}>
+              <Card className="h-full border-border/50 bg-card/40 transition-all hover:border-primary/30 hover:bg-card/60">
+                <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8">
                   <div>
-                    <div className="text-sm font-semibold text-foreground">{founderQuote.name}</div>
-                    <div className="text-xs text-muted-foreground">{founderQuote.role}</div>
+                    <Quote className="h-8 w-8 text-primary/60" />
+                    <p className="mt-4 text-lg font-medium leading-relaxed text-foreground">
+                      <span className="text-primary">&ldquo;</span>
+                    {t.quote}
+                    <span className="text-primary">&rdquo;</span>
+                    </p>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          </Reveal>
-
-          {placeholderSlots.map((slot, i) => (
-            <Reveal key={i} delay={0.1 + i * 0.1}>
-              <Card className="h-full border-dashed border-border/60 bg-card/20">
-                <CardContent className="flex h-full flex-col items-center justify-center p-6 text-center">
-                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-muted-foreground">
-                    {i + 2}
+                  <div className="mt-6 flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                      {t.initials}
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-foreground">{t.name}</div>
+                      <div className="text-xs text-muted-foreground">{t.role}</div>
+                    </div>
                   </div>
-                  <p className="text-sm text-muted-foreground">{slot}</p>
                 </CardContent>
               </Card>
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.3} className="mt-12 text-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-          >
-            Be the first to share your BrandOps story →
-          </Link>
-        </Reveal>
       </div>
     </section>
   );
