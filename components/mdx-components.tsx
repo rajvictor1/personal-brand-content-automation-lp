@@ -18,7 +18,41 @@ export function ResourceLink({ href, children }: { href: string; children: React
   );
 }
 
+export function Table({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="my-6 overflow-x-auto rounded-2xl border border-border/50 bg-card/40">
+      <table className="w-full border-collapse text-sm">{children}</table>
+    </div>
+  );
+}
+
+export function Thead({ children }: { children: React.ReactNode }) {
+  return <thead className="border-b border-border/50 bg-muted/30">{children}</thead>;
+}
+
+export function Tbody({ children }: { children: React.ReactNode }) {
+  return <tbody>{children}</tbody>;
+}
+
+export function Tr({ children }: { children: React.ReactNode }) {
+  return <tr className="border-b border-border/30 last:border-b-0">{children}</tr>;
+}
+
+export function Th({ children }: { children: React.ReactNode }) {
+  return <th className="px-4 py-3 text-left font-semibold text-foreground">{children}</th>;
+}
+
+export function Td({ children }: { children: React.ReactNode }) {
+  return <td className="px-4 py-3 align-top text-muted-foreground">{children}</td>;
+}
+
 export const components = {
   Callout,
   ResourceLink,
+  table: Table,
+  thead: Thead,
+  tbody: Tbody,
+  tr: Tr,
+  th: Th,
+  td: Td,
 };
