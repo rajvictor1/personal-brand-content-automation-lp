@@ -30,6 +30,9 @@ const nav = [
       { label: "LinkedIn carousel generator", href: "/linkedin-carousel-generator", description: "Free AI carousel generator" },
       { label: "AI newsletter generator", href: "/ai-newsletter-generator", description: "Free AI newsletter generator" },
       { label: "LinkedIn automation tool", href: "/linkedin-automation-tool", description: "Automate LinkedIn content" },
+      { label: "LinkedIn automation for coaches", href: "/linkedin-automation-tool-for-coaches", description: "Built for coaches" },
+      { label: "LinkedIn automation for consultants", href: "/linkedin-automation-tool-for-consultants", description: "Built for consultants" },
+      { label: "LinkedIn automation for SaaS founders", href: "/linkedin-automation-tool-for-saas-founders", description: "Built for SaaS founders" },
     ],
   },
   {
