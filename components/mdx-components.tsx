@@ -18,32 +18,32 @@ export function ResourceLink({ href, children }: { href: string; children: React
   );
 }
 
-export function Table({ children }: { children: React.ReactNode }) {
+export function Table({ children, ...props }: React.TableHTMLAttributes<HTMLTableElement>) {
   return (
     <div className="my-6 overflow-x-auto rounded-2xl border border-border/50 bg-card/40">
-      <table className="w-full border-collapse text-sm">{children}</table>
+      <table className="w-full border-collapse text-sm" {...props}>{children}</table>
     </div>
   );
 }
 
-export function Thead({ children }: { children: React.ReactNode }) {
-  return <thead className="border-b border-border/50 bg-muted/30">{children}</thead>;
+export function Thead({ children, ...props }: React.HTMLAttributes<HTMLTableSectionElement>) {
+  return <thead className="border-b border-border/50 bg-muted/30" {...props}>{children}</thead>;
 }
 
-export function Tbody({ children }: { children: React.ReactNode }) {
-  return <tbody>{children}</tbody>;
+export function Tbody({ children, ...props }: React.HTMLAttributes<HTMLTableSectionElement>) {
+  return <tbody {...props}>{children}</tbody>;
 }
 
-export function Tr({ children }: { children: React.ReactNode }) {
-  return <tr className="border-b border-border/30 last:border-b-0">{children}</tr>;
+export function Tr({ children, ...props }: React.HTMLAttributes<HTMLTableRowElement>) {
+  return <tr className="border-b border-border/30 last:border-b-0" {...props}>{children}</tr>;
 }
 
-export function Th({ children }: { children: React.ReactNode }) {
-  return <th className="px-4 py-3 text-left font-semibold text-foreground">{children}</th>;
+export function Th({ children, ...props }: React.ThHTMLAttributes<HTMLTableHeaderCellElement>) {
+  return <th className="px-4 py-3 text-left font-semibold text-foreground" {...props}>{children}</th>;
 }
 
-export function Td({ children }: { children: React.ReactNode }) {
-  return <td className="px-4 py-3 align-top text-muted-foreground">{children}</td>;
+export function Td({ children, ...props }: React.TdHTMLAttributes<HTMLTableDataCellElement>) {
+  return <td className="px-4 py-3 align-top text-muted-foreground" {...props}>{children}</td>;
 }
 
 export const components = {
