@@ -5,6 +5,7 @@ import { ArrowRight, Calendar, Clock, Mail, User, Video } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { readFileSync } from "fs";
 import { join } from "path";
+import remarkGfm from "remark-gfm";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Reveal } from "@/components/animations";
@@ -187,7 +188,7 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
 
           <Reveal delay={0.3}>
             <div className="prose prose-invert prose-lg max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-headings:tracking-tight prose-h1:mb-8 prose-h1:text-4xl prose-h1:leading-tight prose-h2:mt-14 prose-h2:mb-5 prose-h2:border-b prose-h2:border-border/50 prose-h2:pb-3 prose-h3:mt-10 prose-h3:mb-4 prose-p:mt-4 prose-p:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-ul:my-6 prose-ol:my-6 prose-li:my-2 prose-li:text-muted-foreground prose-li:leading-relaxed prose-blockquote:my-8 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:p-4 prose-blockquote:rounded-r-lg prose-table:my-8 prose-table:border-border prose-th:border-border prose-th:bg-muted/30 prose-th:p-3 prose-td:border-border prose-td:p-3 prose-img:rounded-xl">
-              <MDXRemote source={source} components={components} />
+              <MDXRemote source={source} components={components} options={{ parseFrontmatter: false, mdxOptions: { remarkPlugins: [remarkGfm] } }} />
             </div>
           </Reveal>
 
