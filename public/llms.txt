@@ -1,0 +1,40 @@
+# BrandOps
+
+## Description
+
+BrandOps is a review-first content workspace for solo operators, trainers, coaches, consultants, SaaS founders, and personal brands. It turns one research topic into a LinkedIn carousel and a cited newsletter, with a human approval gate before anything publishes.
+
+## Key pages
+
+- [BrandOps](https://www.brandops.site/): Review-first personal brand content automation for LinkedIn carousels, newsletters, and AI-assisted research.
+- [LinkedIn Carousel Generator](https://www.brandops.site/linkedin-carousel-generator): Generate cited, review-ready LinkedIn carousels from one research topic.
+- [AI Newsletter Generator](https://www.brandops.site/ai-newsletter-generator): Generate cited newsletters from current research with review-gated sending.
+- [LinkedIn Automation Tool](https://www.brandops.site/linkedin-automation-tool): AI content workspace for founders and trainers.
+- [LinkedIn Automation Tool for Coaches](https://www.brandops.site/linkedin-automation-tool-for-coaches): AI content workflow built for coaches.
+- [LinkedIn Automation Tool for Consultants](https://www.brandops.site/linkedin-automation-tool-for-consultants): AI content workflow built for consultants.
+- [LinkedIn Automation Tool for SaaS Founders](https://www.brandops.site/linkedin-automation-tool-for-saas-founders): AI content workflow built for SaaS founders.
+- [Pricing](https://www.brandops.site/pricing): Free Solo plan and Operator plan details.
+- [Book a Demo](https://www.brandops.site/demo): 30-minute BrandOps walkthrough.
+
+## Resources
+
+- [LinkedIn Content System](https://www.brandops.site/resources/linkedin-content-system): A complete LinkedIn content system for founders and trainers.
+- [Best AI Tools for LinkedIn Content 2026](https://www.brandops.site/resources/best-ai-tools-linkedin-carousels-newsletters-2026): Complete comparison of AI tools for LinkedIn carousels and newsletters.
+- [LinkedIn Carousel Templates](https://www.brandops.site/resources/linkedin-carousel-templates): Seven ready-to-use carousel frameworks.
+- [LinkedIn Carousel Size and Specs 2026](https://www.brandops.site/resources/linkedin-carousel-size-specs-2026): Exact dimensions and format recommendations.
+- [What Is Query Fan-Out?](https://www.brandops.site/resources/what-is-query-fan-out): How Google AI search splits one query into multiple sub-queries.
+- [What Is GEO Search?](https://www.brandops.site/resources/what-is-geo-search): Generative engine optimization explained.
+- [What Is Cited AI Content?](https://www.brandops.site/resources/what-is-cited-ai-content): Building trust with source-backed AI writing.
+- [What Is Review-First Publishing?](https://www.brandops.site/resources/what-is-review-first-publishing): Safe AI content workflow with human approval.
+- [What Is a LinkedIn Carousel?](https://www.brandops.site/resources/what-is-a-linkedin-carousel): Complete guide to LinkedIn carousel posts.
+
+## Contact
+
+- [Contact](https://www.brandops.site/contact): Get help with your BrandOps content workflow.
+- [Founder](https://www.brandops.site/founder): About Rajesh Kumar, founder of BrandOps.
+
+## Policies
+
+- [Terms of Service](https://www.brandops.site/terms)
+- [Privacy Policy](https://www.brandops.site/privacy)
+- [Legal Hub](https://www.brandops.site/legal)
