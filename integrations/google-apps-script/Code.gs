@@ -9,6 +9,9 @@ function doPost(event) {
     if (!expectedSecret || payload.secret !== expectedSecret) {
       return jsonResponse({ ok: false, error: "Unauthorized" });
     }
+    if (payload.type === "social_post") {
+      return saveSocialPost(payload);
+    }
     if (!payload.name || !isValidEmail(payload.email)) {
       return jsonResponse({ ok: false, error: "Invalid lead details" });
     }
@@ -43,6 +46,64 @@ function doPost(event) {
   } catch (error) {
     console.error(error);
     return jsonResponse({ ok: false, error: "Internal error" });
+  }
+}
+
+function saveSocialPost(payload) {
+  if (!payload.external_id || payload.brand !== "brandops") {
+    return jsonResponse({ ok: false, error: "Invalid social post" });
+  }
+  if (!Array.isArray(payload.platforms) || payload.platforms.length !== 1 ||
+      payload.platforms[0] !== "linkedin" ||
+      payload.approval_status !== "review_required") {
+    return jsonResponse({ ok: false, error: "Unsupported publishing configuration" });
+  }
+
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+    let sheet = spreadsheet.getSheetByName("Social Posts");
+    if (!sheet) {
+      sheet = spreadsheet.insertSheet("Social Posts");
+      sheet.appendRow([
+        "Received At", "External ID", "Brand", "Platforms", "Content",
+        "Image URL", "Image Brief", "Source URLs", "Scheduled At",
+        "Approval Status", "Publishing Status", "Platform Post ID", "Last Error",
+      ]);
+      sheet.setFrozenRows(1);
+    }
+
+    if (sheet.getLastRow() > 1) {
+      const existingIds = sheet.getRange(2, 2, sheet.getLastRow() - 1, 1)
+        .getDisplayValues().flat();
+      if (existingIds.includes(String(payload.external_id))) {
+        return jsonResponse({
+          ok: true,
+          duplicate: true,
+          status: "review_required",
+        });
+      }
+    }
+
+    sheet.appendRow([
+      new Date(),
+      sanitize(payload.external_id),
+      "brandops",
+      "linkedin",
+      sanitize(payload.content),
+      sanitize(payload.image_url || ""),
+      sanitize(payload.image_brief || ""),
+      sanitize((payload.source_urls || []).join("\n")),
+      sanitize(payload.scheduled_at),
+      "review_required",
+      "queued",
+      "",
+      "",
+    ]);
+    return jsonResponse({ ok: true, duplicate: false, status: "review_required" });
+  } finally {
+    lock.releaseLock();
   }
 }
 
