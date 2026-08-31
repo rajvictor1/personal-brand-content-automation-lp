@@ -12,6 +12,15 @@ function doPost(event) {
     if (payload.type === "social_post") {
       return saveSocialPost(payload);
     }
+    if (payload.type === "linkedin_connection") {
+      return saveLinkedInConnection(payload);
+    }
+    if (payload.type === "social_post_approve") {
+      return approveSocialPost(payload);
+    }
+    if (payload.type === "social_post_publish") {
+      return publishSocialPost(payload);
+    }
     if (!payload.name || !isValidEmail(payload.email)) {
       return jsonResponse({ ok: false, error: "Invalid lead details" });
     }
@@ -104,6 +113,108 @@ function saveSocialPost(payload) {
     return jsonResponse({ ok: true, duplicate: false, status: "review_required" });
   } finally {
     lock.releaseLock();
+  }
+}
+
+function saveLinkedInConnection(payload) {
+  if (!payload.access_token || !payload.person_id) {
+    return jsonResponse({ ok: false, error: "Invalid LinkedIn connection" });
+  }
+  const properties = PropertiesService.getScriptProperties();
+  properties.setProperties({
+    LINKEDIN_ACCESS_TOKEN: String(payload.access_token),
+    LINKEDIN_PERSON_ID: String(payload.person_id),
+    LINKEDIN_TOKEN_EXPIRES_AT: String(
+      Date.now() + Math.max(Number(payload.expires_in || 0) - 300, 0) * 1000
+    ),
+  });
+  return jsonResponse({ ok: true });
+}
+
+function findSocialPost(externalId) {
+  const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName("Social Posts");
+  if (!sheet || sheet.getLastRow() < 2) return null;
+  const ids = sheet.getRange(2, 2, sheet.getLastRow() - 1, 1).getDisplayValues().flat();
+  const index = ids.indexOf(String(externalId));
+  return index === -1 ? null : { sheet: sheet, row: index + 2 };
+}
+
+function approveSocialPost(payload) {
+  const post = findSocialPost(payload.external_id);
+  if (!post) return jsonResponse({ ok: false, error: "Post not found" });
+  if (post.sheet.getRange(post.row, 11).getDisplayValue() === "published") {
+    return jsonResponse({ ok: false, error: "Post already published" });
+  }
+  post.sheet.getRange(post.row, 10).setValue("approved");
+  post.sheet.getRange(post.row, 11).setValue("approved");
+  return jsonResponse({ ok: true, status: "approved" });
+}
+
+function publishSocialPost(payload) {
+  const post = findSocialPost(payload.external_id);
+  if (!post) return jsonResponse({ ok: false, error: "Post not found" });
+
+  const approval = post.sheet.getRange(post.row, 10).getDisplayValue();
+  const status = post.sheet.getRange(post.row, 11).getDisplayValue();
+  if (approval !== "approved") {
+    return jsonResponse({ ok: false, error: "Post is not approved" });
+  }
+  if (status === "published") {
+    return jsonResponse({
+      ok: true,
+      platform_post_id: post.sheet.getRange(post.row, 12).getDisplayValue(),
+    });
+  }
+
+  const properties = PropertiesService.getScriptProperties();
+  const accessToken = properties.getProperty("LINKEDIN_ACCESS_TOKEN");
+  const personId = properties.getProperty("LINKEDIN_PERSON_ID");
+  const expiresAt = Number(properties.getProperty("LINKEDIN_TOKEN_EXPIRES_AT") || 0);
+  if (!accessToken || !personId || Date.now() >= expiresAt) {
+    return jsonResponse({ ok: false, error: "LinkedIn connection is missing or expired" });
+  }
+
+  const content = post.sheet.getRange(post.row, 5).getDisplayValue();
+  try {
+    const response = UrlFetchApp.fetch("https://api.linkedin.com/rest/posts", {
+      method: "post",
+      contentType: "application/json",
+      headers: {
+        Authorization: "Bearer " + accessToken,
+        "Linkedin-Version": "202607",
+        "X-Restli-Protocol-Version": "2.0.0",
+      },
+      payload: JSON.stringify({
+        author: "urn:li:person:" + personId,
+        commentary: content,
+        visibility: "PUBLIC",
+        distribution: {
+          feedDistribution: "MAIN_FEED",
+          targetEntities: [],
+          thirdPartyDistributionChannels: [],
+        },
+        lifecycleState: "PUBLISHED",
+        isReshareDisabledByAuthor: false,
+      }),
+      muteHttpExceptions: true,
+    });
+    const code = response.getResponseCode();
+    const headers = response.getAllHeaders();
+    const postId = headers["x-restli-id"] || headers["X-RestLi-Id"] || "";
+    if (code < 200 || code >= 300 || !postId) {
+      const error = "LinkedIn returned " + code + ": " + response.getContentText().slice(0, 500);
+      post.sheet.getRange(post.row, 11).setValue("failed");
+      post.sheet.getRange(post.row, 13).setValue(sanitize(error));
+      return jsonResponse({ ok: false, error: error });
+    }
+    post.sheet.getRange(post.row, 11).setValue("published");
+    post.sheet.getRange(post.row, 12).setValue(String(postId));
+    post.sheet.getRange(post.row, 13).setValue("");
+    return jsonResponse({ ok: true, platform_post_id: String(postId) });
+  } catch (error) {
+    post.sheet.getRange(post.row, 11).setValue("failed");
+    post.sheet.getRange(post.row, 13).setValue(sanitize(error));
+    return jsonResponse({ ok: false, error: "LinkedIn publishing failed" });
   }
 }
 
