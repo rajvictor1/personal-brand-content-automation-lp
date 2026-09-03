@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 import { CookieConsent } from "@/components/cookie-consent";
 import { GoogleAnalyticsPageView, GoogleAnalyticsScripts } from "@/components/google-analytics";
+import { ChatWidget } from "@/components/chat-widget";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -96,6 +97,7 @@ export default function RootLayout({
         <Footer />
         <Toaster position="bottom-right" richColors />
         <CookieConsent />
+        <ChatWidget />
       </body>
     </html>
   );
