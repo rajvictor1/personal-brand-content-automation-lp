@@ -31,6 +31,9 @@ const FAQ_POSTS: string[] = [
   "ai-safety-personal-brands-review-first-publishing",
   "linkedin-carousel-hook-formulas",
   "ai-newsletter-subject-line-formulas",
+  "automate-linkedin-carousels-from-research",
+  "linkedin-carousel-newsletter-one-hour-workflow",
+  "review-first-publishing-workflow",
 ];
 
 function extractFaqs(source: string): Array<{ question: string; answer: string }> {
