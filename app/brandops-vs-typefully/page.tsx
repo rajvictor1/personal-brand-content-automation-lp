@@ -63,57 +63,62 @@ export default function BrandOpsVsTypefullyPage() {
   return (
     <>
       {renderSchemas(schemas)}
-      <main className="container-x py-20 sm:py-28">
-        <Reveal>
-          <span className="text-xs font-semibold text-primary uppercase tracking-wider">Comparison</span>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h1 className="mt-3 max-w-4xl text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            BrandOps vs Typefully:{" "}
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-create vs schedule
-            </span>
-          </h1>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            Typefully is excellent for scheduling text posts across LinkedIn, X, Threads, and Bluesky.
-            BrandOps is for operators who want AI to research, draft, and design carousels and newsletters
-            while keeping full approval control.
-          </p>
-        </Reveal>
+      <main className="container-x mx-auto py-20 sm:py-28">
+        <div className="text-center">
+          <Reveal>
+            <span className="text-xs font-semibold text-primary uppercase tracking-wider">Comparison</span>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h1 className="mx-auto mt-3 max-w-4xl text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              BrandOps vs Typefully:{" "}
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                create vs schedule
+              </span>
+            </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+              Typefully is excellent for scheduling text posts across LinkedIn, X, Threads, and Bluesky.
+              BrandOps is for operators who want AI to research, draft, and design carousels and newsletters
+              while keeping full approval control.
+            </p>
+          </Reveal>
+        </div>
 
         <section className="mt-16 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-          <div className="grid grid-cols-[1fr_120px_120px] items-center gap-4 border-b border-border bg-muted/50 px-6 py-4 text-sm font-semibold text-muted-foreground sm:grid-cols-[1fr_140px_140px]">
-            <span>Feature</span>
-            <span className="text-center">BrandOps</span>
-            <span className="text-center">Typefully</span>
-          </div>
-          {comparisonRows.map((row) => (
-            <div
-              key={row.feature}
-              className="grid grid-cols-[1fr_120px_120px] items-center gap-4 border-b border-border px-6 py-4 last:border-b-0 sm:grid-cols-[1fr_140px_140px]"
-            >
-              <div>
-                <p className="font-medium text-foreground">{row.feature}</p>
-                <p className="text-xs text-muted-foreground">{row.note}</p>
-              </div>
-              <div className="flex justify-center">
-                {row.brandops ? (
-                  <Check className="h-5 w-5 text-green-600" />
-                ) : (
-                  <X className="h-5 w-5 text-muted-foreground/60" />
-                )}
-              </div>
-              <div className="flex justify-center">
-                {row.typefully ? (
-                  <Check className="h-5 w-5 text-green-600" />
-                ) : (
-                  <X className="h-5 w-5 text-muted-foreground/60" />
-                )}
-              </div>
-            </div>
-          ))}
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="border-b border-border bg-muted/50">
+                <th className="px-6 py-4 text-left font-semibold text-muted-foreground">Feature</th>
+                <th className="px-6 py-4 text-center font-semibold text-muted-foreground w-[120px] sm:w-[140px]">BrandOps</th>
+                <th className="px-6 py-4 text-center font-semibold text-muted-foreground w-[120px] sm:w-[140px]">Typefully</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonRows.map((row) => (
+                <tr key={row.feature} className="border-b border-border last:border-b-0">
+                  <td className="px-6 py-4">
+                    <p className="font-medium text-foreground">{row.feature}</p>
+                    <p className="text-xs text-muted-foreground">{row.note}</p>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    {row.brandops ? (
+                      <Check className="mx-auto h-5 w-5 text-green-600" />
+                    ) : (
+                      <X className="mx-auto h-5 w-5 text-muted-foreground/60" />
+                    )}
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    {row.typefully ? (
+                      <Check className="mx-auto h-5 w-5 text-green-600" />
+                    ) : (
+                      <X className="mx-auto h-5 w-5 text-muted-foreground/60" />
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </section>
 
         <section className="mt-16 grid gap-8 md:grid-cols-2">
