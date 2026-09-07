@@ -7,7 +7,7 @@ import { BRANDOPS_URL, buildBreadcrumbList, buildOrganization, buildWebPage, bui
 import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
-  title: "AEO/GEO Visibility Card | BrandOps AI Consultancy",
+  title: "AEO/GEO Visibility Card",
   description:
     "Understand how your brand appears in AI-generated answers. Answer Engine Optimization and Generative Engine Optimization analysis for business visibility.",
   alternates: { canonical: `${BRANDOPS_URL}/services/aeo-geo-visibility` },

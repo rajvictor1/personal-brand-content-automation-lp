@@ -1,0 +1,270 @@
+{
+  "brand": {
+    "name": "BrandOps",
+    "website": "https://www.brandops.site",
+    "tagline": "Review-first LinkedIn content workspace for founders, coaches, and consultants.",
+    "short_description_70": "AI-powered LinkedIn carousel and newsletter workspace with review-first publishing.",
+    "short_description_200": "BrandOps is a review-first content workspace that turns one research topic into a LinkedIn carousel and a cited newsletter. Built for solo operators, founders, coaches, trainers, and consultants who want consistent personal brand content without losing control. AI researches, writes, and designs; humans approve every publish action.",
+    "long_description_500": "BrandOps helps solo operators, founders, coaches, trainers, and consultants build a consistent personal brand on LinkedIn without spending weekends writing and designing. The platform combines AI research, AI writing, and AI image generation with a review-first publishing workflow: AI drafts LinkedIn carousels and cited newsletters from one topic, and you approve every slide, paragraph, citation, and visual before anything goes live. Use cases include founder thought leadership, coaching content, consulting authority building, and healthcare practice communication. The Solo plan is free forever; the Operator plan adds team features.",
+    "categories": [
+      "AI Tools",
+      "Marketing Tools",
+      "Social Media Tools",
+      "Content Marketing",
+      "LinkedIn Tools",
+      "Newsletter Tools",
+      "Personal Branding",
+      "SaaS",
+      "Founder Tools",
+      "AI Writing Tools"
+    ],
+    "keywords": [
+      "LinkedIn automation tool",
+      "AI newsletter generator",
+      "LinkedIn carousel generator",
+      "AI content workspace",
+      "personal brand content",
+      "review-first publishing",
+      "cited newsletter",
+      "GEO content",
+      "AI search optimization content"
+    ],
+    "features": [
+      "AI research with Firecrawl",
+      "AI copywriting for LinkedIn carousels and newsletters",
+      "AI image generation for slides and headers",
+      "Review-first publishing workflow",
+      "Cited content with source links",
+      "30-day content calendar templates",
+      "LinkedIn carousel templates and specs",
+      "Multi-format output from one research topic"
+    ],
+    "pricing": "Free Solo plan; Operator plan $49/month (coming soon).",
+    "twitter": "https://twitter.com",
+    "linkedin": "https://www.linkedin.com/in/rajesh-demand-gen-gtm-expert/",
+    "github": "https://github.com/rajvictor1",
+    "founder": "Rajesh Kumar"
+  },
+  "directories": [
+    {
+      "name": "SaaSHub",
+      "dr": 79,
+      "type": "Software Directory",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://www.saashub.com",
+      "submit_url": "https://www.saashub.com/register",
+      "priority": 1,
+      "notes": "Create account, add product, verify email. High authority."
+    },
+    {
+      "name": "Good AI Tools",
+      "dr": 74,
+      "type": "AI Directory",
+      "cost": "Conditional Free",
+      "link_type": "Dofollow",
+      "url": "https://goodaitools.com/",
+      "submit_url": "https://goodaitools.com/submit",
+      "priority": 1,
+      "notes": "AI-focused directory. Good fit."
+    },
+    {
+      "name": "Future Tools",
+      "dr": 69,
+      "type": "AI Directory",
+      "cost": "Free",
+      "link_type": "Dofollow",
+      "url": "https://futuretools.io/",
+      "submit_url": "https://futuretools.io/submit-a-tool",
+      "priority": 1,
+      "notes": "Popular AI tool directory."
+    },
+    {
+      "name": "Acid Tools",
+      "dr": 66,
+      "type": "AI Directory",
+      "cost": "Free",
+      "link_type": "Dofollow",
+      "url": "https://acidtools.com/",
+      "submit_url": "https://acidtools.com/submit",
+      "priority": 2,
+      "notes": "Smaller AI directory."
+    },
+    {
+      "name": "SideProjectors",
+      "dr": 71,
+      "type": "Software Directory",
+      "cost": "Free",
+      "link_type": "Dofollow",
+      "url": "https://www.sideprojectors.com",
+      "submit_url": "https://www.sideprojectors.com/auth/register",
+      "priority": 2,
+      "notes": "For side projects and indie tools."
+    },
+    {
+      "name": "SaaS Browser",
+      "dr": 73,
+      "type": "Software Directory",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://saasbrowser.com/",
+      "submit_url": "https://saasbrowser.com/en/add-your-saas",
+      "priority": 2,
+      "notes": "SaaS discovery platform."
+    },
+    {
+      "name": "ShowMySites",
+      "dr": 69,
+      "type": "Software Directory",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://www.showmysites.com",
+      "submit_url": "https://www.showmysites.com/accounts/signup",
+      "priority": 3,
+      "notes": "General site showcase."
+    },
+    {
+      "name": "Navs Site",
+      "dr": 67,
+      "type": "AI Directory",
+      "cost": "Free",
+      "link_type": "Dofollow",
+      "url": "https://navs.site",
+      "submit_url": "https://navs.site/auth/register",
+      "priority": 2,
+      "notes": "AI tool navigation/directory."
+    },
+    {
+      "name": "NextGen Tools",
+      "dr": 68,
+      "type": "Launchpad",
+      "cost": "Free",
+      "link_type": "Dofollow",
+      "url": "https://www.nxgntools.com",
+      "submit_url": "https://www.nxgntools.com",
+      "priority": 3,
+      "notes": "Tool launch platform."
+    },
+    {
+      "name": "Product Watch",
+      "dr": 72,
+      "type": "Launchpad",
+      "cost": "Free",
+      "link_type": "Dofollow",
+      "url": "https://productwatch.io",
+      "submit_url": "https://productwatch.io",
+      "priority": 2,
+      "notes": "Product launch community."
+    },
+    {
+      "name": "TinyLaunch",
+      "dr": 72,
+      "type": "Launchpad",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://www.tinylaunch.com/",
+      "submit_url": "https://www.tinylaunch.com/login",
+      "priority": 3,
+      "notes": "Startup launch directory."
+    },
+    {
+      "name": "SmolLaunch",
+      "dr": 71,
+      "type": "Launchpad",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://smollaunch.com",
+      "submit_url": "https://smollaunch.com/signup",
+      "priority": 3,
+      "notes": "Small product launch directory."
+    },
+    {
+      "name": "Versily",
+      "dr": 69,
+      "type": "Community",
+      "cost": "Free",
+      "link_type": "Dofollow",
+      "url": "https://versily.com",
+      "submit_url": "https://versily.com/signup",
+      "priority": 3,
+      "notes": "Community for builders."
+    },
+    {
+      "name": "AlternativeTo",
+      "dr": 91,
+      "type": "Software Comparison",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://alternativeto.net",
+      "submit_url": "https://alternativeto.net/software/add/",
+      "priority": 1,
+      "notes": "Massive comparison platform. List as alternative to Taplio, Buffer, Hypefury."
+    },
+    {
+      "name": "G2",
+      "dr": 92,
+      "type": "Review Platform",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://www.g2.com",
+      "submit_url": "https://www.g2.com/products/new",
+      "priority": 1,
+      "notes": "B2B review platform. Requires company email verification. Strong backlink + buyer traffic."
+    },
+    {
+      "name": "Capterra",
+      "dr": 88,
+      "type": "Review Platform",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://www.capterra.com",
+      "submit_url": "https://www.capterra.com/v/",
+      "priority": 1,
+      "notes": "Major software review site."
+    },
+    {
+      "name": "TrustRadius",
+      "dr": 83,
+      "type": "Review Platform",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://www.trustradius.com",
+      "submit_url": "https://www.trustradius.com/vendor-sign-up",
+      "priority": 2,
+      "notes": "B2B reviews."
+    },
+    {
+      "name": "Crozdesk",
+      "dr": 85,
+      "type": "B2B Comparison",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://crozdesk.com",
+      "submit_url": "https://crozdesk.com/get-listed",
+      "priority": 2,
+      "notes": "B2B software comparison."
+    },
+    {
+      "name": "SaaS Genius",
+      "dr": 60,
+      "type": "SaaS Discovery",
+      "cost": "Free",
+      "link_type": "Nofollow",
+      "url": "https://www.saasgenius.com",
+      "submit_url": "https://www.saasgenius.com/submit-saas",
+      "priority": 3,
+      "notes": "Category-based SaaS discovery."
+    },
+    {
+      "name": "Launching Next",
+      "dr": 65,
+      "type": "Startup Directory",
+      "cost": "Free",
+      "link_type": "Dofollow",
+      "url": "https://launchingnext.com",
+      "submit_url": "https://launchingnext.com/submit",
+      "priority": 3,
+      "notes": "Startup showcase."
+    }
+  ]
+}

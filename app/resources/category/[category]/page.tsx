@@ -17,7 +17,7 @@ interface CategoryPageProps {
 }
 
 export async function generateStaticParams() {
-  return ["guides", "templates", "glossary"].map((c) => ({ category: c }));
+  return ["guides", "templates", "glossary", "reports"].map((c) => ({ category: c }));
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   };
 }
 
-const categories: ResourceCategory[] = ["Guides", "Templates", "Glossary"];
+const categories: ResourceCategory[] = ["Guides", "Templates", "Glossary", "Reports"];
 
 function ResourceCard({ post }: { post: ResourcePost }) {
   return (

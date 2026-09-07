@@ -7,7 +7,7 @@ import { BRANDOPS_URL, buildBreadcrumbList, buildOrganization, buildWebPage, bui
 import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
-  title: "YouTube Research & Content Strategy | BrandOps AI Consultancy",
+  title: "YouTube Research & Content Strategy",
   description:
     "Turn YouTube competitor research and video performance patterns into sourced content ideas and practical briefs for your channel.",
   alternates: { canonical: `${BRANDOPS_URL}/services/youtube-research` },

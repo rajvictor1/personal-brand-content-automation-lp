@@ -7,7 +7,7 @@ import { BRANDOPS_URL, buildBreadcrumbList, buildOrganization, buildWebPage, bui
 import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
-  title: "Website Lead Magnets | BrandOps AI Consultancy",
+  title: "Website Lead Magnets",
   description:
     "Turn website visitors into leads with useful downloadable assets. We design, write, and build lead magnet funnels around your audience and business goals.",
   alternates: { canonical: `${BRANDOPS_URL}/services/website-lead-magnets` },

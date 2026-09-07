@@ -1,4 +1,4 @@
-export type ResourceCategory = "Guides" | "Templates" | "Glossary" | "Cheat Sheets";
+export type ResourceCategory = "Guides" | "Templates" | "Glossary" | "Cheat Sheets" | "Reports";
 
 export interface ResourcePost {
   slug: string;
@@ -310,6 +310,18 @@ export const resources: ResourcePost[] = [
     publishedAt: "2026-08-21",
     updatedAt: "2026-08-21",
     readingTime: 7,
+    author: "Rajesh Kumar",
+    authorRole: "Founder, BrandOps",
+  },
+  {
+    slug: "linkedin-content-statistics-2026",
+    title: "LinkedIn Content Statistics 2026: 25 Data Points for Founders",
+    description:
+      "LinkedIn content statistics for 2026. Data on carousel engagement, post frequency, newsletter growth, AI content adoption, and what drives visibility on LinkedIn.",
+    category: "Reports",
+    publishedAt: "2026-08-23",
+    updatedAt: "2026-08-23",
+    readingTime: 8,
     author: "Rajesh Kumar",
     authorRole: "Founder, BrandOps",
   },

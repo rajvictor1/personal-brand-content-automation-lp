@@ -19,12 +19,12 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "AI Content for LinkedIn & Newsletter | BrandOps",
+  title: "AI Content for LinkedIn & Newsletter",
   description:
     "Turn your expertise into consistent LinkedIn carousels and cited newsletter content. AI-assisted research, writing, and design with full review control.",
   alternates: { canonical: `${BRANDOPS_URL}/services/linkedin-content` },
   openGraph: {
-    title: "AI Content for LinkedIn & Newsletter | BrandOps",
+    title: "AI Content for LinkedIn & Newsletter",
     description:
       "AI-assisted LinkedIn carousels and newsletter content service for founders, coaches, and consultants.",
     url: `${BRANDOPS_URL}/services/linkedin-content`,

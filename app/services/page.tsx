@@ -6,9 +6,9 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { BRANDOPS_URL, buildBreadcrumbList, buildOrganization, buildWebPage, renderSchemas } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "AI Consultancy Services | BrandOps",
+  title: "AI Consultancy Services",
   description:
-    "BrandOps is an AI consultancy for business visibility, content, and lead generation. Services include LinkedIn content, website lead magnets, AEO/GEO visibility, and YouTube research.",
+    "BrandOps is an AI consultancy for business visibility, content, and lead generation. Services include AI content, lead magnets, AEO/GEO visibility, and YouTube research.",
   alternates: { canonical: `${BRANDOPS_URL}/services` },
 };
 
