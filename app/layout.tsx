@@ -13,19 +13,22 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
-    default: "BrandOps | Review-First Personal Brand Content Automation",
+    default: "BrandOps | AI Consultancy for Content, Visibility & Lead Generation",
     template: "%s | BrandOps",
   },
   description:
-    "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter.",
+    "BrandOps is an AI consultancy helping businesses improve visibility, create useful content, and generate leads. Services include AI content, website lead magnets, AEO/GEO visibility, and YouTube research.",
   keywords: [
-    "LinkedIn automation",
-    "personal brand",
-    "newsletter",
-    "carousel generator",
-    "content automation",
-    "Firecrawl",
-    "OpenAI",
+    "AI consultancy",
+    "AI content services",
+    "website lead magnets",
+    "AEO",
+    "GEO",
+    "AI search visibility",
+    "LinkedIn content service",
+    "YouTube research",
+    "lead generation",
+    "BrandOps",
   ],
   authors: [{ name: "Rajesh Kumar", url: "https://www.brandops.site" }],
   creator: "Rajesh Kumar",
@@ -49,24 +52,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "BrandOps",
-    title: "BrandOps | Review-First Personal Brand Content Automation",
+    title: "BrandOps | AI Consultancy for Content, Visibility & Lead Generation",
     description:
-      "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter.",
+      "Practical AI consultancy for business visibility, content, and lead generation.",
     url: "https://www.brandops.site",
     images: [
       {
         url: "https://www.brandops.site/og.png",
         width: 1200,
         height: 630,
-        alt: "BrandOps | review-first content automation for LinkedIn carousels and newsletters",
+        alt: "BrandOps | AI consultancy for content, visibility, and lead generation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrandOps | Review-First Personal Brand Content Automation",
+    title: "BrandOps | AI Consultancy for Content, Visibility & Lead Generation",
     description:
-      "AI builds your content. You own the publish button. BrandOps turns one research topic into a LinkedIn carousel and a cited newsletter.",
+      "Practical AI consultancy for business visibility, content, and lead generation.",
     images: ["https://www.brandops.site/og.png"],
   },
   verification: {

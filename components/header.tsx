@@ -20,6 +20,17 @@ const nav = [
     type: "simple" as const,
   },
   {
+    label: "Services",
+    href: "/services",
+    type: "dropdown" as const,
+    items: [
+      { label: "AI Content for LinkedIn & Newsletter", href: "/services/linkedin-content", description: "Turn expertise into consistent LinkedIn and newsletter content" },
+      { label: "Website Lead Magnets", href: "/services/website-lead-magnets", description: "Capture leads with useful downloadable assets" },
+      { label: "AEO/GEO Visibility Card", href: "/services/aeo-geo-visibility", description: "Understand how your brand appears in AI-generated answers" },
+      { label: "YouTube Research & Content Strategy", href: "/services/youtube-research", description: "Turn competitor and video research into content briefs" },
+    ],
+  },
+  {
     label: "Features",
     href: "/features",
     type: "dropdown" as const,
@@ -45,10 +56,12 @@ const nav = [
     href: "/resources",
     type: "dropdown" as const,
     items: [
-      { label: "All resources", href: "/resources", description: "Guides, webinars, cheat sheets, and videos" },
       { label: "Guides", href: "/resources/category/guides", description: "Step-by-step workflows" },
       { label: "Webinars", href: "/resources/webinars", description: "Live trainings and replays" },
       { label: "Cheat Sheets", href: "/resources/cheat-sheets", description: "Quick-reference one-pagers" },
+      { label: "Templates", href: "/resources/category/templates", description: "Ready-to-use templates" },
+      { label: "Glossary", href: "/resources/category/glossary", description: "SEO and AI search terms" },
+      { label: "Reports", href: "/resources/category/reports", description: "Data and statistics" },
       { label: "Videos", href: "/resources/videos", description: "Tutorials and walkthroughs" },
     ],
   },
@@ -69,16 +82,17 @@ const nav = [
 
 const mobileNav = [
   { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "AI Content", href: "/services/linkedin-content" },
+  { label: "Lead Magnets", href: "/services/website-lead-magnets" },
+  { label: "AEO/GEO Visibility", href: "/services/aeo-geo-visibility" },
+  { label: "YouTube Research", href: "/services/youtube-research" },
   { label: "Features", href: "/features" },
   { label: "Pipeline", href: "/pipeline" },
   { label: "Resources", href: "/resources" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
-  { label: "Careers", href: "/careers" },
-  { label: "Support", href: "/support" },
-  { label: "Founder", href: "/founder" },
   { label: "Contact", href: "/contact" },
-  { label: "Book Demo", href: "/demo" },
 ];
 
 function NavDropdown({
@@ -159,16 +173,10 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <Link
-            href="/demo"
+            href="/contact"
             className="hidden rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition-transform hover:scale-105 md:block"
           >
-            Book a demo
-          </Link>
-          <Link
-            href="/contact"
-            className="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105 md:block"
-          >
-            Get early access
+            Book a Consultation
           </Link>
 
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
@@ -195,9 +203,9 @@ export function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="mt-4 rounded-full bg-primary px-4 py-3 text-center text-base font-semibold text-primary-foreground"
+                  className="mt-4 rounded-full bg-orange-500 px-4 py-3 text-center text-base font-semibold text-white"
                 >
-                  Get early access
+                  Book a Consultation
                 </Link>
               </nav>
             </SheetContent>

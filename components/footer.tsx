@@ -3,6 +3,16 @@ import { Sparkles } from "lucide-react";
 
 const footerGroups = [
   {
+    title: "Services",
+    links: [
+      { label: "All services", href: "/services" },
+      { label: "AI Content for LinkedIn & Newsletter", href: "/services/linkedin-content" },
+      { label: "Website Lead Magnets", href: "/services/website-lead-magnets" },
+      { label: "AEO/GEO Visibility Card", href: "/services/aeo-geo-visibility" },
+      { label: "YouTube Research & Strategy", href: "/services/youtube-research" },
+    ],
+  },
+  {
     title: "Product",
     links: [
       { label: "Features", href: "/features" },
@@ -12,9 +22,6 @@ const footerGroups = [
       { label: "LinkedIn carousel generator", href: "/linkedin-carousel-generator" },
       { label: "AI newsletter generator", href: "/ai-newsletter-generator" },
       { label: "LinkedIn automation tool", href: "/linkedin-automation-tool" },
-      { label: "LinkedIn automation for coaches", href: "/linkedin-automation-tool-for-coaches" },
-      { label: "LinkedIn automation for consultants", href: "/linkedin-automation-tool-for-consultants" },
-      { label: "LinkedIn automation for SaaS founders", href: "/linkedin-automation-tool-for-saas-founders" },
       { label: "Pipeline", href: "/pipeline" },
       { label: "Pricing", href: "/pricing" },
     ],
@@ -28,9 +35,10 @@ const footerGroups = [
       { label: "Videos", href: "/resources/videos" },
       { label: "Templates", href: "/resources/category/templates" },
       { label: "Glossary", href: "/resources/category/glossary" },
+      { label: "Reports", href: "/resources/category/reports" },
     ],
   },
-    {
+  {
     title: "Company",
     links: [
       { label: "About", href: "/about" },
@@ -38,7 +46,7 @@ const footerGroups = [
       { label: "Careers", href: "/careers" },
       { label: "Support", href: "/support" },
       { label: "Contact", href: "/contact" },
-      { label: "Book a Demo", href: "/demo" },
+      { label: "Book a Consultation", href: "/contact" },
     ],
   },
   {
@@ -107,7 +115,7 @@ export function Footer() {
               BrandOps
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-              A review-first content workspace for solo operators, trainers, and founders who want to publish more without losing control.
+              Practical AI consultancy for business visibility, content, and lead generation.
             </p>
             <div className="flex items-center gap-3">
               {socials.map((social) => (
@@ -145,7 +153,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 text-sm text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} BrandOps. All rights reserved.</p>
-          <p>Built for solo operators. Review-first.</p>
+          <p>AI consultancy for content, visibility, and lead generation.</p>
         </div>
       </div>
     </footer>

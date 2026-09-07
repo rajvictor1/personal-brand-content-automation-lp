@@ -1,13 +1,12 @@
-import { Hero, ProblemSolution, Outcomes } from "@/components/hero";
-import { FeatureGrid } from "@/components/feature-grid";
-import { Pipeline } from "@/components/pipeline";
-import { PricingCards } from "@/components/pricing-cards";
-import { Faq } from "@/components/faq";
-import { Cta } from "@/components/cta";
-import { Testimonials } from "@/components/testimonials";
-import { Walkthrough } from "@/components/walkthrough";
-import { CaseStudy } from "@/components/case-study";
-import { ToolsGrid } from "@/components/tools-grid";
+import { Metadata } from "next";
+import {
+  ConsultancyHero,
+  ConsultancyIntro,
+  ServiceCards,
+  HowWeWork,
+  WorkExamples,
+  FinalCta,
+} from "@/components/consultancy";
 import {
   BRANDOPS_URL,
   buildBreadcrumbList,
@@ -16,6 +15,34 @@ import {
   buildWebPage,
   renderSchemas,
 } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  title: "BrandOps | AI Consultancy for Content, Visibility & Lead Generation",
+  description:
+    "BrandOps is an AI consultancy helping businesses improve visibility, create useful content, and generate leads. Services include AI content, lead magnets, AEO/GEO visibility, and YouTube research.",
+  alternates: { canonical: BRANDOPS_URL },
+  openGraph: {
+    title: "BrandOps | AI Consultancy for Content, Visibility & Lead Generation",
+    description:
+      "Practical AI consultancy for business visibility, content, and lead generation.",
+    url: BRANDOPS_URL,
+    images: [
+      {
+        url: "https://www.brandops.site/og.png",
+        width: 1200,
+        height: 630,
+        alt: "BrandOps | AI consultancy for content, visibility, and lead generation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BrandOps | AI Consultancy for Content, Visibility & Lead Generation",
+    description:
+      "Practical AI consultancy for business visibility, content, and lead generation.",
+    images: ["https://www.brandops.site/og.png"],
+  },
+};
 
 export default function HomePage() {
   return (
@@ -26,22 +53,16 @@ export default function HomePage() {
         buildBreadcrumbList([{ name: "Home", url: BRANDOPS_URL }]),
         buildWebPage(
           "BrandOps",
-          "Review-first personal brand content automation for LinkedIn carousels, newsletters, and AI-assisted research.",
+          "AI consultancy helping businesses improve visibility, create useful content, and generate leads.",
           BRANDOPS_URL
         ),
       ])}
-      <Hero />
-      <ToolsGrid />
-      <Outcomes />
-      <ProblemSolution />
-      <FeatureGrid />
-      <Walkthrough />
-      <Pipeline headingLevel="h2" />
-      <CaseStudy />
-      <PricingCards headingLevel="h2" />
-      <Testimonials />
-      <Faq />
-      <Cta />
+      <ConsultancyHero />
+      <ConsultancyIntro />
+      <ServiceCards />
+      <HowWeWork />
+      <WorkExamples />
+      <FinalCta />
     </>
   );
 }
