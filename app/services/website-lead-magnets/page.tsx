@@ -84,7 +84,9 @@ export default function WebsiteLeadMagnetsPage() {
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href="/linkedin-templates"
+                href="https://landing-page-hzulxy1wx-homeo-clinic.vercel.app"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/50 px-8 py-4 text-lg font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-secondary"
               >
                 <Download className="h-5 w-5" />
