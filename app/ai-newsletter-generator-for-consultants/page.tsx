@@ -13,7 +13,7 @@ import {
 import { LeadCapture } from "@/components/lead-capture";
 
 export const metadata: Metadata = {
-  title: "AI Newsletter Generator for Consultants | BrandOps",
+  title: "AI Newsletter Generator for Consultants",
   description:
     "BrandOps is an AI newsletter generator for consultants. It researches current stories, writes cited drafts, and lets you review before sending.",
   alternates: { canonical: "https://www.brandops.site/ai-newsletter-generator-for-consultants" },
