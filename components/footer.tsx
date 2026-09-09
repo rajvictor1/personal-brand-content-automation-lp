@@ -50,17 +50,6 @@ const footerGroups = [
       { label: "Book a Consultation", href: "/contact" },
     ],
   },
-  {
-    title: "Legal",
-    links: [
-      { label: "Legal hub", href: "/legal" },
-      { label: "Terms of Service", href: "/terms" },
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "GDPR", href: "/legal/gdpr" },
-      { label: "Security", href: "/legal/security" },
-      { label: "Data Retention", href: "/legal/data-retention" },
-    ],
-  },
 ];
 
 const socials = [
@@ -105,13 +94,13 @@ const SocialIcon = ({ label }: { label: string }) => {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/50 bg-muted/20">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <footer className="border-t border-white/10 bg-card">
+      <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="space-y-5 lg:col-span-4">
             <Link href="/" className="inline-flex items-center gap-2 text-lg font-semibold tracking-tight">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground">
-                <Sparkles className="h-5 w-5" />
+              <span className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground">
+                <Sparkles className="h-4 w-4" />
               </span>
               BrandOps
             </Link>
@@ -125,7 +114,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-border/50 bg-background p-2 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                  className="rounded-full border border-white/10 bg-background p-2 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
                   aria-label={social.label}
                 >
                   <SocialIcon label={social.label} />
@@ -152,7 +141,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 text-sm text-muted-foreground md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} BrandOps. All rights reserved.</p>
           <p>AI consultancy for content, visibility, and lead generation.</p>
         </div>

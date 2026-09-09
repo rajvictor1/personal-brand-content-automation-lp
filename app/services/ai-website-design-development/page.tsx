@@ -3,14 +3,14 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/animations";
-import { ArrowRight, CheckCircle, Code2, Cpu, ExternalLink, Globe, Layout, Rocket, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle, Code2, Cpu, ExternalLink, Globe, Layout, Rocket } from "lucide-react";
 import { BRANDOPS_URL, buildBreadcrumbList, buildOrganization, buildWebPage, buildService, renderSchemas } from "@/lib/schema";
 import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
-  title: "AI-Ready Website Design & Development",
+  title: "AI-Ready Website Design \u0026 Development",
   description:
-    "AI-ready website design and development for founders and consultants. We build fast, SEO-friendly Next.js websites that rank in search and AI engines, load instantly, and turn visitors into leads.",
+    "AI-ready website design and development for founders and consultants. We build fast, search-friendly Next.js websites that rank in search and AI engines, load instantly, and turn visitors into leads.",
   alternates: { canonical: `${BRANDOPS_URL}/services/ai-website-design-development` },
 };
 
@@ -86,9 +86,9 @@ const portfolioProjects = [
 
 function PortfolioCard({ project }: { project: typeof portfolioProjects[0] }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:border-primary/30 hover:shadow-md">
-      <div className="relative overflow-hidden border-b border-border bg-muted/30 p-3 pb-0">
-        <div className="overflow-hidden rounded-t-lg border border-border/50 bg-background shadow-sm">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-card transition-all hover:border-primary/40">
+      <div className="relative overflow-hidden border-b border-white/10 bg-secondary/30 p-3 pb-0">
+        <div className="overflow-hidden rounded-t-lg border border-white/10 bg-background shadow-sm">
           <div className="flex items-center gap-1.5 bg-muted/80 px-3 py-2">
             <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
             <div className="h-2.5 w-2.5 rounded-full bg-amber-400" />
@@ -142,58 +142,47 @@ export default function AiWebsiteDesignDevelopmentPage() {
         buildBreadcrumbList([
           { name: "Home", url: BRANDOPS_URL },
           { name: "Services", url: `${BRANDOPS_URL}/services` },
-          { name: "AI-Ready Website Design & Development", url },
+          { name: "AI-Ready Website Design \u0026 Development", url },
         ]),
         buildWebPage(
-          "AI-Ready Website Design & Development",
-          "AI-ready website design and development for founders and consultants. Fast Next.js websites built for SEO, AI search visibility, and lead conversion.",
+          "AI-Ready Website Design \u0026 Development",
+          "AI-ready website design and development for founders and consultants. We build fast, SEO-friendly Next.js websites.",
           url
         ),
         buildService(
-          "AI-Ready Website Design & Development",
-          "Next.js website design and development for founders and consultants, with AI-assisted copy, layout, and code.",
+          "AI-Ready Website Design \u0026 Development",
+          "AI-ready website design and development for founders and consultants.",
           url
         ),
       ])}
 
-      <section className="relative overflow-hidden px-4 pb-20 pt-24 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute top-[-100px] left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/8 blur-[100px]" />
-          <div className="absolute top-[20%] right-[-100px] h-[400px] w-[400px] rounded-full bg-accent/6 blur-[100px]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.06),transparent_60%)]" />
-        </div>
-        <div className="mx-auto max-w-4xl text-center">
+      <section className="px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal>
-            <Badge variant="outline" className="mb-6 border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary">
-              <Sparkles className="mr-1.5 inline h-3.5 w-3.5" />
-              Website Design & Development Service
-            </Badge>
+            <p className="mb-4 text-sm font-medium tracking-wide text-primary">Website Design \u0026 Development Service</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)] sm:text-5xl lg:text-6xl">
-              AI-ready websites for founders and consultants{" "}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(99,102,241,0.25)]">
-                who mean business.
-              </span>
+            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              AI-ready websites for founders and consultants who mean business.
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-              Built with AI. Finished by humans. Designed to rank, load fast, and convert visitors into leads.
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              Built with AI agents. Finished by humans. Designed to rank, load fast, and convert visitors into leads.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="#contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
               >
                 Discuss Your Website
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/50 px-8 py-4 text-lg font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-5 py-2.5 text-sm font-medium text-muted-foreground transition hover:border-white/20 hover:text-foreground"
               >
                 Explore All Services
               </Link>
@@ -202,20 +191,24 @@ export default function AiWebsiteDesignDevelopmentPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-muted/20 px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+      <section className="border-y border-white/10 px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Next.js websites for founders & consultants
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              A modern website is your hardest-working business asset. We build it to perform across search, speed, and conversion.
-            </p>
+            <Reveal>
+              <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                Next.js websites for founders \u0026 consultants
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+                A modern website is your hardest-working business asset. We build it to perform across search, speed, and conversion.
+              </p>
+            </Reveal>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-foreground">Why it works</h3>
-              <ul className="space-y-3 text-muted-foreground">
+              <ul className="space-y-3 text-sm text-muted-foreground">
                 {benefits.map((item) => (
                   <li key={item} className="flex gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -226,7 +219,7 @@ export default function AiWebsiteDesignDevelopmentPage() {
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-foreground">What you get</h3>
-              <ul className="space-y-3 text-muted-foreground">
+              <ul className="space-y-3 text-sm text-muted-foreground">
                 {deliverables.map((item) => (
                   <li key={item} className="flex gap-3">
                     <Rocket className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -240,38 +233,46 @@ export default function AiWebsiteDesignDevelopmentPage() {
       </section>
 
       <section className="px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-5xl">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              How AI fits into the build
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              AI accelerates the repetitive parts. Strategy, taste, and quality control stay human.
-            </p>
+            <Reveal>
+              <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                How AI fits into the build
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+                AI accelerates the repetitive parts. Strategy, taste, and quality control stay human.
+              </p>
+            </Reveal>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {aiAdvantages.map(({ icon: Icon, title, description }) => (
-              <div key={title} className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-                <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                  <Icon className="h-6 w-6 text-primary" />
+              <div key={title} className="rounded-2xl border border-white/10 bg-card p-6">
+                <div className="mb-4 inline-flex rounded-full border border-white/10 bg-secondary p-3">
+                  <Icon className="h-5 w-5 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">{title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-muted/20 px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+      <section className="border-y border-white/10 px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Websites and products we have built
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              A selection of live sites we have designed and developed for founders, consultants, clinics, and product teams.
-            </p>
+            <Reveal>
+              <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                Websites and products we have built
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+                A selection of live sites we have designed and developed for founders, consultants, clinics, and product teams.
+              </p>
+            </Reveal>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {portfolioProjects.map((project) => (
@@ -281,31 +282,13 @@ export default function AiWebsiteDesignDevelopmentPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Ready for a website that works as hard as you do?
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Tell us what you are building. We will recommend the right pages, tech, and AI-assisted workflow to get it live.
-          </p>
-          <Link
-            href="#contact"
-            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105"
-          >
-            Start the Conversation
-            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
-      </section>
-
       <section className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <div className="mb-12 text-center">
             <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
               FAQ
             </Badge>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
               Website design and development questions
             </h2>
           </div>
@@ -344,7 +327,7 @@ export default function AiWebsiteDesignDevelopmentPage() {
                 a: "Hermes is our multi-agent operating system. It runs research, drafting, code generation, and QA tasks under human oversight so we can deliver better work faster.",
               },
             ].map((faq, i) => (
-              <div key={i} className="rounded-xl border border-border bg-card p-6 shadow-sm">
+              <div key={i} className="rounded-xl border border-white/10 bg-card p-6">
                 <h3 className="text-lg font-semibold text-foreground">{faq.q}</h3>
                 <p className="mt-2 text-muted-foreground">{faq.a}</p>
               </div>
@@ -353,17 +336,17 @@ export default function AiWebsiteDesignDevelopmentPage() {
         </div>
       </section>
 
-      <section id="contact" className="border-y border-border/50 bg-muted/20 px-4 py-24 sm:px-6 lg:px-8">
+      <section id="contact" className="border-y border-white/10 px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <div className="mb-10 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
               Discuss your website project
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Share what you need. We will reply with a clear plan and next steps.
             </p>
           </div>
-          <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+          <div className="rounded-2xl border border-white/10 bg-card p-8 shadow-sm">
             <ContactForm />
           </div>
         </div>
