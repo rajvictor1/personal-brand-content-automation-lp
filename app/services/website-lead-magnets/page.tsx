@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/animations";
-import { ArrowRight, CheckCircle, Download, Mail, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle, Download, Mail } from "lucide-react";
 import { BRANDOPS_URL, buildBreadcrumbList, buildOrganization, buildWebPage, buildService, renderSchemas } from "@/lib/schema";
 import { ContactForm } from "@/components/contact-form";
 
@@ -52,44 +52,38 @@ export default function WebsiteLeadMagnetsPage() {
         ),
       ])}
 
-      <section className="relative overflow-hidden px-4 pb-20 pt-24 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
-          <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-accent/10 blur-[140px]" />
-        </div>
-        <div className="mx-auto max-w-4xl text-center">
+      <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="mx-auto max-w-5xl">
           <Reveal>
-            <Badge variant="outline" className="mb-6 border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary">
-              <Sparkles className="mr-1.5 inline h-3.5 w-3.5" />
-              Lead Generation Service
-            </Badge>
+            <p className="mb-4 text-sm font-medium tracking-wide text-primary">Lead Generation Service</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
               Website Lead Magnets That Turn Visitors Into Leads
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               Give your website visitors a useful reason to share their email. We design the asset, write the copy, build the page, and set up the capture flow.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="#contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
               >
                 Discuss Your Lead Magnet
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="https://landing-page-hzulxy1wx-homeo-clinic.vercel.app"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/50 px-8 py-4 text-lg font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-5 py-2.5 text-sm font-medium text-muted-foreground transition hover:border-white/20 hover:text-foreground"
               >
-                <Download className="h-5 w-5" />
+                <Download className="h-4 w-4" />
                 See a Live Example
               </Link>
             </div>
@@ -97,20 +91,24 @@ export default function WebsiteLeadMagnetsPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-muted/20 px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+      <section className="border-y border-white/10 px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              What you get
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              A complete lead magnet funnel built around your audience and offer.
-            </p>
+            <Reveal>
+              <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+                What you get
+              </Badge>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                A complete lead magnet funnel
+              </h2>
+            </Reveal>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-foreground">Why it works</h3>
-              <ul className="space-y-3 text-muted-foreground">
+              <ul className="space-y-3 text-sm text-muted-foreground">
                 {benefits.map((item) => (
                   <li key={item} className="flex gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -121,7 +119,7 @@ export default function WebsiteLeadMagnetsPage() {
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-foreground">Deliverables</h3>
-              <ul className="space-y-3 text-muted-foreground">
+              <ul className="space-y-3 text-sm text-muted-foreground">
                 {deliverables.map((item) => (
                   <li key={item} className="flex gap-3">
                     <Mail className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -134,24 +132,23 @@ export default function WebsiteLeadMagnetsPage() {
         </div>
       </section>
 
-      <section id="contact" className="px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-xl">
-          <Reveal className="mb-10 text-center">
-            <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
-              Book a Consultation
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Discuss your lead magnet
-            </h2>
-            <p className="mx-auto mt-4 text-lg text-muted-foreground">
-              Tell us your audience and goal. We will reply with a practical approach.
-            </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="rounded-2xl border border-border/50 bg-card/40 p-6 shadow-xl backdrop-blur-sm sm:p-8">
-              <ContactForm />
-            </div>
-          </Reveal>
+      <section id="contact" className="border-y border-white/10 px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-10 text-center">
+            <Reveal>
+              <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                Discuss your lead magnet
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Tell us your audience and goal. We will reply with a practical approach.
+              </p>
+            </Reveal>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-card p-8 shadow-sm">
+            <ContactForm />
+          </div>
         </div>
       </section>
     </>
