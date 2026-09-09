@@ -7,6 +7,7 @@ const footerGroups = [
     links: [
       { label: "All services", href: "/services" },
       { label: "AI Content for LinkedIn & Newsletter", href: "/services/linkedin-content" },
+      { label: "AI-Ready Website Design & Development", href: "/services/ai-website-design-development" },
       { label: "Website Lead Magnets", href: "/services/website-lead-magnets" },
       { label: "AEO/GEO Visibility Card", href: "/services/aeo-geo-visibility" },
       { label: "YouTube Research & Strategy", href: "/services/youtube-research" },

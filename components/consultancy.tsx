@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Sparkles, Mail, Download, Search, Play } from "lucide-react";
+import { ArrowRight, CheckCircle, Download, Globe, Mail, Play, Search, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/animations";
 
@@ -9,9 +9,9 @@ export function ConsultancyHero() {
   return (
     <section className="relative overflow-hidden px-4 pb-20 pt-24 sm:px-6 lg:px-8">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/2 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
-        <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-accent/10 blur-[140px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.12),transparent_50%)]" />
+        <div className="absolute top-[-100px] left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/8 blur-[100px]" />
+        <div className="absolute top-[20%] right-[-100px] h-[400px] w-[400px] rounded-full bg-accent/6 blur-[100px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.06),transparent_60%)]" />
       </div>
 
       <div className="mx-auto max-w-4xl text-center">
@@ -26,9 +26,9 @@ export function ConsultancyHero() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
+          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)] sm:text-5xl lg:text-7xl">
             Put AI to work for your{" "}
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(99,102,241,0.25)]">
               visibility, content, and lead generation.
             </span>
           </h1>
@@ -89,6 +89,14 @@ const services = [
     cta: "Explore Content Services",
   },
   {
+    icon: Globe,
+    title: "AI-Ready Website Design & Development",
+    description:
+      "Fast, search-friendly Next.js websites for founders and consultants. Built with AI-assisted copy, layout, and development, finished by human oversight.",
+    href: "/services/ai-website-design-development",
+    cta: "Explore Website Services",
+  },
+  {
     icon: Download,
     title: "Website Lead Magnets",
     description:
@@ -123,7 +131,7 @@ export function ServiceCards() {
             Services
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Four ways to put AI to work
+            Five ways to put AI to work
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
             Each service is focused on a clear business outcome, supported by AI where it actually helps.

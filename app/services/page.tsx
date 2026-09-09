@@ -21,6 +21,13 @@ const services = [
     cta: "Explore Content Services",
   },
   {
+    title: "AI-Ready Website Design & Development",
+    description:
+      "Fast, search-friendly Next.js websites for founders and consultants. Built with AI-assisted copy, layout, and development, finished by human oversight.",
+    href: "/services/ai-website-design-development",
+    cta: "Explore Website Services",
+  },
+  {
     title: "Website Lead Magnets",
     description:
       "Give website visitors a useful reason to connect with your business. Create a lead magnet around your audience's needs and introduce a clear next step.",

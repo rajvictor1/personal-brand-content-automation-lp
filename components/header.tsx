@@ -25,6 +25,7 @@ const nav = [
     type: "dropdown" as const,
     items: [
       { label: "AI Content for LinkedIn & Newsletter", href: "/services/linkedin-content", description: "Turn expertise into consistent LinkedIn and newsletter content" },
+      { label: "AI-Ready Website Design & Development", href: "/services/ai-website-design-development", description: "Fast, search-friendly Next.js websites" },
       { label: "Website Lead Magnets", href: "/services/website-lead-magnets", description: "Capture leads with useful downloadable assets" },
       { label: "AEO/GEO Visibility Card", href: "/services/aeo-geo-visibility", description: "Understand how your brand appears in AI-generated answers" },
       { label: "YouTube Research & Content Strategy", href: "/services/youtube-research", description: "Turn competitor and video research into content briefs" },
