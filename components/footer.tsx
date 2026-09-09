@@ -50,6 +50,17 @@ const footerGroups = [
       { label: "Book a Consultation", href: "/contact" },
     ],
   },
+  {
+    title: "Legal",
+    links: [
+      { label: "Legal hub", href: "/legal" },
+      { label: "Terms of Service", href: "/terms" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "GDPR", href: "/legal/gdpr" },
+      { label: "Security", href: "/legal/security" },
+      { label: "Data Retention", href: "/legal/data-retention" },
+    ],
+  },
 ];
 
 const socials = [
@@ -123,7 +134,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-8">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5 lg:col-span-8">
             {footerGroups.map((group) => (
               <div key={group.title} className="space-y-4">
                 <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">{group.title}</h4>
