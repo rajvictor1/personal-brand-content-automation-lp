@@ -74,10 +74,11 @@ const statusClass = {
 
 export function ConsultancyHero() {
   return (
-    <section className="px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+    <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
       <div className="mx-auto max-w-5xl">
         <Reveal>
-          <p className="mb-4 text-sm font-medium tracking-wide text-primary">AI Consultancy for Content, Visibility & Lead Generation</p>
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary">AI Consultancy for Content, Visibility \u0026 Lead Generation</p>
         </Reveal>
         <Reveal delay={0.1}>
           <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
