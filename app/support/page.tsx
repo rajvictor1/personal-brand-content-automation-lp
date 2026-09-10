@@ -110,17 +110,13 @@ export default function SupportPage() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <h1 className="text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
+        <h1 className="text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
             We are here whenever you need us
           </h1>
-        </Reveal>
 
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
             Running a personal brand is hard enough. When something breaks, slows down, or just feels confusing, send us a message and a real human will help.
           </p>
-        </Reveal>
 
         <Reveal delay={0.3}>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

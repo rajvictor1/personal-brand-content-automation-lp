@@ -67,20 +67,14 @@ export default function BrandOpsVsCanvaPage() {
       <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.10),rgba(99,102,241,0.15)_40%,transparent_70%)]" />
         <div className="mx-auto max-w-5xl">
-          <Reveal>
-            <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Comparison</p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Comparison</p>
+          <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
               BrandOps vs Canva: generate vs design
             </h1>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               Canva is the best manual design canvas. BrandOps is the fastest way to go from a research
               topic to a review-ready LinkedIn carousel with copy, citations, and artwork already done.
             </p>
-          </Reveal>
         </div>
       </section>
 

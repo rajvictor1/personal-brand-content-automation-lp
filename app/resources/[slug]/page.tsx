@@ -150,16 +150,12 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
               </span>
             </div>
           </Reveal>
-          <Reveal delay={0.2}>
-            <h1 className="mx-auto mt-5 max-w-3xl text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h1 className="mx-auto mt-5 max-w-3xl text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               {post.title}
             </h1>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               {post.description}
             </p>
-          </Reveal>
         </div>
       </section>
 

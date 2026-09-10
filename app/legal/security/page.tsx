@@ -38,19 +38,13 @@ export default function SecurityPage() {
     <div className="relative">
       <section className="relative px-4 pb-12 pt-24 text-center sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
-          <Reveal>
-            <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Legal / Security</p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Legal / Security</p>
+          <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
               Security
             </h1>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               We design BrandOps so that speed never comes at the cost of control. Here is how we protect your data and our systems.
             </p>
-          </Reveal>
         </div>
       </section>
 

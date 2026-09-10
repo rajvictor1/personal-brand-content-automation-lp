@@ -49,17 +49,13 @@ export default function VideosPage() {
             </Link>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
+          <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
               Videos
             </h1>
-          </Reveal>
 
-          <Reveal delay={0.2}>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               Short tutorials and walkthroughs for building a review-first personal-brand content system.
             </p>
-          </Reveal>
         </div>
       </section>
 

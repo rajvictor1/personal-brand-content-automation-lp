@@ -124,17 +124,13 @@ export default function LinkedInContentSystemPage() {
             </Badge>
           </Reveal>
 
-          <Reveal delay={0.2}>
-            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
+          <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
               LinkedIn Content System for Personal Brands
             </h1>
-          </Reveal>
 
-          <Reveal delay={0.3}>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               A repeatable system to turn one research topic into a LinkedIn carousel and cited newsletter every week. Built for solo founders, trainers, and consultants who want consistency without a second job.
             </p>
-          </Reveal>
         </div>
       </section>
 

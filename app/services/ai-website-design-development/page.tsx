@@ -159,21 +159,14 @@ export default function AiWebsiteDesignDevelopmentPage() {
       <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.10),rgba(99,102,241,0.15)_40%,transparent_70%)]" />
         <div className="mx-auto max-w-5xl">
-          <Reveal>
-            <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Website Design \u0026 Development Service</p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Website Design \u0026 Development Service</p>
+          <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
               Next.js websites for founders and consultants
             </h1>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               We design and build fast, search-friendly websites with AI-assisted copy, clean code, and human oversight.
             </p>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
@@ -188,7 +181,6 @@ export default function AiWebsiteDesignDevelopmentPage() {
                 Explore All Services
               </Link>
             </div>
-          </Reveal>
         </div>
       </section>
 
@@ -200,11 +192,9 @@ export default function AiWebsiteDesignDevelopmentPage() {
                 Next.js websites for founders \u0026 consultants
               </h2>
             </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
                 A modern website is your hardest-working business asset. We build it to perform across search, speed, and conversion.
               </p>
-            </Reveal>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="space-y-4">
@@ -241,11 +231,9 @@ export default function AiWebsiteDesignDevelopmentPage() {
                 How AI fits into the build
               </h2>
             </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
                 AI accelerates the repetitive parts. Strategy, taste, and quality control stay human.
               </p>
-            </Reveal>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {aiAdvantages.map(({ icon: Icon, title, description }) => (
@@ -269,11 +257,9 @@ export default function AiWebsiteDesignDevelopmentPage() {
                 Websites and products we have built
               </h2>
             </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
                 A selection of live sites we have designed and developed for founders, consultants, clinics, and product teams.
               </p>
-            </Reveal>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {portfolioProjects.map((project) => (

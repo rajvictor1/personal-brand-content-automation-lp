@@ -94,9 +94,7 @@ export default function FounderPage() {
 
         <section className="mx-auto max-w-5xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Reveal>
-              <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Founder</p>
-            </Reveal>
+            <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Founder</p>
 
             <Reveal delay={0.1}>
               <div className="mx-auto mb-8 h-32 w-32 overflow-hidden rounded-full border-2 border-white/10 bg-secondary sm:h-40 sm:w-40">
@@ -108,17 +106,13 @@ export default function FounderPage() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.2}>
-              <h1 className="text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
+            <h1 className="text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
                 Rajesh Kumar
               </h1>
-            </Reveal>
 
-            <Reveal delay={0.3}>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
                 Demand-gen practitioner. GTM operator. Trainer. Building BrandOps to help solo founders and consultants publish faster without losing their voice.
               </p>
-            </Reveal>
 
             <Reveal delay={0.4}>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

@@ -81,7 +81,7 @@ export function ConsultancyHero() {
           <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">AI Consultancy for Content, Visibility \u0026 Lead Generation</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl lg:text-6xl">
+          <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl lg:text-6xl">
             Put AI to work for your visibility, content, and leads.
           </h1>
         </Reveal>

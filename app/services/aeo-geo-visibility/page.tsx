@@ -55,26 +55,19 @@ export default function AeoGeoVisibilityPage() {
       <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.10),rgba(99,102,241,0.15)_40%,transparent_70%)]" />
         <div className="mx-auto max-w-5xl">
-          <Reveal>
-            <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">AI Search Visibility Service</p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">AI Search Visibility Service</p>
+          <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
               AEO/GEO Visibility Card
             </h1>
-          </Reveal>
           <Reveal delay={0.2}>
             <p className="mx-auto mt-2 max-w-3xl text-base text-muted-foreground">
               Answer Engine Optimization / Generative Engine Optimization
             </p>
           </Reveal>
-          <Reveal delay={0.3}>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               Understand how your brand appears in AI-generated answers. We measure visibility gaps, compare your presence against competitors, and give you a practical plan to improve how your business is represented.
             </p>
-          </Reveal>
-          <Reveal delay={0.4}>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
@@ -89,7 +82,6 @@ export default function AeoGeoVisibilityPage() {
                 Try the Free Scorecard
               </Link>
             </div>
-          </Reveal>
         </div>
       </section>
 
