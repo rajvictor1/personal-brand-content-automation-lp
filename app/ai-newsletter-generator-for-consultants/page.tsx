@@ -66,58 +66,93 @@ export default function ConsultantsNewsletterPage() {
   return (
     <>
       {renderSchemas(schemas)}
-      <main className="container-x py-20 sm:py-28">
-        <Reveal>
-          <span className="text-xs font-semibold text-primary uppercase tracking-wider">For Consultants</span>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h1 className="mt-3 max-w-4xl text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            AI newsletter generator for{" "}
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              consultants
-            </span>
-          </h1>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            Stay top-of-mind with clients and prospects without spending hours writing. BrandOps finds
-            current stories, writes a cited draft, and waits for your approval before anything is sent.
-          </p>
-        </Reveal>
 
-        <section className="mt-16 grid gap-8 md:grid-cols-2">
-          {benefits.map((b) => (
-            <div key={b.title} className="rounded-2xl border border-border bg-card p-8">
-              <b.icon className="h-8 w-8 text-primary" />
-              <h2 className="mt-4 font-display text-2xl font-medium text-foreground">{b.title}</h2>
-              <p className="mt-2 text-muted-foreground">{b.description}</p>
+      <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="mx-auto max-w-5xl">
+          <Reveal>
+            <p className="mb-4 text-sm font-medium tracking-wide text-primary">For Consultants</p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              AI newsletter generator for consultants
+            </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              Stay top-of-mind with clients and prospects without spending hours writing. BrandOps finds
+              current stories, writes a cited draft, and waits for your approval before anything is sent.
+            </p>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
+              >
+                Get early access <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/ai-newsletter-generator"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-5 py-2.5 text-sm font-medium text-muted-foreground transition hover:border-white/20 hover:text-foreground"
+              >
+                See the newsletter generator
+              </Link>
             </div>
-          ))}
-        </section>
+          </Reveal>
+        </div>
+      </section>
 
-        <section className="mt-16 rounded-3xl border border-border bg-gradient-to-br from-secondary/60 to-background p-8 sm:p-12 text-center">
-          <h2 className="font-display text-3xl font-medium text-foreground">Write your next newsletter in minutes</h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Join BrandOps Solo for free and generate your first cited newsletter today.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-semibold text-primary-foreground hover:opacity-90 transition"
-            >
-              Get early access <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/ai-newsletter-generator"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-base font-medium hover:bg-secondary transition"
-            >
-              See the newsletter generator
-            </Link>
+      <section className="border-y border-white/10 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid gap-5 md:grid-cols-2">
+            {benefits.map((b) => (
+              <Reveal key={b.title}>
+                <div className="rounded-2xl border border-white/10 bg-card p-6">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary">
+                    <b.icon className="h-5 w-5" />
+                  </div>
+                  <h2 className="text-xl font-semibold text-foreground">{b.title}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.description}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <LeadCapture />
-      </main>
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
+          <Reveal>
+            <div className="rounded-2xl border border-white/10 bg-card p-8 text-center">
+              <h2 className="text-2xl font-semibold tracking-tight text-foreground">Write your next newsletter in minutes</h2>
+              <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+                Join BrandOps Solo for free and generate your first cited newsletter today.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
+                >
+                  Get early access <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/ai-newsletter-generator"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-5 py-2.5 text-sm font-medium text-muted-foreground transition hover:border-white/20 hover:text-foreground"
+                >
+                  See the newsletter generator
+                </Link>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
+          <LeadCapture />
+        </div>
+      </section>
     </>
   );
 }

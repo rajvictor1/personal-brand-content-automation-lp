@@ -34,9 +34,12 @@ export default function PricingPage() {
         ),
         breadcrumb,
       ])}
-      <div className="pt-16">
-        <PricingCards />
-        <Testimonials />
+      <div className="relative">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="pt-16">
+          <PricingCards />
+          <Testimonials />
+        </div>
       </div>
     </>
   );

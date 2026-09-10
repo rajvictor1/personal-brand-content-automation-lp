@@ -85,7 +85,7 @@ export function BentoFeatures() {
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ delay: i * 0.06, duration: 0.5 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className={`group relative overflow-hidden rounded-2xl border border-border/40 bg-card/30 p-6 backdrop-blur-sm transition-colors hover:border-primary/30 hover:bg-card/50 ${span}`}
+                className={`group relative overflow-hidden rounded-xl border border-white/10 bg-card/30 p-6 transition-colors hover:border-primary/30 hover:bg-card/50 ${span}`}
               >
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
                   <Icon className="h-5 w-5" />

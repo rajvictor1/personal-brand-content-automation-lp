@@ -1,5 +1,4 @@
 import { Reveal } from "@/components/animations";
-import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,14 +10,16 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <section className="py-24">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <section className="relative px-4 pb-24 pt-24 sm:px-6 lg:px-8">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+      <div className="mx-auto max-w-5xl">
         <Reveal className="mb-10 text-center">
-          <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
-            Legal
-          </Badge>
-          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Terms of Service</h1>
-          <p className="mt-4 text-muted-foreground">Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary">Legal</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">Terms of Service</h1>
+          <p className="mt-4 text-muted-foreground">
+            Last updated:{" "}
+            {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+          </p>
         </Reveal>
 
         <Reveal delay={0.1}>

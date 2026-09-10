@@ -16,13 +16,11 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="border-y border-border/50 bg-muted/20 py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="border-y border-white/10 py-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
-          <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
-            Customer voices
-          </span>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary">Customer voices</p>
+          <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Trusted by founders and operators
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
@@ -33,7 +31,7 @@ export function Testimonials() {
         <div className="mx-auto max-w-3xl">
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={0.1 + i * 0.1}>
-              <Card className="h-full border-border/50 bg-card/40 transition-all hover:border-primary/30 hover:bg-card/60">
+              <Card className="h-full border-white/10 bg-card transition-all hover:border-primary/30 hover:bg-card/60">
                 <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8">
                   <div>
                     <Quote className="h-8 w-8 text-primary/60" />

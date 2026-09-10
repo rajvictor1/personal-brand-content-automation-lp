@@ -114,56 +114,50 @@ export default function LinkedInAutomationToolForCoachesPage() {
   return (
     <>
       {renderSchemas(schemas)}
-      <div className="relative">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
-        </div>
-
-        <section className="mx-auto max-w-4xl px-4 pt-24 pb-16 text-center sm:px-6 lg:px-8">
+      <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="mx-auto max-w-5xl">
           <Reveal>
-            <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
-              Review-first LinkedIn automation for coaches
-            </span>
+            <p className="mb-4 text-sm font-medium tracking-wide text-primary">Review-first LinkedIn automation for coaches</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              LinkedIn Automation Tool{" "}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                for coaches
-              </span>
+            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              LinkedIn Automation Tool for coaches
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               AI researches, writes, and designs your LinkedIn carousel and newsletter. You own the publish button.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
               >
-                Start free <ArrowRight className="h-5 w-5" />
+                Start free <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/demo"
-                className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/50 px-8 py-4 text-lg font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-5 py-2.5 text-sm font-medium text-muted-foreground transition hover:border-white/20 hover:text-foreground"
               >
                 Book a demo
               </Link>
             </div>
           </Reveal>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal delay={0.2}>
-            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">What BrandOps automates</h2>
+            <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight text-foreground">What BrandOps automates</h2>
           </Reveal>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((benefit, index) => (
               <Reveal key={benefit.title} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <div className="rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                     <benefit.icon className="h-6 w-6" />
                   </div>
@@ -173,44 +167,48 @@ export default function LinkedInAutomationToolForCoachesPage() {
               </Reveal>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">Automation that stays safe and useful</h2>
+            <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight text-foreground">Automation that stays safe and useful</h2>
           </Reveal>
           <div className="grid gap-6 md:grid-cols-2">
             <Reveal delay={0.1}>
-              <Link href="/resources/linkedin-automation-safety" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+              <Link href="/resources/linkedin-automation-safety" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">LinkedIn automation safety guide</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What is safe, what is risky, and why review-first automation protects your account.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.2}>
-              <Link href="/resources/review-first-publishing-workflow" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+              <Link href="/resources/review-first-publishing-workflow" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Review-first publishing workflow</h3>
                 <p className="mt-2 text-sm text-muted-foreground">How to build a human approval gate that does not slow down your publishing cadence.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.3}>
-              <Link href="/resources/ai-workflows-linkedin-personal-brands" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+              <Link href="/resources/ai-workflows-linkedin-personal-brands" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">10 AI workflows for LinkedIn</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Practical workflows for research, drafting, design, and publishing review.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.4}>
-              <Link href="/resources/linkedin-content-calendar-template" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+              <Link href="/resources/linkedin-content-calendar-template" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">30-day content calendar</h3>
                 <p className="mt-2 text-sm text-muted-foreground">A ready-to-use calendar that keeps your automated workflow full of post ideas.</p>
               </Link>
             </Reveal>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal>
-            <div className="rounded-2xl border border-border/50 bg-card/40 p-6 sm:p-8">
-              <h2 className="mb-6 text-center text-2xl font-bold text-foreground">Built for coaches like you</h2>
+            <div className="rounded-2xl border border-white/10 bg-card/40 p-6 sm:p-8">
+              <h2 className="mb-6 text-center text-2xl font-semibold tracking-tight text-foreground">Built for coaches like you</h2>
               <ul className="grid gap-4 sm:grid-cols-2">
                 {idealFor.map((item, index) => (
                   <Reveal key={item} delay={0.1 + index * 0.1}>
@@ -223,47 +221,53 @@ export default function LinkedInAutomationToolForCoachesPage() {
               </ul>
             </div>
           </Reveal>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <LeadCapture />
-        </section>
+        </div>
+      </section>
 
-        <Testimonials />
+      <Testimonials />
 
-        <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">Frequently asked questions</h2>
+            <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight text-foreground">Frequently asked questions</h2>
           </Reveal>
           <div className="space-y-4">
             {faq.map((item, index) => (
               <Reveal key={item.question} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-border/50 bg-card/40 p-6">
+                <div className="rounded-2xl border border-white/10 bg-card/40 p-6">
                   <h3 className="text-lg font-semibold text-foreground">{item.question}</h3>
                   <p className="mt-2 text-muted-foreground">{item.answer}</p>
                 </div>
               </Reveal>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-4xl px-4 pb-24 text-center sm:px-6 lg:px-8">
+      <section className="px-4 pb-24 pt-8 text-center sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal delay={0.3}>
-            <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 to-card/40 p-8">
-              <h3 className="text-2xl font-bold text-foreground">Automate your coaching content workflow</h3>
+            <div className="rounded-2xl border border-white/10 bg-card/40 p-8">
+              <h3 className="text-2xl font-semibold tracking-tight text-foreground">Automate your coaching content workflow</h3>
               <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
                 Join free and start turning research into review-ready LinkedIn assets.
               </p>
               <Link
                 href="/contact"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
               >
                 Get early access <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </Reveal>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "BrandOps Legal Hub | Privacy, Security & GDPR Policies",
+  title: "BrandOps Legal Hub | Privacy, Security \u0026 GDPR Policies",
   description:
     "Find BrandOps legal documents in one place: privacy policy, terms of service, GDPR, security practices, and data retention information.",
   alternates: { canonical: "https://www.brandops.site/legal" },
@@ -46,16 +46,16 @@ const legalSections = [
 export default function LegalHubPage() {
   return (
     <div className="relative">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
-      </div>
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
 
-      <section className="mx-auto max-w-4xl px-4 pt-24 pb-16 text-center sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-5xl px-4 pt-24 pb-16 text-center sm:px-6 lg:px-8">
         <Reveal>
-          <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">Legal</span>
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary">Legal</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Policies and{" "}<span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">procedures</span></h1>
+          <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            Policies and procedures
+          </h1>
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
@@ -65,15 +65,15 @@ export default function LegalHubPage() {
       </section>
 
       <section className="mx-auto max-w-5xl px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2">
           {legalSections.map((section, index) => (
             <Reveal key={section.title} delay={0.1 + index * 0.1}>
               <Link
                 href={section.href}
-                className="group flex items-start gap-4 rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60"
+                className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-primary/40"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
-                  <section.icon className="h-6 w-6" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary transition-colors group-hover:border-primary/40">
+                  <section.icon className="h-5 w-5" />
                 </div>
                 <div>
                   <h2 className="text-xl font-semibold text-foreground">{section.title}</h2>
@@ -85,15 +85,15 @@ export default function LegalHubPage() {
         </div>
 
         <Reveal delay={0.5}>
-          <div className="mt-12 rounded-2xl border border-border/50 bg-gradient-to-br from-primary/10 to-card/40 p-8 text-center">
+          <div className="mt-12 rounded-2xl border border-white/10 bg-card p-8 text-center">
             <Mail className="mx-auto h-10 w-10 text-primary" />
-            <h3 className="mt-4 text-xl font-bold text-foreground">Questions?</h3>
+            <h3 className="mt-4 text-xl font-semibold text-foreground">Questions?</h3>
             <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
               For legal, privacy, or security questions, contact us through the contact page.
             </p>
             <Link
               href="/contact?subject=Legal question"
-              className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90"
+              className="mt-5 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
             >
               Contact legal
             </Link>

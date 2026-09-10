@@ -53,13 +53,8 @@ export function PricingCards({ headingLevel = "h1" }: PricingCardsProps) {
     <section className="py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
-          <Badge
-            variant="outline"
-            className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary"
-          >
-            Pricing
-          </Badge>
-          <HeadingTag className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary">Pricing</p>
+          <HeadingTag className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Simple, operator-first pricing
           </HeadingTag>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
@@ -71,7 +66,7 @@ export function PricingCards({ headingLevel = "h1" }: PricingCardsProps) {
           {plans.map((plan, i) => (
             <Reveal key={plan.name} delay={i * 0.15}>
               <Card
-                className={`relative flex flex-col overflow-hidden border-border/50 bg-card/40 backdrop-blur-sm ${
+                className={`relative flex flex-col overflow-hidden border-white/10 bg-card ${
                   plan.primary
                     ? "border-primary/40 ring-1 ring-primary/30"
                     : ""
@@ -106,7 +101,7 @@ export function PricingCards({ headingLevel = "h1" }: PricingCardsProps) {
                   </ul>
                   <Button
                     variant={plan.primary ? "default" : "outline"}
-                    className="mt-8 w-full rounded-full"
+                    className="mt-8 w-full rounded-xl"
                     onClick={() => (window.location.href = plan.href)}
                   >
                     {plan.cta}

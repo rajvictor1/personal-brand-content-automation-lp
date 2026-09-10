@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Mail, ArrowRight, Target, Users, Sparkles, BarChart3 } from "lucide-react";
 import { Reveal } from "@/components/animations";
-import { Badge } from "@/components/ui/badge";
 import {
   BRANDOPS_URL,
   LINKEDIN_URL,
@@ -91,20 +90,16 @@ export default function FounderPage() {
     <>
       {renderSchemas(schemas)}
       <div className="relative">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-primary/10 blur-[160px]"></div>
-        </div>
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
 
-        <section className="mx-auto max-w-4xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-5xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
           <div className="text-center">
             <Reveal>
-              <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
-                Founder
-              </Badge>
+              <p className="mb-4 text-sm font-medium tracking-wide text-primary">Founder</p>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="mx-auto mb-8 h-32 w-32 overflow-hidden rounded-full border-2 border-border/50 bg-muted/30 sm:h-40 sm:w-40">
+              <div className="mx-auto mb-8 h-32 w-32 overflow-hidden rounded-full border-2 border-white/10 bg-secondary sm:h-40 sm:w-40">
                 <img
                   src="/founder-rk.png"
                   alt="Rajesh Kumar"
@@ -114,7 +109,7 @@ export default function FounderPage() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+              <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
                 Rajesh Kumar
               </h1>
             </Reveal>
@@ -131,14 +126,14 @@ export default function FounderPage() {
                   href={LINKEDIN_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:brightness-110"
                 >
                   <LinkedInIcon className="h-4 w-4" />
                   Connect on LinkedIn
                 </Link>
                 <Link
                   href="/contact?subject=Founder inquiry"
-                  className="inline-flex items-center gap-2 rounded-full border border-border/50 px-6 py-3 text-sm font-semibold text-foreground hover:border-primary hover:text-primary"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-6 py-3 text-sm font-medium text-foreground transition hover:border-white/20 hover:text-primary"
                 >
                   <Mail className="h-4 w-4" />
                   Get in touch
@@ -148,10 +143,10 @@ export default function FounderPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
           <Reveal delay={0.3}>
-            <div className="rounded-2xl border border-border/50 bg-card/40 p-8">
-              <h2 className="mb-4 text-2xl font-bold text-foreground">Why I built BrandOps</h2>
+            <div className="rounded-2xl border border-white/10 bg-card p-8">
+              <h2 className="mb-4 text-2xl font-semibold text-foreground">Why I built BrandOps</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   I spent years running demand-gen and GTM programs where speed was celebrated and quality was an afterthought. The result was generic content, missed context, and posts that sounded like everyone else.
@@ -167,17 +162,17 @@ export default function FounderPage() {
           </Reveal>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">Where I focus</h2>
+            <h2 className="mb-8 text-center text-2xl font-semibold text-foreground">Where I focus</h2>
           </Reveal>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2">
             {strengths.map((strength, index) => (
               <Reveal key={strength.title} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <strength.icon className="h-6 w-6" />
+                <div className="rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-primary/40">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary">
+                    <strength.icon className="h-5 w-5" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">{strength.title}</h3>
                   <p className="mt-2 text-muted-foreground">{strength.description}</p>
@@ -187,10 +182,10 @@ export default function FounderPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
           <Reveal delay={0.3}>
-            <div className="rounded-2xl border border-border/50 bg-gradient-to-br from-primary/10 to-card/40 p-8">
-              <h2 className="mb-4 text-2xl font-bold text-foreground">Work with me</h2>
+            <div className="rounded-2xl border border-white/10 bg-card p-8">
+              <h2 className="mb-4 text-2xl font-semibold text-foreground">Work with me</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   I advise founders, trainers, and consultants on demand-gen, GTM, and building a personal-brand content system. If you want help designing your own review-first workflow, let us talk.
@@ -207,7 +202,7 @@ export default function FounderPage() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
               >
                 Connect on LinkedIn
                 <ArrowRight className="h-4 w-4" />
@@ -216,16 +211,16 @@ export default function FounderPage() {
           </Reveal>
         </section>
 
-        <section className="mx-auto max-w-4xl px-4 pb-24 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-5xl px-4 pb-24 sm:px-6 lg:px-8">
           <Reveal delay={0.4}>
-            <div className="rounded-2xl border border-border/50 bg-gradient-to-br from-primary/10 to-card/40 p-10 text-center">
-              <h2 className="text-3xl font-bold text-foreground">Have a question about BrandOps?</h2>
+            <div className="rounded-2xl border border-white/10 bg-card p-10 text-center">
+              <h2 className="text-3xl font-semibold text-foreground">Have a question about BrandOps?</h2>
               <p className="mx-auto mt-3 max-w-xl text-lg text-muted-foreground">
                 I read every message. Whether it is product feedback, a setup issue, or a request for advice, send it through.
               </p>
               <Link
                 href="/contact?subject=Founder inquiry"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:brightness-110"
               >
                 <Mail className="h-4 w-4" />
                 Message the founder

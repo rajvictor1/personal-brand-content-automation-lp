@@ -118,56 +118,50 @@ export default function LinkedInCarouselGeneratorPage() {
   return (
     <>
       {renderSchemas(schemas)}
-      <div className="relative">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
-        </div>
-
-        <section className="mx-auto max-w-4xl px-4 pt-24 pb-16 text-center sm:px-6 lg:px-8">
+      <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="mx-auto max-w-5xl">
           <Reveal>
-            <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
-              Free Solo plan available
-            </span>
+            <p className="mb-4 text-sm font-medium tracking-wide text-primary">Free Solo plan available</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              AI LinkedIn Carousel Generator{" "}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                from one research topic
-              </span>
+            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              AI LinkedIn Carousel Generator from one research topic
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               Turn a timely story into a 5-slide, cited, review-ready LinkedIn carousel. No design skills. No auto-publishing. You keep the publish button.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
               >
-                Start free <ArrowRight className="h-5 w-5" />
+                Start free <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/demo"
-                className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/50 px-8 py-4 text-lg font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-5 py-2.5 text-sm font-medium text-muted-foreground transition hover:border-white/20 hover:text-foreground"
               >
                 Book a demo
               </Link>
             </div>
           </Reveal>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal delay={0.2}>
-            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">What the generator does</h2>
+            <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight text-foreground">What the generator does</h2>
           </Reveal>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <Reveal key={feature.title} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+                <div className="rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                     <feature.icon className="h-6 w-6" />
                   </div>
@@ -177,51 +171,55 @@ export default function LinkedInCarouselGeneratorPage() {
               </Reveal>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">Everything you need to build LinkedIn carousels</h2>
+            <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight text-foreground">Everything you need to build LinkedIn carousels</h2>
           </Reveal>
           <div className="grid gap-6 md:grid-cols-2">
             <Reveal delay={0.1}>
-              <Link href="/resources/linkedin-carousel-templates" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+              <Link href="/resources/linkedin-carousel-templates" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">7 carousel templates</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Copy-ready frameworks for lists, stories, comparisons, data breakdowns, and more.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.2}>
-              <Link href="/resources/linkedin-carousel-size-specs-2026" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+              <Link href="/resources/linkedin-carousel-size-specs-2026" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Size & specs 2026</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Exact dimensions, aspect ratio, file format, and font size for professional carousels.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.3}>
-              <Link href="/resources/linkedin-carousel-hook-formulas" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+              <Link href="/resources/linkedin-carousel-hook-formulas" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Hook formulas</h3>
                 <p className="mt-2 text-sm text-muted-foreground">12 proven opening lines that stop the scroll and get more swipes.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.4}>
-              <Link href="/resources/linkedin-carousel-design-framework-non-designers" className="group block rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+              <Link href="/resources/linkedin-carousel-design-framework-non-designers" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Design framework for non-designers</h3>
                 <p className="mt-2 text-sm text-muted-foreground">The 5-slide formula: structure, word counts, colors, and layout rules.</p>
               </Link>
             </Reveal>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">BrandOps vs. doing it manually</h2>
+            <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight text-foreground">BrandOps vs. doing it manually</h2>
           </Reveal>
-          <div className="rounded-2xl border border-border/50 bg-card/40 p-6 sm:p-8">
-            <div className="grid grid-cols-3 gap-4 text-sm font-semibold text-muted-foreground">
+          <div className="rounded-2xl border border-white/10 bg-card/40 p-6 sm:p-8">
+            <div className="grid grid-cols-3 gap-4 text-sm font-medium text-muted-foreground">
               <div>Task</div>
               <div className="text-center">Manual</div>
               <div className="text-right text-primary">BrandOps</div>
             </div>
-            <div className="my-4 h-px bg-border/50"></div>
+            <div className="my-4 h-px bg-white/10"></div>
             {comparisons.map((row, index) => (
               <Reveal key={row.label} delay={0.1 + index * 0.1}>
                 <div className="grid grid-cols-3 gap-4 py-3 text-sm">
@@ -232,47 +230,53 @@ export default function LinkedInCarouselGeneratorPage() {
               </Reveal>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <LeadCapture />
-        </section>
+        </div>
+      </section>
 
-        <Testimonials />
+      <Testimonials />
 
-        <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="mb-8 text-center text-2xl font-bold text-foreground">Frequently asked questions</h2>
+            <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight text-foreground">Frequently asked questions</h2>
           </Reveal>
           <div className="space-y-4">
             {faq.map((item, index) => (
               <Reveal key={item.question} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-border/50 bg-card/40 p-6">
+                <div className="rounded-2xl border border-white/10 bg-card/40 p-6">
                   <h3 className="text-lg font-semibold text-foreground">{item.question}</h3>
                   <p className="mt-2 text-muted-foreground">{item.answer}</p>
                 </div>
               </Reveal>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-4xl px-4 pb-24 text-center sm:px-6 lg:px-8">
+      <section className="px-4 pb-24 pt-8 text-center sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <Reveal delay={0.3}>
-            <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 to-card/40 p-8">
-              <h3 className="text-2xl font-bold text-foreground">Start generating carousels today</h3>
+            <div className="rounded-2xl border border-white/10 bg-card/40 p-8">
+              <h3 className="text-2xl font-semibold tracking-tight text-foreground">Start generating carousels today</h3>
               <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
                 Join free and turn your next research topic into a review-ready LinkedIn carousel.
               </p>
               <Link
                 href="/contact"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
               >
                 Get early access <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </Reveal>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

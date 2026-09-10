@@ -83,16 +83,16 @@ const openings = [
 export default function CareersPage() {
   return (
     <div className="relative">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
-      </div>
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
 
-      <section className="mx-auto max-w-4xl px-4 pt-24 pb-16 text-center sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-5xl px-4 pt-24 pb-16 text-center sm:px-6 lg:px-8">
         <Reveal>
-          <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">Careers</span>
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary">Careers</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Join the BrandOps{" "}<span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">team</span></h1>
+          <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            Join the BrandOps team
+          </h1>
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
@@ -101,11 +101,11 @@ export default function CareersPage() {
         </Reveal>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="space-y-6">
+      <section className="mx-auto max-w-5xl px-4 pb-24 sm:px-6 lg:px-8">
+        <div className="space-y-5">
           {openings.map((job, index) => (
             <Reveal key={job.id} delay={0.1 + index * 0.1}>
-              <div className="rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
+              <div className="rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-primary/40">
                 <div className="flex flex-wrap items-center gap-3">
                   <Badge variant="outline" className="border-primary/30 bg-primary/10 text-primary">
                     {job.type}
@@ -153,7 +153,7 @@ export default function CareersPage() {
 
                 <Link
                   href={`/contact?subject=Application for ${encodeURIComponent(job.title)}`}
-                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                  className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
                 >
                   <Briefcase className="h-4 w-4" /> Apply for this role
                 </Link>
@@ -163,15 +163,15 @@ export default function CareersPage() {
         </div>
 
         <Reveal delay={0.5}>
-          <div className="mt-12 rounded-2xl border border-border/50 bg-gradient-to-br from-primary/10 to-card/40 p-8 text-center">
+          <div className="mt-12 rounded-2xl border border-white/10 bg-card p-8 text-center">
             <GraduationCap className="mx-auto h-10 w-10 text-primary" />
-            <h3 className="mt-4 text-xl font-bold text-foreground">Do not see a perfect fit?</h3>
+            <h3 className="mt-4 text-xl font-semibold text-foreground">Do not see a perfect fit?</h3>
             <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
               We are always open to motivated people. Send us a note with what you want to learn and what you can build.
             </p>
             <Link
               href="/contact?subject=General internship application"
-              className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary px-5 py-2.5 text-sm font-semibold text-primary hover:bg-primary/10"
+              className="mt-5 inline-flex items-center gap-2 rounded-xl border border-primary px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary/10"
             >
               Send an open application <ArrowRight className="h-4 w-4" />
             </Link>

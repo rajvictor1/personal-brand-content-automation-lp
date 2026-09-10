@@ -64,61 +64,55 @@ export default function AboutPage() {
     <>
       {renderSchemas(schemas)}
       <div className="relative">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
-      </div>
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
 
-      <section className="mx-auto max-w-4xl px-4 pt-24 pb-16 text-center sm:px-6 lg:px-8">
-        <Reveal>
-          <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">About BrandOps</span>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            AI builds your content.
-            {" "}
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              You own the publish button.
-            </span>
-          </h1>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            BrandOps is a personal-brand content workspace for solo operators, trainers, and founders who want to publish more consistently without sacrificing judgment.
-          </p>
-        </Reveal>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-2">
-          {values.map((value, index) => (
-            <Reveal key={value.title} delay={0.1 + index * 0.1}>
-              <div className="rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <value.icon className="h-6 w-6" />
-                </div>
-                <h2 className="text-xl font-semibold text-foreground">{value.title}</h2>
-                <p className="mt-2 text-muted-foreground">{value.description}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal delay={0.5}>
-          <div className="mt-16 rounded-2xl border border-border/50 bg-gradient-to-br from-primary/10 to-card/40 p-8 text-center">
-            <h3 className="text-2xl font-bold text-foreground">Want to join us?</h3>
-            <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
-              We are a small team building tools for the next generation of personal brands. Check our open roles.
+        <section className="mx-auto max-w-5xl px-4 pt-24 pb-16 text-center sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="mb-4 text-sm font-medium tracking-wide text-primary">About BrandOps</p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              AI builds your content. You own the publish button.
+            </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+              BrandOps is a personal-brand content workspace for solo operators, trainers, and founders who want to publish more consistently without sacrificing judgment.
             </p>
-            <Link
-              href="/careers"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
-            >
-              See open roles
-            </Link>
+          </Reveal>
+        </section>
+
+        <section className="mx-auto max-w-5xl px-4 pb-24 sm:px-6 lg:px-8">
+          <div className="grid gap-5 md:grid-cols-2">
+            {values.map((value, index) => (
+              <Reveal key={value.title} delay={0.1 + index * 0.1}>
+                <div className="rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-primary/40">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary">
+                    <value.icon className="h-5 w-5" />
+                  </div>
+                  <h2 className="text-xl font-semibold text-foreground">{value.title}</h2>
+                  <p className="mt-2 text-muted-foreground">{value.description}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
-      </section>
-    </div>
+
+          <Reveal delay={0.5}>
+            <div className="mt-12 rounded-2xl border border-white/10 bg-card p-8 text-center">
+              <h3 className="text-2xl font-semibold text-foreground">Want to join us?</h3>
+              <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
+                We are a small team building tools for the next generation of personal brands. Check our open roles.
+              </p>
+              <Link
+                href="/careers"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:brightness-110"
+              >
+                See open roles
+              </Link>
+            </div>
+          </Reveal>
+        </section>
+      </div>
     </>
   );
 }

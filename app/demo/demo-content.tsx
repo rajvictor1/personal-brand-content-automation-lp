@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Reveal } from "@/components/animations";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, Loader2, Mail, Calendar, Shield, Sparkles, Users } from "lucide-react";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
+
+// Badge component is not used on this page
 
 const features = [
   {
@@ -69,21 +70,17 @@ export default function DemoPage() {
   };
 
   return (
-    <section className="relative overflow-hidden py-16 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative py-16 sm:py-24">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           {/* Left column - value prop */}
           <Reveal>
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge variant="outline" className="text-primary">
-                  Personalized walkthrough
-                </Badge>
-                <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                  Book a 30-minute{" "}
-                  <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                    demo
-                  </span>
+                <p className="text-sm font-medium tracking-wide text-primary">Personalized walkthrough</p>
+                <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+                  Book a 30-minute demo
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   A personalized tour of the BrandOps workspace and see how we help solo founders, trainers, and consultants publish content without losing control.
@@ -94,9 +91,9 @@ export default function DemoPage() {
                 <h2 className="text-lg font-semibold text-foreground">What happens during the demo</h2>
                 <div className="grid gap-4">
                   {features.map((feature, index) => (
-                    <div key={index} className="flex gap-4 rounded-xl border border-border/50 bg-muted/30 p-4">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                        <feature.icon className="h-5 w-5 text-primary" />
+                    <div key={index} className="flex gap-4 rounded-xl border border-white/10 bg-card p-4">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary">
+                        <feature.icon className="h-5 w-5" />
                       </div>
                       <p className="text-sm leading-relaxed text-muted-foreground">{feature.text}</p>
                     </div>
@@ -104,7 +101,7 @@ export default function DemoPage() {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-border/50 bg-muted/30 p-6">
+              <div className="rounded-xl border border-white/10 bg-card p-6">
                 <p className="text-sm text-muted-foreground">
                   Trusted by solo operators who want a review-first AI content system for LinkedIn carousels and newsletters.
                 </p>
@@ -114,11 +111,10 @@ export default function DemoPage() {
 
           {/* Right column - form card */}
           <Reveal delay={0.15}>
-            <div className="relative rounded-2xl border border-border/50 bg-card p-6 shadow-2xl sm:p-8">
-              <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 opacity-50 blur-sm" />
-              <div className="relative space-y-6">
+            <div className="rounded-2xl border border-white/10 bg-card p-6 sm:p-8">
+              <div className="space-y-6">
                 <div className="space-y-2 text-center">
-                  <h2 className="text-2xl font-bold text-foreground">See BrandOps in action</h2>
+                  <h2 className="text-2xl font-semibold text-foreground">See BrandOps in action</h2>
                   <p className="text-sm text-muted-foreground">
                     Fill the form and we will reach out within 24 hours.
                   </p>
@@ -212,7 +208,7 @@ export default function DemoPage() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-primary to-accent text-white hover:opacity-90"
+                      className="w-full rounded-xl bg-primary text-primary-foreground hover:brightness-110"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
@@ -236,7 +232,7 @@ export default function DemoPage() {
                       and{" "}
                       <Link href="/terms" className="text-primary hover:underline">
                         Terms of Service
-                      </Link>
+                      </Link>{" "}
                       .
                     </p>
                   </form>

@@ -49,31 +49,28 @@ export const metadata: Metadata = {
 export default function GeoScorecardPage() {
   return (
     <>
-      <section className="relative overflow-hidden px-4 pb-16 pt-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-              Free lead magnet
-            </span>
-            <h1 className="mt-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              AI Findability Scorecard for Personal Brands
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground">
-              One URL. One minute. A clear picture of how AI search engines see your site.
-            </p>
-          </div>
+      <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="mx-auto max-w-5xl">
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary">Free lead magnet</p>
+          <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            AI Findability Scorecard for Personal Brands
+          </h1>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            One URL. One minute. A clear picture of how AI search engines see your site.
+          </p>
         </div>
       </section>
 
-      <section className="px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="border-y border-white/10 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <AIFindabilityScorecard />
         </div>
       </section>
 
-      <section className="border-t border-border/50 bg-muted/20 px-4 py-20 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-foreground">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground">
             Why AI findability matters now
           </h2>
           <p className="mt-4 text-muted-foreground">

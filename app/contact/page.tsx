@@ -1,6 +1,5 @@
 import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/animations";
-import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
 import {
   BRANDOPS_URL,
@@ -35,30 +34,30 @@ export default function ContactPage() {
         ),
         breadcrumb,
       ])}
-      <section className="py-24">
-      <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="mb-10 text-center">
-          <Badge
-            variant="outline"
-            className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary"
-          >
-            Early access
-          </Badge>
-          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Get in touch
-          </h1>
-          <p className="mx-auto mt-4 text-lg text-muted-foreground">
-            Tell us what you are building and we will add you to the early-access list.
-          </p>
-        </Reveal>
+      <section className="relative py-24">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+            <Reveal className="text-center lg:text-left">
+              <div className="space-y-4">
+                <p className="text-sm font-medium tracking-wide text-primary">Early access</p>
+                <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                  Get in touch
+                </h1>
+                <p className="mx-auto max-w-xl text-lg text-muted-foreground lg:mx-0">
+                  Tell us what you are building and we will add you to the early-access list.
+                </p>
+              </div>
+            </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="rounded-2xl border border-border/50 bg-card/40 p-6 shadow-xl backdrop-blur-sm sm:p-8">
-            <ContactForm />
+            <Reveal delay={0.1}>
+              <div className="rounded-2xl border border-white/10 bg-card p-6 sm:p-8">
+                <ContactForm />
+              </div>
+            </Reveal>
           </div>
-        </Reveal>
-      </div>
-    </section>
+        </div>
+      </section>
     </>
   );
 }
