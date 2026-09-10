@@ -1,6 +1,5 @@
 import { BentoFeatures } from "@/components/bento-features";
 import { Metadata } from "next";
-import { Reveal } from "@/components/animations";
 import {
   BRANDOPS_URL,
   buildBreadcrumbList,
