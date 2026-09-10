@@ -43,7 +43,7 @@ const footerGroups = [
     title: "Company",
     links: [
       { label: "About", href: "/about" },
-      { label: "Founder", href: "/founder" },
+      { label: "Mind Behind BrandOps", href: "/founder" },
       { label: "Careers", href: "/careers" },
       { label: "Support", href: "/support" },
       { label: "Contact", href: "/contact" },
