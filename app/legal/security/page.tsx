@@ -37,7 +37,6 @@ export default function SecurityPage() {
   return (
     <div className="relative">
       <section className="relative px-4 pb-12 pt-24 text-center sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
         <div className="mx-auto max-w-5xl">
           <Reveal>
             <p className="mb-4 text-sm font-medium tracking-wide text-primary">Legal / Security</p>
@@ -63,7 +62,7 @@ export default function SecurityPage() {
           <div className="grid gap-4 sm:grid-cols-2">
             {practices.map((practice, index) => (
               <Reveal key={practice.title} delay={0.1 + index * 0.05}>
-                <div className="rounded-xl border border-white/10 bg-card/40 p-6">
+                <div className="rounded-xl border border-white/10 bg-card p-6">
                   <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <practice.icon className="h-5 w-5" />
                   </div>
@@ -118,7 +117,7 @@ export default function SecurityPage() {
       <section className="border-t border-white/10 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <Reveal delay={0.4}>
-            <div className="rounded-xl border border-white/10 bg-card/40 p-8 text-center">
+            <div className="rounded-xl border border-white/10 bg-card p-8 text-center">
               <Mail className="mx-auto h-10 w-10 text-primary" />
               <h3 className="mt-4 text-xl font-semibold text-foreground">Report a security issue</h3>
               <p className="mx-auto mt-2 max-w-lg text-sm text-muted-foreground">

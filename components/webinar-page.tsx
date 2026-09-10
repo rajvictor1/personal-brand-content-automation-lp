@@ -50,7 +50,6 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
       ])}
       <div className="relative">
         <section className="relative px-4 pb-12 pt-24 text-center sm:px-6 lg:px-8">
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
           <div className="mx-auto max-w-5xl">
             <Reveal>
               <p className="mb-4 text-sm font-medium tracking-wide text-primary">
@@ -69,13 +68,13 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
             </Reveal>
             <Reveal delay={0.3}>
               <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
-                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card/40 px-4 py-2">
+                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card px-4 py-2">
                   <Calendar className="h-4 w-4 text-primary" /> {webinar.date}
                 </span>
-                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card/40 px-4 py-2">
+                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card px-4 py-2">
                   <Clock className="h-4 w-4 text-primary" /> {webinar.time} {webinar.timezone}
                 </span>
-                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card/40 px-4 py-2">
+                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card px-4 py-2">
                   <PlayCircle className="h-4 w-4 text-primary" /> {webinar.duration}
                 </span>
               </div>
@@ -101,7 +100,7 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
           <div className="mx-auto max-w-5xl">
             <div className="grid gap-4 lg:grid-cols-2">
               <Reveal delay={0.1}>
-                <Card className="h-full border-white/10 bg-card/40">
+                <Card className="h-full border-white/10 bg-card">
                   <CardContent className="p-6">
                     <h2 className="text-xl font-semibold text-foreground">What you will learn</h2>
                     <ul className="mt-5 space-y-3">
@@ -117,7 +116,7 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
               </Reveal>
 
               <Reveal delay={0.2}>
-                <Card className="h-full border-white/10 bg-card/40">
+                <Card className="h-full border-white/10 bg-card">
                   <CardContent className="p-6">
                     <h2 className="text-xl font-semibold text-foreground">Who should attend</h2>
                     <p className="mt-4 text-sm text-muted-foreground">This webinar is for you if:</p>
@@ -151,7 +150,7 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {webinar.agenda.map((item, i) => (
                 <Reveal key={i} delay={0.05 * i}>
-                  <Card className="border-white/10 bg-card/40 transition-colors hover:border-primary/30">
+                  <Card className="border-white/10 bg-card transition-colors hover:border-primary/30">
                     <CardContent className="p-6">
                       <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-sm font-bold text-primary">
                         {i + 1}
@@ -167,9 +166,9 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
         </section>
 
         <section className="border-y border-white/10 px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-5xl">
             <Reveal delay={0.1}>
-              <Card className="border-white/10 bg-card/40">
+              <Card className="border-white/10 bg-card">
                 <CardContent className="p-8 text-center sm:p-12">
                   <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-primary/10">
                     <User className="h-8 w-8 text-primary" />
@@ -187,7 +186,7 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
         </section>
 
         <section className="px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-5xl">
             <Reveal delay={0.1}>
               <div className="mb-10 text-center">
                 <h2 className="text-2xl font-semibold tracking-tight text-foreground">Frequently asked questions</h2>
@@ -196,7 +195,7 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
             <div className="space-y-4">
               {webinar.faqs.map((faq, i) => (
                 <Reveal key={i} delay={0.05 * i}>
-                  <Card className="border-white/10 bg-card/40">
+                  <Card className="border-white/10 bg-card">
                     <CardContent className="p-6">
                       <h3 className="text-base font-semibold text-foreground">{faq.q}</h3>
                       <p className="mt-2 text-sm text-muted-foreground">{faq.a}</p>
@@ -210,9 +209,9 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
 
         {isUpcoming && (
           <section id="register" className="border-t border-white/10 px-4 py-16 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-4xl">
+            <div className="mx-auto max-w-5xl">
               <Reveal delay={0.1}>
-                <div className="rounded-xl border border-white/10 bg-card/40 p-8 text-center sm:p-12">
+                <div className="rounded-xl border border-white/10 bg-card p-8 text-center sm:p-12">
                   <h2 className="text-2xl font-semibold text-foreground">Save your seat before spots fill.</h2>
                   <p className="mt-3 text-sm text-muted-foreground">
                     {webinar.date} · {webinar.time} {webinar.timezone} · Google Meet

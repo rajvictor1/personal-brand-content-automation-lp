@@ -60,9 +60,9 @@ const features = [
 export function FeatureGrid() {
   return (
     <section id="features" className="py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
-          <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+          <Badge variant="outline" className="mb-4 border-white/10 bg-card px-3 py-1 text-sm text-primary">
             Features
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
@@ -78,7 +78,7 @@ export function FeatureGrid() {
             const Icon = feature.icon;
             return (
               <Reveal key={feature.title} delay={i * 0.08}>
-                <Card className="group h-full overflow-hidden border-border/50 bg-card/40 transition-all hover:border-primary/30 hover:bg-card/60 hover:shadow-lg hover:shadow-primary/5">
+                <Card className="group h-full overflow-hidden border-white/10 bg-card transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
                   <CardContent className="flex h-full flex-col p-6">
                     <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
                       <Icon className="h-6 w-6" />

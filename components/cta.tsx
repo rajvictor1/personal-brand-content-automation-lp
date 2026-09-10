@@ -7,11 +7,7 @@ import { Reveal } from "@/components/animations";
 export function Cta() {
   return (
     <section className="relative overflow-hidden py-24">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
-      </div>
-
-      <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Ready to stop chasing content?
@@ -23,14 +19,14 @@ export function Cta() {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105"
+              className="group inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:brightness-110"
             >
               Request early access
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               href="/demo"
-              className="inline-flex items-center gap-2 rounded-full border border-border/50 px-8 py-4 text-lg font-semibold text-foreground transition-colors hover:border-primary/30 hover:bg-primary/10"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-card px-8 py-4 text-lg font-semibold text-foreground transition-colors hover:border-primary/30 hover:bg-primary/10"
             >
               Book a 30-minute demo
             </Link>

@@ -11,8 +11,8 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="border-y border-border/50 bg-muted/20 py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="border-y border-white/10 bg-muted/20 py-16">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {stats.map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.1} className="text-center">

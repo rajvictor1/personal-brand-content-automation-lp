@@ -39,17 +39,15 @@ export function Hero() {
   return (
     <section ref={ref} className="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-40">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/2 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]"></div>
-        <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-accent/10 blur-[140px]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.12),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.06),transparent_50%)]"></div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <Badge
               variant="outline"
-              className="mb-6 border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary"
+              className="mb-6 border-white/10 bg-card px-4 py-1.5 text-sm text-primary"
             >
               <Sparkles className="mr-1.5 inline h-3.5 w-3.5" />
               The review-first content workspace
@@ -59,7 +57,7 @@ export function Hero() {
           <Reveal delay={0.1}>
             <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
               AI builds your content.{" "}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              <span className="text-primary">
                 You own the publish button.
               </span>
             </h1>
@@ -76,14 +74,14 @@ export function Hero() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105"
+                className="group inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:brightness-110"
               >
                 Join early access
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/demo"
-                className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/50 px-8 py-4 text-lg font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-card px-8 py-4 text-lg font-semibold text-foreground transition-colors hover:bg-secondary"
               >
                 Book a demo
               </Link>
@@ -94,9 +92,9 @@ export function Hero() {
         <Reveal delay={0.4} className="mx-auto mt-20 max-w-5xl">
           <motion.div
             style={{ y }}
-            className="relative rounded-2xl border border-border/50 bg-card/50 p-1 shadow-2xl backdrop-blur-md"
+            className="relative rounded-xl border border-white/10 bg-card p-1 shadow-xl"
           >
-            <div className="grid gap-4 rounded-xl bg-gradient-to-b from-background to-card p-6 sm:grid-cols-2 lg:grid-cols-4 lg:p-8">
+            <div className="grid gap-4 rounded-xl bg-card p-6 sm:grid-cols-2 lg:grid-cols-4 lg:p-8">
               {pipeline.map((node, i) => {
                 const Icon = node.icon;
                 return (
@@ -107,7 +105,7 @@ export function Hero() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 + i * 0.12, duration: 0.5 }}
                     whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                    className="rounded-xl border border-border/50 bg-background/60 p-5 transition-colors hover:border-primary/30"
+                    className="rounded-xl border border-white/10 bg-background p-5 transition-colors hover:border-primary/30"
                   >
                     <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <Icon className="h-5 w-5" />
@@ -127,12 +125,12 @@ export function Hero() {
 
 export function ProblemSolution() {
   return (
-    <section className="border-y border-border/50 bg-muted/20 py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="border-y border-white/10 bg-muted/20 py-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-2">
           <Reveal>
             <div className="space-y-6">
-              <Badge variant="outline" className="border-destructive/30 bg-destructive/10 text-destructive">
+              <Badge variant="outline" className="border-destructive/30 bg-card text-destructive">
                 The problem
               </Badge>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -156,7 +154,7 @@ export function ProblemSolution() {
 
           <Reveal delay={0.15}>
             <div className="space-y-6">
-              <Badge variant="outline" className="border-primary/30 bg-primary/10 text-primary">
+              <Badge variant="outline" className="border-primary/30 bg-card text-primary">
                 The BrandOps solution
               </Badge>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -186,7 +184,7 @@ export function ProblemSolution() {
 export function Outcomes() {
   return (
     <section className="py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {outcomes.map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.1} className="text-center">

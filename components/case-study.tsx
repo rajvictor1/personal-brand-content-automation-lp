@@ -22,8 +22,8 @@ const after = [
 
 export function CaseStudy() {
   return (
-    <section className="border-y border-border/50 bg-muted/20 py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="border-y border-white/10 bg-muted/20 py-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
           <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
             Illustrative case study
@@ -38,7 +38,7 @@ export function CaseStudy() {
 
         <div className="grid gap-8 md:grid-cols-2">
           <Reveal>
-            <Card className="h-full border-destructive/30 bg-card/40">
+            <Card className="h-full border-destructive/30 bg-card">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-destructive">Before BrandOps</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Manual workflow per weekly content cycle.</p>
@@ -46,7 +46,7 @@ export function CaseStudy() {
                   {before.map((item) => {
                     const Icon = item.icon;
                     return (
-                      <div key={item.label} className="flex items-center justify-between rounded-lg bg-background/60 p-4">
+                      <div key={item.label} className="flex items-center justify-between rounded-xl bg-card p-4">
                         <div className="flex items-center gap-3">
                           <Icon className="h-4 w-4 text-muted-foreground" />
                           <span className="text-sm text-foreground">{item.label}</span>
@@ -64,7 +64,7 @@ export function CaseStudy() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <Card className="h-full border-primary/30 bg-card/40">
+            <Card className="h-full border-primary/30 bg-card">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-primary">With BrandOps</h3>
                 <p className="mt-2 text-sm text-muted-foreground">AI-assisted workflow with review gate.</p>
@@ -72,7 +72,7 @@ export function CaseStudy() {
                   {after.map((item) => {
                     const Icon = item.icon;
                     return (
-                      <div key={item.label} className="flex items-center justify-between rounded-lg bg-background/60 p-4">
+                      <div key={item.label} className="flex items-center justify-between rounded-xl bg-card p-4">
                         <div className="flex items-center gap-3">
                           <Icon className="h-4 w-4 text-muted-foreground" />
                           <span className="text-sm text-foreground">{item.label}</span>
@@ -93,7 +93,7 @@ export function CaseStudy() {
         <Reveal delay={0.3} className="mt-12 text-center">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+            className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition hover:brightness-110"
           >
             Want to share your real result? Get in touch →
           </Link>

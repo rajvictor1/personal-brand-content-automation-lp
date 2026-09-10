@@ -10,8 +10,8 @@ const painPoints = [
 
 export function ProblemSection() {
   return (
-    <section className="relative border-y border-border/30 bg-muted/20 py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative border-y border-white/10 bg-muted/20 py-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Building a personal brand should not be a second job
@@ -25,7 +25,7 @@ export function ProblemSection() {
         <div className="grid gap-6 sm:grid-cols-3">
           {painPoints.map((item, i) => (
             <Reveal key={item.label} delay={i * 0.12}>
-              <div className="rounded-2xl border border-border/40 bg-card/30 p-6 text-center backdrop-blur-sm">
+              <div className="rounded-xl border border-white/10 bg-card p-6 text-center">
                 <div className="text-4xl font-bold text-primary">{item.stat}</div>
                 <div className="mt-2 text-sm text-muted-foreground">{item.label}</div>
               </div>

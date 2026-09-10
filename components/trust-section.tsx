@@ -13,9 +13,8 @@ const checks = [
 
 export function TrustSection() {
   return (
-    <section className="relative overflow-hidden border-y border-border/30 bg-muted/20 py-24">
-      <div className="pointer-events-none absolute -right-32 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-primary/10 blur-[120px]"></div>
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden border-y border-white/10 bg-muted/20 py-24">
+      <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -55,7 +54,7 @@ export function TrustSection() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 + i * 0.1 }}
-                    className="rounded-xl border border-border/40 bg-card/40 p-5"
+                    className="rounded-xl border border-white/10 bg-card p-5"
                   >
                     <Icon className="mb-3 h-6 w-6 text-primary" />
                     <h3 className="font-semibold text-foreground">{item.title}</h3>

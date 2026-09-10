@@ -28,7 +28,7 @@ const tools = [
 export function ToolsGrid() {
   return (
     <section className="py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-12 text-center">
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Free AI tools for your personal brand
@@ -43,7 +43,7 @@ export function ToolsGrid() {
             <Reveal key={tool.title} delay={0.1 + index * 0.1}>
               <Link
                 href={tool.href}
-                className="group flex h-full flex-col rounded-2xl border border-border/50 bg-card/40 p-6 transition-all hover:border-primary/30 hover:bg-card/60"
+                className="group flex h-full flex-col rounded-xl border border-white/10 bg-card p-6 transition-all hover:border-primary/30 hover:bg-secondary"
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <tool.icon className="h-6 w-6" />

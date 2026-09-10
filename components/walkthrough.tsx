@@ -16,12 +16,8 @@ const steps = [
 
 export function Walkthrough() {
   return (
-    <section className="relative overflow-hidden py-24">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[140px]"></div>
-      </div>
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="py-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
           <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
             See it in action
@@ -34,7 +30,7 @@ export function Walkthrough() {
           </p>
         </Reveal>
 
-        <div className="mx-auto max-w-4xl rounded-2xl border border-border/50 bg-card/40 p-6 shadow-2xl backdrop-blur-md sm:p-10">
+        <div className="mx-auto max-w-4xl rounded-xl border border-white/10 bg-card p-6 shadow-xl sm:p-10">
           <div className="space-y-4">
             {steps.map((step, i) => {
               const Icon = step.icon;
@@ -46,7 +42,7 @@ export function Walkthrough() {
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.12, duration: 0.5 }}
                     whileHover={{ scale: 1.02 }}
-                    className="flex items-center gap-4 rounded-xl border border-border/50 bg-background/60 p-4 transition-colors hover:border-primary/30"
+                    className="flex items-center gap-4 rounded-xl border border-white/10 bg-card p-4 transition-colors hover:border-primary/30"
                   >
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <Icon className="h-5 w-5" />

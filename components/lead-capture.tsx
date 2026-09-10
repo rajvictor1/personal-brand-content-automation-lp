@@ -19,7 +19,7 @@ export function LeadCapture() {
 
   return (
     <Reveal>
-      <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 to-card/40 p-6 sm:p-8">
+      <div className="rounded-xl border border-white/10 bg-card p-6 sm:p-8">
         <div className="flex items-start gap-4">
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
             <Download className="h-6 w-6" />
@@ -31,7 +31,7 @@ export function LeadCapture() {
             </p>
 
             {submitted ? (
-              <div className="mt-4 flex items-center gap-2 rounded-xl border border-primary/30 bg-primary/10 p-4 text-sm text-foreground">
+              <div className="mt-4 flex items-center gap-2 rounded-xl border border-white/10 bg-card p-4 text-sm text-foreground">
                 <CheckCircle className="h-5 w-5 text-primary" />
                 <span>Thanks. We will send the checklist to {email} shortly.</span>
               </div>
@@ -43,11 +43,11 @@ export function LeadCapture() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="h-12 flex-1 rounded-full border-border/50 bg-background/60 px-4"
+                  className="h-12 flex-1 rounded-xl border-white/10 bg-background px-4"
                 />
                 <Button
                   type="submit"
-                  className="h-12 rounded-full bg-primary px-6 text-primary-foreground hover:opacity-90"
+                  className="h-12 rounded-xl bg-primary px-6 text-primary-foreground transition hover:brightness-110"
                 >
                   Send me the checklist <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -77,7 +77,7 @@ export function SmallLeadCapture({ label = "Get early access" }: { label?: strin
   return (
     <div className="w-full max-w-md">
       {submitted ? (
-        <div className="flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-3 text-sm text-foreground">
+        <div className="flex items-center gap-2 rounded-full border border-white/10 bg-card px-4 py-3 text-sm text-foreground">
           <CheckCircle className="h-4 w-4 text-primary" />
           <span>Thanks. We will be in touch.</span>
         </div>
@@ -89,11 +89,11 @@ export function SmallLeadCapture({ label = "Get early access" }: { label?: strin
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="h-11 flex-1 rounded-full border-border/50 bg-background/60 px-4"
+            className="h-11 flex-1 rounded-full border-white/10 bg-background px-4"
           />
           <Button
             type="submit"
-            className="h-11 rounded-full bg-primary px-5 text-primary-foreground hover:opacity-90"
+            className="h-11 rounded-xl bg-primary px-5 text-primary-foreground transition hover:brightness-110"
           >
             {label}
           </Button>

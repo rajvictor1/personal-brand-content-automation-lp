@@ -31,7 +31,7 @@ export function Testimonials() {
         <div className="mx-auto max-w-3xl">
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={0.1 + i * 0.1}>
-              <Card className="h-full border-white/10 bg-card transition-all hover:border-primary/30 hover:bg-card/60">
+              <Card className="h-full border-white/10 bg-card transition-all hover:border-primary/30 hover:bg-card">
                 <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8">
                   <div>
                     <Quote className="h-8 w-8 text-primary/60" />

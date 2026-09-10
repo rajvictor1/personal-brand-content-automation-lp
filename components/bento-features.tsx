@@ -60,7 +60,7 @@ const features = [
 export function BentoFeatures() {
   return (
     <section className="py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-14 text-center">
           <span className="mb-3 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
             Product
@@ -85,7 +85,7 @@ export function BentoFeatures() {
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ delay: i * 0.06, duration: 0.5 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className={`group relative overflow-hidden rounded-xl border border-white/10 bg-card/30 p-6 transition-colors hover:border-primary/30 hover:bg-card/50 ${span}`}
+                className={`group relative overflow-hidden rounded-xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/30 hover:bg-card ${span}`}
               >
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
                   <Icon className="h-5 w-5" />

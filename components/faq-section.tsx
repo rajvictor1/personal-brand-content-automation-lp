@@ -35,7 +35,7 @@ const faqs = [
 export function FaqSection() {
   return (
     <section className="py-24">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Frequently asked questions
@@ -55,7 +55,7 @@ export function FaqSection() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
               >
-                <AccordionItem value={`item-${i}`} className="border-border/40">
+                <AccordionItem value={`item-${i}`} className="border-white/10">
                   <AccordionTrigger className="text-left text-base font-medium hover:text-primary">
                     {faq.q}
                   </AccordionTrigger>

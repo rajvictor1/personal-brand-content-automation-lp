@@ -24,7 +24,7 @@ export function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-50 mx-auto max-w-3xl rounded-2xl border border-border/50 bg-card/90 p-5 shadow-2xl backdrop-blur-xl md:left-auto md:right-6 md:w-[420px]">
+    <div className="fixed bottom-4 left-4 right-4 z-50 mx-auto max-w-3xl rounded-2xl border border-white/10 bg-card p-5 shadow-2xl md:left-auto md:right-6 md:w-[420px]">
       <p className="text-sm text-foreground">
         <strong className="block text-base font-semibold mb-1">We use cookies</strong>
         We may place these for analysis of our visitor data, to improve our website, show personalised content and to give you a great website experience.
@@ -33,7 +33,7 @@ export function CookieConsent() {
         <Button variant="ghost" size="sm" onClick={handleDecline} className="text-muted-foreground hover:text-foreground">
           No, adjust
         </Button>
-        <Button size="sm" onClick={handleAccept} className="bg-primary text-primary-foreground hover:opacity-90">
+        <Button size="sm" onClick={handleAccept} className="rounded-xl bg-primary text-primary-foreground hover:brightness-110">
           Accept all
         </Button>
       </div>

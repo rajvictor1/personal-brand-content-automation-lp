@@ -136,8 +136,8 @@ export function AIFindabilityScorecard() {
   }
 
   return (
-    <div className="mx-auto max-w-3xl">
-      <Card className="border border-border/50 bg-card/60 backdrop-blur-xl">
+    <div className="mx-auto max-w-5xl">
+      <Card className="border border-white/10 bg-card">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-lg">
             <Search className="h-5 w-5 text-primary" />
@@ -174,7 +174,7 @@ export function AIFindabilityScorecard() {
             <label className="flex items-start gap-3 text-sm text-muted-foreground">
               <input
                 type="checkbox"
-                className="mt-1 h-4 w-4 rounded border-border bg-background text-primary"
+                className="mt-1 h-4 w-4 rounded border-white/10 bg-background text-primary"
                 checked={consent}
                 onChange={(e) => setConsent(e.target.checked)}
               />
@@ -192,7 +192,7 @@ export function AIFindabilityScorecard() {
 
             <Button
               type="submit"
-              className="w-full bg-gradient-to-r from-primary to-accent text-primary-foreground"
+              className="w-full rounded-xl bg-primary text-primary-foreground hover:brightness-110"
               size="lg"
               disabled={loading}
             >
@@ -211,7 +211,7 @@ export function AIFindabilityScorecard() {
 
       {result && (
         <div className="mt-10 space-y-6">
-          <Card className="border border-border/50 bg-card/60 backdrop-blur-xl">
+          <Card className="border border-white/10 bg-card">
             <CardContent className="p-6">
               <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
                 <div className="text-center sm:text-left">
@@ -221,7 +221,7 @@ export function AIFindabilityScorecard() {
                 </div>
                 <Button
                   onClick={() => generatePDF(result)}
-                  className="bg-emerald-600 text-white hover:bg-emerald-700"
+                  className="rounded-xl bg-primary text-primary-foreground hover:brightness-110"
                   size="lg"
                 >
                   <Download className="mr-2 h-4 w-4" />
@@ -233,7 +233,7 @@ export function AIFindabilityScorecard() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             {result.categories.map((cat) => (
-              <Card key={cat.name} className="border border-border/50 bg-card/60 backdrop-blur-xl">
+              <Card key={cat.name} className="border border-white/10 bg-card">
                 <CardContent className="p-5">
                   <div className="flex items-start justify-between">
                     <div>
@@ -255,7 +255,7 @@ export function AIFindabilityScorecard() {
             ))}
           </div>
 
-          <Card className="border border-border/50 bg-card/60 backdrop-blur-xl">
+          <Card className="border border-white/10 bg-card">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-emerald-500" />
@@ -276,9 +276,9 @@ export function AIFindabilityScorecard() {
             </CardContent>
           </Card>
 
-          <Separator className="bg-border/50" />
+          <Separator className="bg-white/10" />
 
-          <div className="rounded-xl border border-primary/30 bg-primary/5 p-6 text-center">
+          <div className="rounded-xl border border-white/10 bg-card p-6 text-center">
             <p className="text-sm font-medium text-foreground">
               Want to keep your personal brand AI-findable?
             </p>
@@ -287,7 +287,7 @@ export function AIFindabilityScorecard() {
             </p>
             <a
               href="/contact"
-              className="mt-4 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105"
+              className="mt-4 inline-flex rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:brightness-110"
             >
               Join the early-access list
             </a>

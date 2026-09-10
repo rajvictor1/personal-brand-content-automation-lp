@@ -17,7 +17,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.15, duration: 0.5 }}
-      className="relative rounded-2xl border border-border/40 bg-card/30 p-6 backdrop-blur-sm"
+      className="relative rounded-xl border border-white/10 bg-card p-6"
     >
       <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/15 text-primary font-bold">
         {index + 1}
@@ -31,7 +31,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
 export function SolutionSection() {
   return (
     <section className="py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-14 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             From topic to publish-ready assets in minutes
