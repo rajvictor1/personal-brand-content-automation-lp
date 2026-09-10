@@ -142,7 +142,7 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-4 inline-flex items-center gap-3">
-              <Badge variant="outline" className="border-primary/30 bg-primary/10 text-primary">
+              <Badge variant="outline" className="border-white/10 bg-card text-primary">
                 {post.category}
               </Badge>
               <span className="flex items-center gap-1 text-xs text-muted-foreground">
@@ -236,7 +236,7 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <Link
                 href="/demo"
-                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-primary/30"
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-white/20"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <Video className="h-5 w-5" />
@@ -248,7 +248,7 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
               </Link>
               <Link
                 href="/contact"
-                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-primary/30"
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-white/20"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <Mail className="h-5 w-5" />
