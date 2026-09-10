@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <section className="relative px-4 pb-24 pt-24 sm:px-6 lg:px-8">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.10),rgba(99,102,241,0.15)_40%,transparent_70%)]" />
       <div className="mx-auto max-w-5xl">
         <Reveal className="mb-10 text-center">
-          <p className="mb-4 text-sm font-medium tracking-wide text-primary">Legal</p>
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Legal</p>
           <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">Privacy Policy</h1>
           <p className="mt-4 text-muted-foreground">
             Last updated:{" "}

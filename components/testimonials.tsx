@@ -19,7 +19,7 @@ export function Testimonials() {
     <section className="border-y border-white/10 py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
-          <p className="mb-4 text-sm font-medium tracking-wide text-primary">Customer voices</p>
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Customer voices</p>
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Trusted by founders and operators
           </h2>

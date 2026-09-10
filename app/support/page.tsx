@@ -100,18 +100,18 @@ const realExample = {
 export default function SupportPage() {
   return (
     <div className="relative">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.10),rgba(99,102,241,0.15)_40%,transparent_70%)]" />
 
       <section className="mx-auto max-w-5xl px-4 pt-24 pb-16 text-center sm:px-6 lg:px-8">
         <Reveal>
-          <p className="mb-4 text-sm font-medium tracking-wide text-primary">
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
             <HeadphonesIcon className="mr-1.5 inline h-3.5 w-3.5" />
             24/7 support
           </p>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+          <h1 className="text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
             We are here whenever you need us
           </h1>
         </Reveal>

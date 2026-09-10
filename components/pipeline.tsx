@@ -54,7 +54,7 @@ export function Pipeline({ headingLevel = "h1" }: PipelineProps) {
     <section className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <Reveal className="mb-12 text-center">
-          <p className="mb-4 text-sm font-medium tracking-wide text-primary">How it works</p>
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">How it works</p>
           <HeadingTag className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             The BrandOps pipeline
           </HeadingTag>

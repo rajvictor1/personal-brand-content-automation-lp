@@ -157,19 +157,19 @@ export default function AiWebsiteDesignDevelopmentPage() {
       ])}
 
       <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.10),rgba(99,102,241,0.15)_40%,transparent_70%)]" />
         <div className="mx-auto max-w-5xl">
           <Reveal>
-            <p className="mb-4 text-sm font-medium tracking-wide text-primary">Website Design \u0026 Development Service</p>
+            <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Website Design \u0026 Development Service</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              AI-ready websites for founders and consultants who mean business.
+            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
+              Next.js websites for founders and consultants
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Built with AI agents. Finished by humans. Designed to rank, load fast, and convert visitors into leads.
+              We design and build fast, search-friendly websites with AI-assisted copy, clean code, and human oversight.
             </p>
           </Reveal>
           <Reveal delay={0.3}>

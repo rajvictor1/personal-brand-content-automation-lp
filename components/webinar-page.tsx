@@ -52,12 +52,12 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
         <section className="relative px-4 pb-12 pt-24 text-center sm:px-6 lg:px-8">
           <div className="mx-auto max-w-5xl">
             <Reveal>
-              <p className="mb-4 text-sm font-medium tracking-wide text-primary">
+              <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
                 {isUpcoming ? "Free Live Webinar" : "Webinar Replay"}
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="mx-auto max-w-4xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              <h1 className="mx-auto max-w-4xl text-balance text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl">
                 {webinar.title}
               </h1>
             </Reveal>

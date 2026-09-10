@@ -53,7 +53,7 @@ export function PricingCards({ headingLevel = "h1" }: PricingCardsProps) {
     <section className="py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
-          <p className="mb-4 text-sm font-medium tracking-wide text-primary">Pricing</p>
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Pricing</p>
           <HeadingTag className="text-3xl font-semibold tracking-tight text-foreground drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-4xl lg:text-5xl">
             Simple, operator-first pricing
           </HeadingTag>

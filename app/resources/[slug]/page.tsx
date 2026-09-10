@@ -133,7 +133,7 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
     <>
       {renderSchemas(schemas)}
       <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.10),rgba(99,102,241,0.15)_40%,transparent_70%)]" />
         <div className="mx-auto max-w-5xl">
           <Reveal>
             <Link href="/resources" className="text-sm font-medium text-primary hover:underline">
