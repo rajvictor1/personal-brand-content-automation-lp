@@ -219,6 +219,20 @@ const whyUs = [
   },
 ];
 
+function SectionCta({ label = "Start a Project", href = "/contact" }: { label?: string; href?: string }) {
+  return (
+    <div className="mt-10 flex justify-center">
+      <Link
+        href={href}
+        className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
+      >
+        {label}
+        <ArrowRight className="h-4 w-4" />
+      </Link>
+    </div>
+  );
+}
+
 export default function PipelinePage() {
   const url = `${BRANDOPS_URL}/pipeline`;
   return (
@@ -264,6 +278,7 @@ export default function PipelinePage() {
               Book a Call
             </Link>
           </div>
+          <SectionCta label="Request a detailed proposal" />
         </div>
       </section>
 
@@ -331,6 +346,7 @@ export default function PipelinePage() {
               </Reveal>
             ))}
           </div>
+          <SectionCta label="Get a custom scope" />
         </div>
       </section>
 
@@ -364,6 +380,7 @@ export default function PipelinePage() {
               </Reveal>
             ))}
           </div>
+          <SectionCta label="Start your first sprint" />
         </div>
       </section>
 
@@ -405,6 +422,7 @@ export default function PipelinePage() {
               </Reveal>
             ))}
           </div>
+          <SectionCta label="Choose your engagement" />
         </div>
       </section>
 
@@ -437,6 +455,7 @@ export default function PipelinePage() {
               </Reveal>
             ))}
           </div>
+          <SectionCta label="Book a strategy call" />
         </div>
       </section>
 
