@@ -278,7 +278,6 @@ export default function PipelinePage() {
               Book a Call
             </Link>
           </div>
-          <SectionCta label="Request a detailed proposal" />
         </div>
       </section>
 
