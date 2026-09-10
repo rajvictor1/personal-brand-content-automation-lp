@@ -39,65 +39,71 @@ const videos = [
 
 export default function VideosPage() {
   return (
-    <div className="relative">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
-      </div>
+    <>
+      <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="mx-auto max-w-5xl">
+          <Reveal>
+            <Link href="/resources" className="text-sm font-medium text-primary hover:underline">
+              ← Back to resources
+            </Link>
+          </Reveal>
 
-      <section className="mx-auto max-w-5xl px-4 pt-24 pb-20 sm:px-6 lg:px-8">
-        <Reveal>
-          <Link href="/resources" className="text-sm font-medium text-primary hover:underline">
-            ← Back to resources
-          </Link>
-        </Reveal>
+          <Reveal delay={0.1}>
+            <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              Videos
+            </h1>
+          </Reveal>
 
-        <Reveal delay={0.1}>
-          <h1 className="mt-6 text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl"><span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Videos</span></h1>
-        </Reveal>
-
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Short tutorials and walkthroughs for building a review-first personal-brand content system.
-          </p>
-        </Reveal>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {videos.map((video, index) => (
-            <Reveal key={video.id} delay={0.1 + index * 0.1}>
-              <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border/50 bg-card/40 transition-all hover:border-primary/30 hover:bg-card/60">
-                <div className="relative aspect-video bg-muted/30">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/90 text-primary-foreground shadow-lg transition-transform group-hover:scale-110">
-                      <Play className="h-6 w-6 fill-current" />
-                    </div>
-                  </div>
-                  <div className="absolute bottom-3 right-3 rounded bg-black/70 px-2 py-1 text-xs font-medium text-white">
-                    {video.duration}
-                  </div>
-                </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <h2 className="text-lg font-semibold text-foreground group-hover:text-primary">
-                    {video.title}
-                  </h2>
-                  <p className="mt-2 flex-1 text-sm text-muted-foreground">{video.description}</p>
-                  <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
-                    <Clock className="h-3.5 w-3.5" />
-                    <span>{video.duration}</span>
-                  </div>
-                  <Link
-                    href={video.youtubeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:opacity-90"
-                  >
-                    <Play className="h-4 w-4 fill-current" /> Watch video
-                  </Link>
-                </div>
-              </div>
-            </Reveal>
-          ))}
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              Short tutorials and walkthroughs for building a review-first personal-brand content system.
+            </p>
+          </Reveal>
         </div>
       </section>
-    </div>
+
+      <section className="border-y border-white/10 px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {videos.map((video, index) => (
+              <Reveal key={video.id} delay={0.1 + index * 0.1}>
+                <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-card transition-colors hover:border-primary/30"
+                >
+                  <div className="relative aspect-video bg-muted/30">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/90 text-primary-foreground shadow-lg transition-transform group-hover:scale-110">
+                        <Play className="h-6 w-6 fill-current" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-3 right-3 rounded bg-black/70 px-2 py-1 text-xs font-medium text-white">
+                      {video.duration}
+                    </div>
+                  </div>
+                  <div className="flex flex-1 flex-col p-5">
+                    <h2 className="text-lg font-semibold text-foreground group-hover:text-primary">
+                      {video.title}
+                    </h2>
+                    <p className="mt-2 flex-1 text-sm text-muted-foreground">{video.description}</p>
+                    <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
+                      <Clock className="h-3.5 w-3.5" />
+                      <span>{video.duration}</span>
+                    </div>
+                    <Link
+                      href={video.youtubeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:brightness-110"
+                    >
+                      <Play className="h-4 w-4 fill-current" /> Watch video
+                    </Link>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

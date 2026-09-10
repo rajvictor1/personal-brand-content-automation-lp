@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   Target,
 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/animations";
 import { resources } from "@/lib/resources";
 import {
@@ -107,12 +108,10 @@ export default function LinkedInContentSystemPage() {
   return (
     <>
       {renderSchemas(schemas)}
-      <div className="relative">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
-        </div>
 
-        <article className="mx-auto max-w-3xl px-4 pt-24 pb-20 sm:px-6 lg:px-8">
+      <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="mx-auto max-w-5xl">
           <Reveal>
             <Link href="/resources" className="text-sm font-medium text-primary hover:underline">
               ← Back to resources
@@ -120,93 +119,90 @@ export default function LinkedInContentSystemPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <span className="mb-4 mt-6 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+            <Badge variant="outline" className="mb-4 mt-4 inline-flex border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
               Pillar guide
-            </span>
+            </Badge>
           </Reveal>
 
           <Reveal delay={0.2}>
-            <h1 className="mt-4 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              LinkedIn Content System for{" "}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                Personal Brands
-              </span>
+            <h1 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              LinkedIn Content System for Personal Brands
             </h1>
           </Reveal>
 
           <Reveal delay={0.3}>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               A repeatable system to turn one research topic into a LinkedIn carousel and cited newsletter every week. Built for solo founders, trainers, and consultants who want consistency without a second job.
             </p>
           </Reveal>
+        </div>
+      </section>
 
-          <section className="mt-16">
-            <Reveal delay={0.2}>
-              <h2 className="mb-8 text-2xl font-bold text-foreground">The 6-step system</h2>
-            </Reveal>
-            <div className="space-y-6">
-              {systemSteps.map((step, index) => (
-                <Reveal key={step.title} delay={0.1 + index * 0.1}>
-                  <div className="flex gap-4 rounded-2xl border border-border/50 bg-card/40 p-5">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                      <step.icon className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground">{step.title}</h3>
-                      <p className="mt-1 text-muted-foreground">{step.description}</p>
-                    </div>
+      <section className="border-y border-white/10 px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
+          <Reveal delay={0.2}>
+            <h2 className="mb-8 text-2xl font-semibold text-foreground">The 6-step system</h2>
+          </Reveal>
+          <div className="space-y-4">
+            {systemSteps.map((step, index) => (
+              <Reveal key={step.title} delay={0.1 + index * 0.1}>
+                <div className="flex gap-4 rounded-2xl border border-white/10 bg-card p-5">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <step.icon className="h-5 w-5" />
                   </div>
-                </Reveal>
-              ))}
-            </div>
-          </section>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground">{step.title}</h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{step.description}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
 
-          <section className="mt-16">
-            <Reveal delay={0.2}>
-              <h2 className="mb-8 text-2xl font-bold text-foreground">Guides in this system</h2>
-            </Reveal>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {relatedArticles.map((article, index) => {
-                const post = resources.find((r) => r.slug === article.slug);
-                if (!post) return null;
-                return (
-                  <Reveal key={article.slug} delay={0.1 + index * 0.1}>
-                    <Link
-                      href={`/resources/${article.slug}`}
-                      className="group flex items-center justify-between rounded-2xl border border-border/50 bg-card/40 p-5 transition-all hover:border-primary/30 hover:bg-card/60"
-                    >
-                      <div>
-                        <h3 className="font-semibold text-foreground">{article.label}</h3>
-                        <p className="mt-1 text-sm text-muted-foreground line-clamp-2">{post.description}</p>
-                      </div>
-                      <ArrowRight className="ml-3 h-5 w-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </Reveal>
-                );
-              })}
-            </div>
-          </section>
+          <Reveal delay={0.2}>
+            <h2 className="mb-8 mt-16 text-2xl font-semibold text-foreground">Guides in this system</h2>
+          </Reveal>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {relatedArticles.map((article, index) => {
+              const post = resources.find((r) => r.slug === article.slug);
+              if (!post) return null;
+              return (
+                <Reveal key={article.slug} delay={0.1 + index * 0.1}>
+                  <Link
+                    href={`/resources/${article.slug}`}
+                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-primary/30"
+                  >
+                    <div>
+                      <h3 className="text-sm font-semibold text-foreground">{article.label}</h3>
+                      <p className="mt-1 text-xs text-muted-foreground line-clamp-2">{post.description}</p>
+                    </div>
+                    <ArrowRight className="ml-3 h-5 w-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Reveal>
+              );
+            })}
+          </div>
 
           <section className="mt-12">
             <LeadCapture />
           </section>
 
-          <section className="mt-12 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 to-card/40 p-8 text-center">
+          <section className="mt-12 rounded-2xl border border-white/10 bg-card p-8 text-center">
             <Reveal delay={0.3}>
-              <h3 className="text-2xl font-bold text-foreground">Put the system on autopilot</h3>
-              <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
+              <h3 className="text-2xl font-semibold text-foreground">Put the system on autopilot</h3>
+              <p className="mx-auto mt-2 max-w-lg text-sm text-muted-foreground">
                 BrandOps runs the research, writing, and design steps for you. You review and publish.
               </p>
               <Link
                 href="/contact"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
               >
                 Get early access <ArrowRight className="h-4 w-4" />
               </Link>
             </Reveal>
           </section>
-        </article>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

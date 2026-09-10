@@ -132,41 +132,41 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
   return (
     <>
       {renderSchemas(schemas)}
-      <div className="relative">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"></div>
-        </div>
-
-        <article className="mx-auto max-w-3xl px-4 pt-24 pb-20 sm:px-6 lg:px-8">
+      <section className="relative px-4 pb-12 pt-16 text-center sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08),transparent_50%)]" />
+        <div className="mx-auto max-w-5xl">
           <Reveal>
             <Link href="/resources" className="text-sm font-medium text-primary hover:underline">
               ← Back to resources
             </Link>
           </Reveal>
-
           <Reveal delay={0.1}>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
+            <div className="mt-4 inline-flex items-center gap-3">
               <Badge variant="outline" className="border-primary/30 bg-primary/10 text-primary">
                 {post.category}
               </Badge>
-              <span className="flex items-center gap-1 text-sm text-muted-foreground">
-                <Clock className="h-4 w-4" /> {post.readingTime} min read
+              <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                <Clock className="h-3.5 w-3.5" /> {post.readingTime} min read
               </span>
             </div>
           </Reveal>
-
           <Reveal delay={0.2}>
-            <h1 className="mt-4 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+            <h1 className="mx-auto mt-5 max-w-3xl text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               {post.title}
             </h1>
           </Reveal>
-
           <Reveal delay={0.3}>
-            <p className="mt-4 text-lg text-muted-foreground">{post.description}</p>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              {post.description}
+            </p>
           </Reveal>
+        </div>
+      </section>
 
+      <article className="border-y border-white/10 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl">
           <Reveal delay={0.4}>
-            <div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
+            <div className="mb-8 flex items-center gap-3 text-sm text-muted-foreground">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-primary">
                 <User className="h-4 w-4" />
               </div>
@@ -176,8 +176,8 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
                 </Link>
                 <p className="text-xs">{post.authorRole}</p>
               </div>
-              <span className="ml-auto flex items-center gap-1">
-                <Calendar className="h-4 w-4" />
+              <span className="ml-auto flex items-center gap-1 text-xs">
+                <Calendar className="h-3.5 w-3.5" />
                 {new Date(post.publishedAt).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
@@ -187,22 +187,22 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
             </div>
           </Reveal>
 
-          <Separator className="my-8" />
+          <Separator className="my-6 bg-white/10" />
 
           <Reveal delay={0.3}>
-            <div className="prose prose-invert prose-lg max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-headings:tracking-tight prose-h1:mb-8 prose-h1:text-4xl prose-h1:leading-tight prose-h2:mt-14 prose-h2:mb-5 prose-h2:border-b prose-h2:border-border/50 prose-h2:pb-3 prose-h3:mt-10 prose-h3:mb-4 prose-p:mt-4 prose-p:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-ul:my-6 prose-ol:my-6 prose-li:my-2 prose-li:text-muted-foreground prose-li:leading-relaxed prose-blockquote:my-8 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:p-4 prose-blockquote:rounded-r-lg prose-table:my-8 prose-table:border-border prose-th:border-border prose-th:bg-muted/30 prose-th:p-3 prose-td:border-border prose-td:p-3 prose-img:rounded-xl">
+            <div className="prose prose-invert prose-lg max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-headings:tracking-tight prose-h1:mb-8 prose-h1:text-4xl prose-h1:leading-tight prose-h2:mt-14 prose-h2:mb-5 prose-h2:border-b prose-h2:border-white/10 prose-h2:pb-3 prose-h3:mt-10 prose-h3:mb-4 prose-p:mt-4 prose-p:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-ul:my-6 prose-ol:my-6 prose-li:my-2 prose-li:text-muted-foreground prose-li:leading-relaxed prose-blockquote:my-8 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:p-4 prose-blockquote:rounded-r-lg prose-table:my-8 prose-table:border-white/10 prose-th:border-white/10 prose-th:bg-card prose-th:p-3 prose-td:border-white/10 prose-td:p-3 prose-img:rounded-xl">
               <MDXRemote source={source} components={components} options={{ parseFrontmatter: false, mdxOptions: { remarkPlugins: [remarkGfm] } }} />
             </div>
           </Reveal>
 
           {related.length > 0 && (
             <Reveal delay={0.4}>
-              <div className="mt-16 rounded-2xl border border-border/50 bg-card/40 p-6">
-                <h3 className="text-xl font-semibold text-foreground">Related in {post.category}</h3>
-                <ul className="mt-4 space-y-3">
+              <div className="mt-12 rounded-2xl border border-white/10 bg-card p-6">
+                <h3 className="text-lg font-semibold text-foreground">Related in {post.category}</h3>
+                <ul className="mt-4 space-y-2">
                   {related.map((r) => (
                     <li key={r.slug}>
-                      <Link href={`/resources/${r.slug}`} className="text-primary hover:underline">
+                      <Link href={`/resources/${r.slug}`} className="text-sm text-primary hover:underline">
                         {r.title}
                       </Link>
                     </li>
@@ -213,15 +213,15 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
           )}
 
           <Reveal delay={0.5}>
-            <div className="mt-8 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 to-card/40 p-6">
-              <h3 className="text-xl font-semibold text-foreground">Try it in BrandOps</h3>
-              <p className="mt-2 text-muted-foreground">
+            <div className="mt-6 rounded-2xl border border-white/10 bg-card p-6">
+              <h3 className="text-lg font-semibold text-foreground">Try it in BrandOps</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
                 These workflows are built into the BrandOps content workspace. Pick one to see how research turns into a ready-to-review asset.
               </p>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-4 space-y-2">
                 {relatedWorkflows.map((w) => (
                   <li key={w.href}>
-                    <Link href={w.href} className="group inline-flex items-center font-medium text-primary hover:underline">
+                    <Link href={w.href} className="group inline-flex items-center text-sm font-medium text-primary hover:underline">
                       {w.label}
                       <span className="ml-2 text-xs text-muted-foreground">— {w.desc}</span>
                       <ArrowRight className="ml-1 inline h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -233,35 +233,35 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
           </Reveal>
 
           <Reveal delay={0.6}>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <Link
                 href="/demo"
-                className="flex items-center gap-3 rounded-2xl border border-border/50 bg-card/40 p-5 transition-colors hover:border-primary/30 hover:bg-card/60"
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-primary/30"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <Video className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Book a demo</p>
+                  <p className="text-sm font-semibold text-foreground">Book a demo</p>
                   <p className="text-xs text-muted-foreground">30-minute walkthrough</p>
                 </div>
               </Link>
               <Link
                 href="/contact"
-                className="flex items-center gap-3 rounded-2xl border border-border/50 bg-card/40 p-5 transition-colors hover:border-primary/30 hover:bg-card/60"
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-primary/30"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Get early access</p>
+                  <p className="text-sm font-semibold text-foreground">Get early access</p>
                   <p className="text-xs text-muted-foreground">Join the waitlist</p>
                 </div>
               </Link>
             </div>
           </Reveal>
-        </article>
-      </div>
+        </div>
+      </article>
     </>
   );
 }

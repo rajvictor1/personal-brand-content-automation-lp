@@ -9,7 +9,6 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/animations";
 
 const steps = [
@@ -52,50 +51,41 @@ interface PipelineProps {
 export function Pipeline({ headingLevel = "h1" }: PipelineProps) {
   const HeadingTag = headingLevel;
   return (
-    <section className="py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="mb-16 text-center">
-          <Badge
-            variant="outline"
-            className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary"
-          >
-            How it works
-          </Badge>
-          <HeadingTag className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+    <section className="px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl">
+        <Reveal className="mb-12 text-center">
+          <p className="mb-4 text-sm font-medium tracking-wide text-primary">How it works</p>
+          <HeadingTag className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             The BrandOps pipeline
           </HeadingTag>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             From research signal to reviewed asset. Every step is visible, gated, and under your control.
           </p>
         </Reveal>
 
-        <div className="relative">
-          <div className="absolute top-[3.25rem] left-0 right-0 hidden h-0.5 bg-gradient-to-r from-transparent via-primary/40 to-transparent md:block"></div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {steps.map((step, i) => {
-              const Icon = step.icon;
-              return (
-                <Reveal key={step.label} delay={i * 0.1}>
-                  <motion.div
-                    whileHover={{ y: -4 }}
-                    className="relative rounded-2xl border border-border/50 bg-card/40 p-6 backdrop-blur-sm transition-colors hover:border-primary/30 hover:bg-card/60"
-                  >
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <div className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                      Step {i + 1}
-                    </div>
-                    <h3 className="mt-1 text-xl font-semibold text-foreground">{step.label}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {step.detail}
-                    </p>
-                  </motion.div>
-                </Reveal>
-              );
-            })}
-          </div>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {steps.map((step, i) => {
+            const Icon = step.icon;
+            return (
+              <Reveal key={step.label} delay={i * 0.1}>
+                <motion.div
+                  whileHover={{ y: -4 }}
+                  className="rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/30"
+                >
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Step {i + 1}
+                  </div>
+                  <h3 className="mt-1 text-lg font-semibold text-foreground">{step.label}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {step.detail}
+                  </p>
+                </motion.div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
