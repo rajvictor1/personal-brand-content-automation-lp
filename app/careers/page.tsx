@@ -99,9 +99,9 @@ export default function CareersPage() {
         <div className="space-y-5">
           {openings.map((job, index) => (
             <Reveal key={job.id} delay={0.1 + index * 0.1}>
-              <div className="rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-primary/40">
+              <div className="rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-white/20">
                 <div className="flex flex-wrap items-center gap-3">
-                  <Badge variant="outline" className="border-primary/30 bg-primary/10 text-primary">
+                  <Badge variant="outline" className="border-white/10 bg-card text-primary">
                     {job.type}
                   </Badge>
                   <Badge variant="secondary">{job.team}</Badge>
@@ -165,7 +165,7 @@ export default function CareersPage() {
             </p>
             <Link
               href="/contact?subject=General internship application"
-              className="mt-5 inline-flex items-center gap-2 rounded-xl border border-primary px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary/10"
+              className="mt-5 inline-flex items-center gap-2 rounded-xl border border-primary px-5 py-2.5 text-sm font-medium text-primary hover:bg-card"
             >
               Send an open application <ArrowRight className="h-4 w-4" />
             </Link>

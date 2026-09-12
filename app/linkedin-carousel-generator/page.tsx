@@ -153,8 +153,8 @@ export default function LinkedInCarouselGeneratorPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <Reveal key={feature.title} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-card text-primary">
                     <feature.icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
@@ -173,25 +173,25 @@ export default function LinkedInCarouselGeneratorPage() {
           </Reveal>
           <div className="grid gap-6 md:grid-cols-2">
             <Reveal delay={0.1}>
-              <Link href="/resources/linkedin-carousel-templates" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/linkedin-carousel-templates" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">7 carousel templates</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Copy-ready frameworks for lists, stories, comparisons, data breakdowns, and more.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.2}>
-              <Link href="/resources/linkedin-carousel-size-specs-2026" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/linkedin-carousel-size-specs-2026" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Size & specs 2026</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Exact dimensions, aspect ratio, file format, and font size for professional carousels.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.3}>
-              <Link href="/resources/linkedin-carousel-hook-formulas" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/linkedin-carousel-hook-formulas" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Hook formulas</h3>
                 <p className="mt-2 text-sm text-muted-foreground">12 proven opening lines that stop the scroll and get more swipes.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.4}>
-              <Link href="/resources/linkedin-carousel-design-framework-non-designers" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/linkedin-carousel-design-framework-non-designers" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Design framework for non-designers</h3>
                 <p className="mt-2 text-sm text-muted-foreground">The 5-slide formula: structure, word counts, colors, and layout rules.</p>
               </Link>
@@ -205,7 +205,7 @@ export default function LinkedInCarouselGeneratorPage() {
           <Reveal>
             <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight text-foreground">BrandOps vs. doing it manually</h2>
           </Reveal>
-          <div className="rounded-2xl border border-white/10 bg-card/40 p-6 sm:p-8">
+          <div className="rounded-2xl border border-white/10 bg-card p-6 sm:p-8">
             <div className="grid grid-cols-3 gap-4 text-sm font-medium text-muted-foreground">
               <div>Task</div>
               <div className="text-center">Manual</div>
@@ -241,7 +241,7 @@ export default function LinkedInCarouselGeneratorPage() {
           <div className="space-y-4">
             {faq.map((item, index) => (
               <Reveal key={item.question} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-white/10 bg-card/40 p-6">
+                <div className="rounded-2xl border border-white/10 bg-card p-6">
                   <h3 className="text-lg font-semibold text-foreground">{item.question}</h3>
                   <p className="mt-2 text-muted-foreground">{item.answer}</p>
                 </div>
@@ -254,7 +254,7 @@ export default function LinkedInCarouselGeneratorPage() {
       <section className="px-4 pb-24 pt-8 text-center sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <Reveal delay={0.3}>
-            <div className="rounded-2xl border border-white/10 bg-card/40 p-8">
+            <div className="rounded-2xl border border-white/10 bg-card p-8">
               <h3 className="text-2xl font-semibold tracking-tight text-foreground">Start generating carousels today</h3>
               <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
                 Join free and turn your next research topic into a review-ready LinkedIn carousel.

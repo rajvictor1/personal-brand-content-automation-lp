@@ -126,8 +126,8 @@ export default function NewsletterWorkflowPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <Reveal key={feature.title} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-card text-primary">
                     <feature.icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
@@ -147,7 +147,7 @@ export default function NewsletterWorkflowPage() {
           <div className="space-y-4">
             {faq.map((item, index) => (
               <Reveal key={item.question} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-white/10 bg-card/40 p-6">
+                <div className="rounded-2xl border border-white/10 bg-card p-6">
                   <h3 className="text-lg font-semibold text-foreground">{item.question}</h3>
                   <p className="mt-2 text-muted-foreground">{item.answer}</p>
                 </div>
@@ -160,7 +160,7 @@ export default function NewsletterWorkflowPage() {
       <section className="px-4 pb-24 pt-8 text-center sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <Reveal delay={0.3}>
-            <div className="rounded-2xl border border-white/10 bg-card/40 p-8">
+            <div className="rounded-2xl border border-white/10 bg-card p-8">
               <h3 className="text-2xl font-semibold tracking-tight text-foreground">Build trust with every send</h3>
               <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
                 Get early access to BrandOps and start sending review-ready newsletters backed by real sources.

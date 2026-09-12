@@ -105,9 +105,9 @@ export function Hero() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 + i * 0.12, duration: 0.5 }}
                     whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                    className="rounded-xl border border-white/10 bg-background p-5 transition-colors hover:border-primary/30"
+                    className="rounded-xl border border-white/10 bg-background p-5 transition-colors hover:border-white/10"
                   >
-                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-card text-primary">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">{node.label}</div>
@@ -154,7 +154,7 @@ export function ProblemSolution() {
 
           <Reveal delay={0.15}>
             <div className="space-y-6">
-              <Badge variant="outline" className="border-primary/30 bg-card text-primary">
+              <Badge variant="outline" className="border-white/10 bg-card text-primary">
                 The BrandOps solution
               </Badge>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

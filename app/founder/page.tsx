@@ -284,7 +284,7 @@ export default function FounderPage() {
                     { icon: Briefcase, label: "Personal-brand systems", desc: "Turns one research session into a week of citable, review-gated content." },
                   ].map((item) => (
                     <li key={item.label} className="flex gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-card text-primary">
                         <item.icon className="h-4 w-4" />
                       </div>
                       <div>
@@ -377,7 +377,7 @@ export default function FounderPage() {
             {aiWork.map((item) => (
               <Reveal key={item.title}>
                 <div className="h-full rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20">
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-card text-primary">
                     <Zap className="h-5 w-5" />
                   </div>
                   <h3 className="text-base font-semibold text-white">{item.title}</h3>

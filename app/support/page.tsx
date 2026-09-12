@@ -14,12 +14,13 @@ import {
   LifeBuoy
 } from "lucide-react";
 import { Reveal } from "@/components/animations";
+import { BRANDOPS_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "24/7 BrandOps Support | Email support@brandops.site",
   description:
-    "Get fast, human support for BrandOps. Email support@brandops.site for help with setup, carousel generation, newsletter delivery, LinkedIn publishing, and billing.",
-  alternates: { canonical: "https://www.brandops.site/support" },
+    "Get fast, human support for BrandOps. Email support@brandops.site for help with setup, workflows, and troubleshooting.",
+  alternates: { canonical: `${BRANDOPS_URL}/support` },
 };
 
 const supportChannels = [
@@ -142,7 +143,7 @@ export default function SupportPage() {
         <div className="grid gap-5 md:grid-cols-3">
           {supportChannels.map((channel, index) => (
             <Reveal key={channel.title} delay={0.1 + index * 0.1}>
-              <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-primary/40">
+              <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-white/20">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary">
                   <channel.icon className="h-5 w-5" />
                 </div>
@@ -173,7 +174,7 @@ export default function SupportPage() {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {helpTopics.map((topic, index) => (
             <Reveal key={topic.title} delay={0.1 + index * 0.1}>
-              <div className="rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-primary/40">
+              <div className="rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-white/20">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary">
                   <topic.icon className="h-5 w-5" />
                 </div>

@@ -13,9 +13,9 @@ import {
 import { LeadCapture } from "@/components/lead-capture";
 
 export const metadata: Metadata = {
-  title: "BrandOps vs Typefully: AI Content Workspace vs LinkedIn Scheduler",
+  title: "BrandOps vs Typefully | AI Content vs Scheduler",
   description:
-    "Compare BrandOps vs Typefully. BrandOps generates cited carousels and newsletters from research with a review gate. Typefully is a scheduling and analytics tool for text posts.",
+    "Compare BrandOps vs Typefully. BrandOps creates cited carousels and newsletters from research with a review gate. Typefully is a scheduling tool.",
   alternates: { canonical: "https://www.brandops.site/brandops-vs-typefully" },
 };
 

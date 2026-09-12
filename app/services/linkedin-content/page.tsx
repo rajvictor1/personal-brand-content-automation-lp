@@ -91,7 +91,7 @@ export default function LinkedinContentServicePage() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-12 text-center">
             <Reveal>
-              <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+              <Badge variant="outline" className="mb-4 border-white/10 bg-card px-3 py-1 text-sm text-primary">
                 What you get
               </Badge>
             </Reveal>

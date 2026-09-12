@@ -139,7 +139,7 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
           <div className="mx-auto max-w-5xl">
             <Reveal delay={0.1}>
               <div className="mb-10 text-center">
-                <Badge variant="outline" className="mb-3 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+                <Badge variant="outline" className="mb-3 border-white/10 bg-card px-3 py-1 text-sm text-primary">
                   Agenda
                 </Badge>
                 <h2 className="text-2xl font-semibold tracking-tight text-foreground">
@@ -150,9 +150,9 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {webinar.agenda.map((item, i) => (
                 <Reveal key={i} delay={0.05 * i}>
-                  <Card className="border-white/10 bg-card transition-colors hover:border-primary/30">
+                  <Card className="border-white/10 bg-card transition-colors hover:border-white/10">
                     <CardContent className="p-6">
-                      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-sm font-bold text-primary">
+                      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-card text-sm font-bold text-primary">
                         {i + 1}
                       </div>
                       <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
@@ -170,7 +170,7 @@ export function WebinarPage({ webinar }: { webinar: Webinar }) {
             <Reveal delay={0.1}>
               <Card className="border-white/10 bg-card">
                 <CardContent className="p-8 text-center sm:p-12">
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-primary/10">
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-card">
                     <User className="h-8 w-8 text-primary" />
                   </div>
                   <h2 className="text-2xl font-semibold text-foreground">Meet your host</h2>

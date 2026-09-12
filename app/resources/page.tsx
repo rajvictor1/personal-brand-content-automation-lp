@@ -34,10 +34,10 @@ function ResourceCard({ post }: { post: ResourcePost }) {
   return (
     <Link
       href={`/resources/${post.slug}`}
-      className="group flex h-full flex-col rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-primary/30"
+      className="group flex h-full flex-col rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-white/20"
     >
       <div className="mb-4 flex items-center gap-3">
-        <Badge variant="outline" className="border-primary/30 bg-primary/10 text-primary">
+        <Badge variant="outline" className="border-white/10 bg-card text-primary">
           {post.category}
         </Badge>
         <span className="flex items-center gap-1 text-xs text-muted-foreground">
@@ -128,7 +128,7 @@ export default function ResourcesPage() {
             <div className="mb-12 rounded-2xl border border-white/10 bg-card p-6">
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div className="flex-1">
-                  <Badge className="mb-3 border-primary/30 bg-primary/10 text-primary">Featured: {featured.category}</Badge>
+                  <Badge className="mb-3 border-white/10 bg-card text-primary">Featured: {featured.category}</Badge>
                   <Link href={`/resources/${featured.slug}`}>
                     <h2 className="text-xl font-semibold text-foreground hover:text-primary">{featured.title}</h2>
                   </Link>
@@ -153,7 +153,7 @@ export default function ResourcesPage() {
             <div className="mb-12 rounded-2xl border border-white/10 bg-card p-6">
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div className="flex-1">
-                  <Badge className="mb-3 border-primary/30 bg-primary/10 text-primary">Upcoming Webinar</Badge>
+                  <Badge className="mb-3 border-white/10 bg-card text-primary">Upcoming Webinar</Badge>
                   <Link href="/webinar">
                     <h2 className="text-xl font-semibold text-foreground hover:text-primary">
                       How to Build a Personal Brand Content System That Runs 90% Without You

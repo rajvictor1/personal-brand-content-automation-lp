@@ -65,9 +65,9 @@ export function BentoFeatures() {
           <span className="mb-3 inline-block rounded-full border border-white/10 bg-card px-3 py-1 text-sm font-medium text-primary">
             Product
           </span>
-          <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Everything you need to stay visible
-          </h1>
+          </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
             One workspace. Two workflows. Full editorial control.
           </p>
@@ -87,7 +87,7 @@ export function BentoFeatures() {
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20 ${span}`}
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-card text-primary transition-colors group-hover:bg-card">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>

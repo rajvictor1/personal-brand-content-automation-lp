@@ -21,7 +21,7 @@ export function LeadCapture() {
     <Reveal>
       <div className="rounded-xl border border-white/10 bg-card p-6 sm:p-8">
         <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-card text-primary">
             <Download className="h-6 w-6" />
           </div>
           <div className="flex-1">

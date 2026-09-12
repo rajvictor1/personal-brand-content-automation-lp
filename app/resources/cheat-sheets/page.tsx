@@ -42,9 +42,9 @@ export default function CheatSheetsPage() {
               <Reveal key={sheet.slug} delay={0.1 + index * 0.1}>
                 <Link
                   href={`/resources/${sheet.slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/30"
+                  className="group flex h-full flex-col rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20"
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-card text-primary">
                     <FileText className="h-6 w-6" />
                   </div>
                   <h2 className="text-lg font-semibold text-foreground group-hover:text-primary">

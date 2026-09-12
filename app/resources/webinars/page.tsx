@@ -23,7 +23,7 @@ function WebinarCard({ webinar, isUpcoming }: { webinar: Webinar; isUpcoming: bo
   return (
     <Link
       href={`/webinars/${webinar.slug}`}
-      className="group flex h-full flex-col rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-primary/30"
+      className="group flex h-full flex-col rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-white/20"
     >
       <div className="mb-4 flex items-center justify-between">
         <Badge
@@ -31,7 +31,7 @@ function WebinarCard({ webinar, isUpcoming }: { webinar: Webinar; isUpcoming: bo
           className={
             isUpcoming
               ? "border-green-500/30 bg-green-500/10 text-green-500"
-              : "border-primary/30 bg-primary/10 text-primary"
+              : "border-white/10 bg-card text-primary"
           }
         >
           {isUpcoming ? "Upcoming" : "Replay Available"}

@@ -64,7 +64,7 @@ export default function VideosPage() {
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {videos.map((video, index) => (
               <Reveal key={video.id} delay={0.1 + index * 0.1}>
-                <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-card transition-colors hover:border-primary/30"
+                <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-card transition-colors hover:border-white/20"
                 >
                   <div className="relative aspect-video bg-muted/30">
                     <div className="absolute inset-0 flex items-center justify-center">

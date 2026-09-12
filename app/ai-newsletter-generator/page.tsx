@@ -153,8 +153,8 @@ export default function AINewsletterGeneratorPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <Reveal key={feature.title} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-card text-primary">
                     <feature.icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
@@ -173,25 +173,25 @@ export default function AINewsletterGeneratorPage() {
           </Reveal>
           <div className="grid gap-6 md:grid-cols-2">
             <Reveal delay={0.1}>
-              <Link href="/resources/newsletter-examples-founders" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/newsletter-examples-founders" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">5 newsletter examples for founders</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Proven formats: one-lesson, curated roundup, behind-the-scenes, cited research, and product breakdown.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.2}>
-              <Link href="/resources/ai-newsletter-subject-line-formulas" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/ai-newsletter-subject-line-formulas" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Subject line formulas</h3>
                 <p className="mt-2 text-sm text-muted-foreground">14 AI newsletter subject line formulas with real examples that increase open rates.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.3}>
-              <Link href="/resources/how-to-write-cited-ai-newsletter" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/how-to-write-cited-ai-newsletter" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">How to write a cited AI newsletter</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Structure, citation rules, and a pre-send checklist for newsletters that build trust.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.4}>
-              <Link href="/resources/ai-newsletter-cheat-sheet" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/ai-newsletter-cheat-sheet" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Newsletter cheat sheet</h3>
                 <p className="mt-2 text-sm text-muted-foreground">One-page reference for structure, citations, subject lines, and pre-send checks.</p>
               </Link>
@@ -205,7 +205,7 @@ export default function AINewsletterGeneratorPage() {
           <Reveal>
             <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight text-foreground">BrandOps vs. writing newsletters manually</h2>
           </Reveal>
-          <div className="rounded-2xl border border-white/10 bg-card/40 p-6 sm:p-8">
+          <div className="rounded-2xl border border-white/10 bg-card p-6 sm:p-8">
             <div className="grid grid-cols-3 gap-4 text-sm font-medium text-muted-foreground">
               <div>Task</div>
               <div className="text-center">Manual</div>
@@ -241,7 +241,7 @@ export default function AINewsletterGeneratorPage() {
           <div className="space-y-4">
             {faq.map((item, index) => (
               <Reveal key={item.question} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-white/10 bg-card/40 p-6">
+                <div className="rounded-2xl border border-white/10 bg-card p-6">
                   <h3 className="text-lg font-semibold text-foreground">{item.question}</h3>
                   <p className="mt-2 text-muted-foreground">{item.answer}</p>
                 </div>
@@ -254,7 +254,7 @@ export default function AINewsletterGeneratorPage() {
       <section className="px-4 pb-24 pt-8 text-center sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <Reveal delay={0.3}>
-            <div className="rounded-2xl border border-white/10 bg-card/40 p-8">
+            <div className="rounded-2xl border border-white/10 bg-card p-8">
               <h3 className="text-2xl font-semibold tracking-tight text-foreground">Start writing cited newsletters</h3>
               <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
                 Join free and turn your next research topic into a review-ready newsletter draft.

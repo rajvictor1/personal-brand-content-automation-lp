@@ -13,9 +13,9 @@ import {
 import { BRANDOPS_URL, buildBreadcrumbList, buildOrganization, buildWebPage, renderSchemas } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "AI Consultancy Services",
+  title: "AI Consultancy Services | BrandOps",
   description:
-    "BrandOps is an AI consultancy for business visibility, content, and lead generation. Services include AI content, website design, lead magnets, AEO/GEO visibility, and YouTube research.",
+    "BrandOps AI consultancy services: content, website design, lead magnets, AEO/GEO visibility, and YouTube research for founders and consultants.",
   alternates: { canonical: `${BRANDOPS_URL}/services` },
 };
 
@@ -119,7 +119,7 @@ export default function ServicesPage() {
       <section id="services" className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <Reveal className="mb-12 text-center">
-            <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+            <Badge variant="outline" className="mb-4 border-white/10 bg-card px-3 py-1 text-sm text-primary">
               What we do
             </Badge>
             <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
@@ -134,7 +134,7 @@ export default function ServicesPage() {
                 <Reveal key={service.title} delay={i * 0.1}>
                   <Link
                     href={service.href}
-                    className="group relative flex h-full flex-col rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/40"
+                    className="group relative flex h-full flex-col rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20"
                   >
                     <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary">
                       <Icon className="h-5 w-5" />
@@ -161,7 +161,7 @@ export default function ServicesPage() {
       <section className="border-y border-white/10 px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <Reveal className="mb-12 text-center">
-            <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+            <Badge variant="outline" className="mb-4 border-white/10 bg-card px-3 py-1 text-sm text-primary">
               Process
             </Badge>
             <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">

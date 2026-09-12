@@ -68,7 +68,7 @@ export function PricingCards({ headingLevel = "h1" }: PricingCardsProps) {
               <Card
                 className={`relative flex flex-col overflow-hidden border-white/10 bg-card ${
                   plan.primary
-                    ? "border-primary/40 ring-1 ring-primary/30"
+                    ? "border-white/10 ring-1 ring-primary/30"
                     : ""
                 }`}
               >
@@ -92,7 +92,7 @@ export function PricingCards({ headingLevel = "h1" }: PricingCardsProps) {
                   <ul className="space-y-3">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-card text-primary">
                           <Check className="h-3 w-3" />
                         </span>
                         <span className="text-sm text-foreground/90">{feature}</span>

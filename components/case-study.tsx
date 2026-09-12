@@ -25,7 +25,7 @@ export function CaseStudy() {
     <section className="border-y border-white/10 bg-muted/20 py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
-          <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+          <Badge variant="outline" className="mb-4 border-white/10 bg-card px-3 py-1 text-sm text-primary">
             Illustrative case study
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -64,7 +64,7 @@ export function CaseStudy() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <Card className="h-full border-primary/30 bg-card">
+            <Card className="h-full border-white/10 bg-card">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-primary">With BrandOps</h3>
                 <p className="mt-2 text-sm text-muted-foreground">AI-assisted workflow with review gate.</p>

@@ -154,7 +154,7 @@ export default function LinkedInAutomationToolForSaaSFoundersPage() {
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((benefit, index) => (
               <Reveal key={benefit.title} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/40">
+                <div className="rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20">
                   <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary">
                     <benefit.icon className="h-5 w-5" />
                   </div>
@@ -174,25 +174,25 @@ export default function LinkedInAutomationToolForSaaSFoundersPage() {
           </Reveal>
           <div className="grid gap-5 md:grid-cols-2">
             <Reveal delay={0.1}>
-              <Link href="/resources/linkedin-automation-safety" className="group block rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/40">
+              <Link href="/resources/linkedin-automation-safety" className="group block rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-primary">LinkedIn automation safety guide</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">What is safe, what is risky, and why review-first automation protects your account.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.2}>
-              <Link href="/resources/review-first-publishing-workflow" className="group block rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/40">
+              <Link href="/resources/review-first-publishing-workflow" className="group block rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-primary">Review-first publishing workflow</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">How to build a human approval gate that does not slow down your publishing cadence.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.3}>
-              <Link href="/resources/ai-workflows-linkedin-personal-brands" className="group block rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/40">
+              <Link href="/resources/ai-workflows-linkedin-personal-brands" className="group block rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-primary">10 AI workflows for LinkedIn</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Practical workflows for research, drafting, design, and publishing review.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.4}>
-              <Link href="/resources/linkedin-content-calendar-template" className="group block rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/40">
+              <Link href="/resources/linkedin-content-calendar-template" className="group block rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-primary">30-day content calendar</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">A ready-to-use calendar that keeps your automated workflow full of post ideas.</p>
               </Link>

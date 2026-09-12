@@ -119,7 +119,7 @@ export default function LinkedInContentSystemPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <Badge variant="outline" className="mb-4 mt-4 inline-flex border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+            <Badge variant="outline" className="mb-4 mt-4 inline-flex border-white/10 bg-card px-3 py-1 text-sm text-primary">
               Pillar guide
             </Badge>
           </Reveal>
@@ -143,7 +143,7 @@ export default function LinkedInContentSystemPage() {
             {systemSteps.map((step, index) => (
               <Reveal key={step.title} delay={0.1 + index * 0.1}>
                 <div className="flex gap-4 rounded-2xl border border-white/10 bg-card p-5">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-card text-primary">
                     <step.icon className="h-5 w-5" />
                   </div>
                   <div>
@@ -166,7 +166,7 @@ export default function LinkedInContentSystemPage() {
                 <Reveal key={article.slug} delay={0.1 + index * 0.1}>
                   <Link
                     href={`/resources/${article.slug}`}
-                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-primary/30"
+                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-white/20"
                   >
                     <div>
                       <h3 className="text-sm font-semibold text-foreground">{article.label}</h3>

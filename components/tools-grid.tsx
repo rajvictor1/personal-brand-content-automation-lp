@@ -43,9 +43,9 @@ export function ToolsGrid() {
             <Reveal key={tool.title} delay={0.1 + index * 0.1}>
               <Link
                 href={tool.href}
-                className="group flex h-full flex-col rounded-xl border border-white/10 bg-card p-6 transition-all hover:border-primary/30 hover:bg-secondary"
+                className="group flex h-full flex-col rounded-xl border border-white/10 bg-card p-6 transition-all hover:border-white/10 hover:bg-secondary"
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-card text-primary">
                   <tool.icon className="h-6 w-6" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">{tool.title}</h3>

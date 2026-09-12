@@ -14,15 +14,15 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "How to Build a Personal Brand Content System That Runs 90% Without You",
+  title: "Free Webinar | Personal Brand Content System | BrandOps",
   description:
-    "Free live webinar for founders: learn the 5-part BrandOps Content System to produce 30 days of content from one 90-minute session. September 10, 7:00 PM IST.",
+    "Free live webinar for founders: learn the 5-part BrandOps Content System to produce 30 days of content from one 90-minute founder session.",
   alternates: { canonical: `${BRANDOPS_URL}/webinar` },
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "BrandOps",
-    title: "How to Build a Personal Brand Content System That Runs 90% Without You",
+    title: "Free Webinar | Personal Brand Content System | BrandOps",
     description:
       "Free live webinar for founders. Learn the 5-part BrandOps Content System to produce 30 days of content from one 90-minute session.",
     url: `${BRANDOPS_URL}/webinar`,
@@ -97,13 +97,13 @@ export default function WebinarPage() {
               </p>
             <Reveal delay={0.3}>
               <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
-                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card/40 px-4 py-2">
+                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card px-4 py-2">
                   <Calendar className="h-4 w-4 text-primary" /> September 10, 2026
                 </span>
-                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card/40 px-4 py-2">
+                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card px-4 py-2">
                   <Clock className="h-4 w-4 text-primary" /> 7:00 PM IST
                 </span>
-                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card/40 px-4 py-2">
+                <span className="flex items-center gap-2 rounded-xl border border-white/10 bg-card px-4 py-2">
                   <PlayCircle className="h-4 w-4 text-primary" /> Google Meet
                 </span>
               </div>
@@ -127,7 +127,7 @@ export default function WebinarPage() {
           <div className="mx-auto max-w-5xl">
             <div className="grid gap-4 lg:grid-cols-2">
               <Reveal delay={0.1}>
-                <Card className="h-full border-white/10 bg-card/40">
+                <Card className="h-full border-white/10 bg-card">
                   <CardContent className="p-6">
                     <h2 className="text-xl font-semibold text-foreground">What you will learn</h2>
                     <ul className="mt-5 space-y-3">
@@ -143,7 +143,7 @@ export default function WebinarPage() {
               </Reveal>
 
               <Reveal delay={0.2}>
-                <Card className="h-full border-white/10 bg-card/40">
+                <Card className="h-full border-white/10 bg-card">
                   <CardContent className="p-6">
                     <h2 className="text-xl font-semibold text-foreground">Who should attend</h2>
                     <p className="mt-4 text-sm text-muted-foreground">This webinar is for you if:</p>
@@ -166,7 +166,7 @@ export default function WebinarPage() {
           <div className="mx-auto max-w-5xl">
             <Reveal delay={0.1}>
               <div className="mb-10 text-center">
-                <Badge variant="outline" className="mb-3 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+                <Badge variant="outline" className="mb-3 border-white/10 bg-card px-3 py-1 text-sm text-primary">
                   Agenda
                 </Badge>
                 <h2 className="text-2xl font-semibold tracking-tight text-foreground">60 minutes. No fluff.</h2>
@@ -175,9 +175,9 @@ export default function WebinarPage() {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {agenda.map((item, i) => (
                 <Reveal key={i} delay={0.05 * i}>
-                  <Card className="border-white/10 bg-card/40 transition-colors hover:border-primary/30">
+                  <Card className="border-white/10 bg-card transition-colors hover:border-white/20">
                     <CardContent className="p-6">
-                      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-sm font-bold text-primary">
+                      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-card text-sm font-bold text-primary">
                         {i + 1}
                       </div>
                       <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
@@ -193,9 +193,9 @@ export default function WebinarPage() {
         <section className="border-y border-white/10 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <Reveal delay={0.1}>
-              <Card className="border-white/10 bg-card/40">
+              <Card className="border-white/10 bg-card">
                 <CardContent className="p-8 text-center sm:p-12">
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-primary/10">
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-card">
                     <User className="h-8 w-8 text-primary" />
                   </div>
                   <h2 className="text-2xl font-semibold text-foreground">Meet your host</h2>
@@ -220,7 +220,7 @@ export default function WebinarPage() {
             <div className="space-y-4">
               {faqs.map((faq, i) => (
                 <Reveal key={i} delay={0.05 * i}>
-                  <Card className="border-white/10 bg-card/40">
+                  <Card className="border-white/10 bg-card">
                     <CardContent className="p-6">
                       <h3 className="text-base font-semibold text-foreground">{faq.q}</h3>
                       <p className="mt-2 text-sm text-muted-foreground">{faq.a}</p>
@@ -235,7 +235,7 @@ export default function WebinarPage() {
         <section id="register" className="border-t border-white/10 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <Reveal delay={0.1}>
-              <div className="rounded-xl border border-white/10 bg-card/40 p-8 text-center sm:p-12">
+              <div className="rounded-xl border border-white/10 bg-card p-8 text-center sm:p-12">
                 <h2 className="text-2xl font-semibold text-foreground">Save your seat before spots fill.</h2>
                 <p className="mt-3 text-sm text-muted-foreground">September 10, 2026 · 7:00 PM IST · Google Meet</p>
                 <div className="mt-8">

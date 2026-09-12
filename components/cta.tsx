@@ -26,7 +26,7 @@ export function Cta() {
             </Link>
             <Link
               href="/demo"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-card px-8 py-4 text-lg font-semibold text-foreground transition-colors hover:border-primary/30 hover:bg-primary/10"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-card px-8 py-4 text-lg font-semibold text-foreground transition-colors hover:border-white/10 hover:bg-card"
             >
               Book a 30-minute demo
             </Link>

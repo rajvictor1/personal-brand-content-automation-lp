@@ -7,22 +7,25 @@ import {
   WorkExamples,
   FinalCta,
 } from "@/components/consultancy";
+import { homeFaqs } from "@/lib/home-faqs";
 import {
   BRANDOPS_URL,
   buildBreadcrumbList,
+  buildFAQPage,
   buildOrganization,
   buildPerson,
   buildWebPage,
   renderSchemas,
 } from "@/lib/schema";
+import { Faq } from "@/components/faq";
 
 export const metadata: Metadata = {
-  title: "BrandOps | AI Consultancy for Content, Visibility & Lead Generation",
+  title: "BrandOps | AI Consultancy for Visibility, Content & Leads",
   description:
-    "BrandOps is an AI consultancy helping businesses improve visibility, create useful content, and generate leads. Services include AI content, lead magnets, AEO/GEO visibility, and YouTube research.",
+    "BrandOps is an AI consultancy that helps businesses improve visibility, create useful content, and generate leads with AI-powered workflows.",
   alternates: { canonical: BRANDOPS_URL },
   openGraph: {
-    title: "BrandOps | AI Consultancy for Content, Visibility & Lead Generation",
+    title: "BrandOps | AI Consultancy for Visibility, Content & Leads",
     description:
       "Practical AI consultancy for business visibility, content, and lead generation.",
     url: BRANDOPS_URL,
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrandOps | AI Consultancy for Content, Visibility & Lead Generation",
+    title: "BrandOps | AI Consultancy for Visibility, Content & Leads",
     description:
       "Practical AI consultancy for business visibility, content, and lead generation.",
     images: ["https://www.brandops.site/og.png"],
@@ -56,12 +59,14 @@ export default function HomePage() {
           "AI consultancy helping businesses improve visibility, create useful content, and generate leads.",
           BRANDOPS_URL
         ),
+        ...(buildFAQPage(homeFaqs, BRANDOPS_URL) ? [buildFAQPage(homeFaqs, BRANDOPS_URL)!] : []),
       ])}
       <ConsultancyHero />
       <ConsultancyIntro />
       <ServiceCards />
       <HowWeWork />
       <WorkExamples />
+      <Faq />
       <FinalCta />
     </>
   );

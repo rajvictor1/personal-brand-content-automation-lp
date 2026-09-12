@@ -64,14 +64,14 @@ const footerGroups = [
 ];
 
 const socials = [
-  { label: "Twitter", href: "https://twitter.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "X", href: "https://x.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/rajesh-demand-gen-gtm-expert/" },
   { label: "YouTube", href: "https://youtube.com" },
-  { label: "GitHub", href: "https://github.com" },
+  { label: "GitHub", href: "https://github.com/rajvictor1" },
 ];
 
 const SocialIcon = ({ label }: { label: string }) => {
-  if (label === "Twitter") {
+  if (label === "X") {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
@@ -125,7 +125,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-white/10 bg-background p-2 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                  className="rounded-full border border-white/10 bg-background p-2 text-muted-foreground transition-colors hover:border-white/20 hover:text-primary"
                   aria-label={social.label}
                 >
                   <SocialIcon label={social.label} />

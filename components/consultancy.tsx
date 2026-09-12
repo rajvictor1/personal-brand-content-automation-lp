@@ -87,7 +87,7 @@ export function ConsultancyHero() {
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            BrandOps is a practical AI consultancy. We use AI agents and human oversight to deliver content, websites, and visibility work you can actually use.
+            BrandOps is a practical AI consultancy for personal brands and small teams. We use AI agents and human oversight to deliver content automation, newsletter automation, websites, SEO, and visibility systems you can use immediately.
           </p>
         </Reveal>
         <Reveal delay={0.3}>
@@ -149,7 +149,7 @@ export function ServiceCards() {
     <section id="services" className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <Reveal className="mb-12 text-center">
-          <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+          <Badge variant="outline" className="mb-4 border-white/10 bg-card px-3 py-1 text-sm text-primary">
             Services
           </Badge>
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
@@ -167,7 +167,7 @@ export function ServiceCards() {
               <Reveal key={service.title} delay={i * 0.1}>
                 <Link
                   href={service.href}
-                  className="group relative flex h-full flex-col rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/40"
+                  className="group relative flex h-full flex-col rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20"
                 >
                   <div className="mb-4 flex items-start justify-between">
                     <span className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-secondary text-primary">
@@ -221,7 +221,7 @@ export function HowWeWork() {
     <section className="border-y border-white/10 px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <Reveal className="mb-12 text-center">
-          <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+          <Badge variant="outline" className="mb-4 border-white/10 bg-card px-3 py-1 text-sm text-primary">
             Process
           </Badge>
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
@@ -279,7 +279,7 @@ export function WorkExamples() {
     <section className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <Reveal className="mb-12 text-center">
-          <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+          <Badge variant="outline" className="mb-4 border-white/10 bg-card px-3 py-1 text-sm text-primary">
             Examples
           </Badge>
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">

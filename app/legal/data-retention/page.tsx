@@ -49,7 +49,7 @@ export default function DataRetentionPage() {
             {retentionItems.map((item, index) => (
               <Reveal key={item.title} delay={0.1 + index * 0.05}>
                 <div className="rounded-xl border border-white/10 bg-card p-6">
-                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-card text-primary">
                     <item.icon className="h-5 w-5" />
                   </div>
                   <h2 className="text-lg font-semibold text-foreground">{item.title}</h2>

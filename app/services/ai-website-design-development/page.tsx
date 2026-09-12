@@ -8,9 +8,9 @@ import { BRANDOPS_URL, buildBreadcrumbList, buildOrganization, buildWebPage, bui
 import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
-  title: "AI-Ready Website Design \u0026 Development",
+  title: "AI Website Design & Development | BrandOps",
   description:
-    "AI-ready website design and development for founders and consultants. We build fast, search-friendly Next.js websites that rank in search and AI engines, load instantly, and turn visitors into leads.",
+    "AI-ready website design and development for founders. We build fast, search-friendly Next.js sites that rank and convert visitors into leads.",
   alternates: { canonical: `${BRANDOPS_URL}/services/ai-website-design-development` },
 };
 
@@ -86,7 +86,7 @@ const portfolioProjects = [
 
 function PortfolioCard({ project }: { project: typeof portfolioProjects[0] }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-card transition-all hover:border-primary/40">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-card transition-all hover:border-white/20">
       <div className="relative overflow-hidden border-b border-white/10 bg-secondary/30 p-3 pb-0">
         <div className="overflow-hidden rounded-t-lg border border-white/10 bg-background shadow-sm">
           <div className="flex items-center gap-1.5 bg-muted/80 px-3 py-2">
@@ -272,7 +272,7 @@ export default function AiWebsiteDesignDevelopmentPage() {
       <section className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <div className="mb-12 text-center">
-            <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+            <Badge variant="outline" className="mb-4 border-white/10 bg-card px-3 py-1 text-sm text-primary">
               FAQ
             </Badge>
             <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">

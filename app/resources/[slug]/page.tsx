@@ -163,7 +163,7 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
         <div className="mx-auto max-w-3xl">
           <Reveal delay={0.4}>
             <div className="mb-8 flex items-center gap-3 text-sm text-muted-foreground">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-card text-primary">
                 <User className="h-4 w-4" />
               </div>
               <div>
@@ -234,7 +234,7 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
                 href="/demo"
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-white/20"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-card text-primary">
                   <Video className="h-5 w-5" />
                 </div>
                 <div>
@@ -246,7 +246,7 @@ export default function ResourcePostPage({ params }: ResourcePageProps) {
                 href="/contact"
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-white/20"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-card text-primary">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>

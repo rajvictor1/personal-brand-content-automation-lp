@@ -50,7 +50,7 @@ export function buildOrganization(): WithContext<Organization> {
       "@type": "ImageObject",
       url: LOGO_URL,
     },
-    sameAs: [LINKEDIN_URL],
+    sameAs: [LINKEDIN_URL, GITHUB_URL],
   };
 }
 
@@ -154,7 +154,8 @@ export function buildArticle(
 }
 
 export function buildFAQPage(
-  questions: Array<{ question: string; answer: string }>
+  questions: Array<{ question: string; answer: string }>,
+  url?: string
 ): WithContext<FAQPage> | null {
   if (!questions.length) return null;
   return {
@@ -168,6 +169,7 @@ export function buildFAQPage(
         text: q.answer,
       },
     })),
+    url,
   };
 }
 

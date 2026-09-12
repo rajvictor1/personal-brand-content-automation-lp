@@ -64,9 +64,9 @@ export default function LegalHubPage() {
             <Reveal key={section.title} delay={0.1 + index * 0.1}>
               <Link
                 href={section.href}
-                className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-primary/40"
+                className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-white/20"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary transition-colors group-hover:border-primary/40">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary transition-colors group-hover:border-white/20">
                   <section.icon className="h-5 w-5" />
                 </div>
                 <div>

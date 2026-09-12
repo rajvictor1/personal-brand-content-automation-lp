@@ -78,16 +78,16 @@ export function FeatureGrid() {
             const Icon = feature.icon;
             return (
               <Reveal key={feature.title} delay={i * 0.08}>
-                <Card className="group h-full overflow-hidden border-white/10 bg-card transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+                <Card className="group h-full overflow-hidden border-white/10 bg-card transition-all hover:border-white/10 hover:shadow-lg hover:shadow-primary/5">
                   <CardContent className="flex h-full flex-col p-6">
-                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-card text-primary transition-colors group-hover:bg-card">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="text-xl font-semibold text-foreground">{feature.title}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
                       {feature.description}
                     </p>
-                    <div className="mt-4 h-1 w-12 rounded-full bg-primary/20 transition-all group-hover:w-full group-hover:bg-primary/40"
+                    <div className="mt-4 h-1 w-12 rounded-full bg-primary/20 transition-all group-hover:w-full group-hover:bg-card"
  />
                   </CardContent>
                 </Card>

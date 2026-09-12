@@ -22,9 +22,9 @@ import {
 import { BRANDOPS_URL, buildBreadcrumbList, buildOrganization, buildWebPage, renderSchemas } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "How We Work | BrandOps AI Consultancy & Delivery Process",
+  title: "How We Work | BrandOps AI Process",
   description:
-    "BrandOps builds AI-powered websites, SEO/GEO visibility systems, LinkedIn content engines, YouTube research workflows, and lead magnets for founders and consultants. See exactly what you get and how we deliver.",
+    "BrandOps builds AI-powered websites, SEO/GEO visibility, LinkedIn content, YouTube research, and lead magnets. See deliverables and engagement options.",
   alternates: { canonical: `${BRANDOPS_URL}/pipeline` },
 };
 
@@ -307,7 +307,7 @@ export default function PipelinePage() {
                   <div className="grid gap-6 lg:grid-cols-[1fr_auto]">
                     <div>
                       <div className="mb-3 flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-card text-primary">
                           <service.icon className="h-5 w-5" />
                         </div>
                         <div>
@@ -368,7 +368,7 @@ export default function PipelinePage() {
               <Reveal key={step.title} delay={0.05 + index * 0.05}>
                 <div className="h-full rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20">
                   <div className="mb-4 flex items-center justify-between">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-card text-primary">
                       <step.icon className="h-5 w-5" />
                     </div>
                     <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{step.label}</span>
@@ -443,7 +443,7 @@ export default function PipelinePage() {
             {whyUs.map((item) => (
               <Reveal key={item.title}>
                 <div className="flex gap-4 rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/20">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-card text-primary">
                     <item.icon className="h-5 w-5" />
                   </div>
                   <div>

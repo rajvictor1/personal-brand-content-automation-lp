@@ -36,10 +36,10 @@ function ResourceCard({ post }: { post: ResourcePost }) {
   return (
     <Link
       href={`/resources/${post.slug}`}
-      className="group flex h-full flex-col rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-primary/30"
+      className="group flex h-full flex-col rounded-2xl border border-white/10 bg-card p-5 transition-colors hover:border-white/20"
     >
       <div className="mb-4 flex items-center gap-3">
-        <Badge variant="outline" className="border-primary/30 bg-primary/10 text-primary">
+        <Badge variant="outline" className="border-white/10 bg-card text-primary">
           {post.category}
         </Badge>
         <span className="flex items-center gap-1 text-xs text-muted-foreground">

@@ -19,7 +19,7 @@ export function Walkthrough() {
     <section className="py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
-          <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
+          <Badge variant="outline" className="mb-4 border-white/10 bg-card px-3 py-1 text-sm text-primary">
             See it in action
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -42,9 +42,9 @@ export function Walkthrough() {
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.12, duration: 0.5 }}
                     whileHover={{ scale: 1.02 }}
-                    className="flex items-center gap-4 rounded-xl border border-white/10 bg-card p-4 transition-colors hover:border-primary/30"
+                    className="flex items-center gap-4 rounded-xl border border-white/10 bg-card p-4 transition-colors hover:border-white/10"
                   >
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-card text-primary">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div className="flex-1">

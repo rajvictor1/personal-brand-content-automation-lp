@@ -80,7 +80,7 @@ export default function AboutPage() {
           <div className="grid gap-5 md:grid-cols-2">
             {values.map((value, index) => (
               <Reveal key={value.title} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-primary/40">
+                <div className="rounded-2xl border border-white/10 bg-card p-6 transition-all hover:border-white/20">
                   <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-secondary text-primary">
                     <value.icon className="h-5 w-5" />
                   </div>

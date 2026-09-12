@@ -70,9 +70,9 @@ export function Pipeline({ headingLevel = "h1" }: PipelineProps) {
               <Reveal key={step.label} delay={i * 0.1}>
                 <motion.div
                   whileHover={{ y: -4 }}
-                  className="rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/30"
+                  className="rounded-2xl border border-white/10 bg-card p-6 transition-colors hover:border-white/10"
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-card text-primary">
                     <Icon className="h-6 w-6" />
                   </div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">

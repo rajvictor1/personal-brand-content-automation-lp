@@ -13,9 +13,9 @@ import {
 import { LeadCapture } from "@/components/lead-capture";
 
 export const metadata: Metadata = {
-  title: "BrandOps vs Taplio: Which LinkedIn Tool is Right for You?",
+  title: "BrandOps vs Taplio | Which LinkedIn Tool Wins?",
   description:
-    "Compare BrandOps vs Taplio for founders and trainers. BrandOps is review-first with cited research and AI-generated carousels and newsletters. Taplio is a scheduling and engagement tool.",
+    "Compare BrandOps vs Taplio for founders. BrandOps is review-first with cited research and AI carousels and newsletters. Taplio schedules posts.",
   alternates: { canonical: "https://www.brandops.site/brandops-vs-taplio" },
 };
 

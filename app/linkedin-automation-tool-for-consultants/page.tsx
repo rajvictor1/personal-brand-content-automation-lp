@@ -149,8 +149,8 @@ export default function LinkedInAutomationToolForConsultantsPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((benefit, index) => (
               <Reveal key={benefit.title} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-card text-primary">
                     <benefit.icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground">{benefit.title}</h3>
@@ -169,25 +169,25 @@ export default function LinkedInAutomationToolForConsultantsPage() {
           </Reveal>
           <div className="grid gap-6 md:grid-cols-2">
             <Reveal delay={0.1}>
-              <Link href="/resources/linkedin-automation-safety" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/linkedin-automation-safety" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">LinkedIn automation safety guide</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What is safe, what is risky, and why review-first automation protects your account.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.2}>
-              <Link href="/resources/review-first-publishing-workflow" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/review-first-publishing-workflow" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">Review-first publishing workflow</h3>
                 <p className="mt-2 text-sm text-muted-foreground">How to build a human approval gate that does not slow down your publishing cadence.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.3}>
-              <Link href="/resources/ai-workflows-linkedin-personal-brands" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/ai-workflows-linkedin-personal-brands" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">10 AI workflows for LinkedIn</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Practical workflows for research, drafting, design, and publishing review.</p>
               </Link>
             </Reveal>
             <Reveal delay={0.4}>
-              <Link href="/resources/linkedin-content-calendar-template" className="group block rounded-2xl border border-white/10 bg-card/40 p-6 transition hover:border-white/20">
+              <Link href="/resources/linkedin-content-calendar-template" className="group block rounded-2xl border border-white/10 bg-card p-6 transition hover:border-white/20">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">30-day content calendar</h3>
                 <p className="mt-2 text-sm text-muted-foreground">A ready-to-use calendar that keeps your automated workflow full of post ideas.</p>
               </Link>
@@ -199,7 +199,7 @@ export default function LinkedInAutomationToolForConsultantsPage() {
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <Reveal>
-            <div className="rounded-2xl border border-white/10 bg-card/40 p-6 sm:p-8">
+            <div className="rounded-2xl border border-white/10 bg-card p-6 sm:p-8">
               <h2 className="mb-6 text-center text-2xl font-semibold tracking-tight text-foreground">Built for consultants like you</h2>
               <ul className="grid gap-4 sm:grid-cols-2">
                 {idealFor.map((item, index) => (
@@ -232,7 +232,7 @@ export default function LinkedInAutomationToolForConsultantsPage() {
           <div className="space-y-4">
             {faq.map((item, index) => (
               <Reveal key={item.question} delay={0.1 + index * 0.1}>
-                <div className="rounded-2xl border border-white/10 bg-card/40 p-6">
+                <div className="rounded-2xl border border-white/10 bg-card p-6">
                   <h3 className="text-lg font-semibold text-foreground">{item.question}</h3>
                   <p className="mt-2 text-muted-foreground">{item.answer}</p>
                 </div>
@@ -245,7 +245,7 @@ export default function LinkedInAutomationToolForConsultantsPage() {
       <section className="px-4 pb-24 pt-8 text-center sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <Reveal delay={0.3}>
-            <div className="rounded-2xl border border-white/10 bg-card/40 p-8">
+            <div className="rounded-2xl border border-white/10 bg-card p-8">
               <h3 className="text-2xl font-semibold tracking-tight text-foreground">Automate your consulting content workflow</h3>
               <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
                 Join free and start turning research into review-ready LinkedIn assets.

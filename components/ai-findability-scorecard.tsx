@@ -266,7 +266,7 @@ export function AIFindabilityScorecard() {
               <ul className="space-y-3">
                 {result.quickWins.map((win, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-semibold text-primary">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-card text-xs font-semibold text-primary">
                       {i + 1}
                     </span>
                     {win}

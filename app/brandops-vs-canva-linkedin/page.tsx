@@ -13,9 +13,9 @@ import {
 import { LeadCapture } from "@/components/lead-capture";
 
 export const metadata: Metadata = {
-  title: "BrandOps vs Canva for LinkedIn Carousels: AI vs Design Tool",
+  title: "BrandOps vs Canva | AI Carousels vs Design Tool",
   description:
-    "Compare BrandOps vs Canva for LinkedIn carousels. BrandOps researches, writes, and designs review-ready carousels. Canva gives you templates to fill in manually.",
+    "Compare BrandOps vs Canva for LinkedIn carousels. BrandOps researches, writes, and designs review-ready carousels. Canva offers templates to fill in.",
   alternates: { canonical: "https://www.brandops.site/brandops-vs-canva-linkedin" },
 };
 
