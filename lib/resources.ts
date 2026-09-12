@@ -123,9 +123,9 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "best-ai-tools-linkedin-carousels-newsletters-2026",
-    title: "Best AI LinkedIn Carousel Generator and Newsletter Tools in 2026",
+    title: "Best AI LinkedIn Carousel + Newsletter Tools in 2026",
     description:
-      "Complete 2026 comparison of the best AI LinkedIn carousel generator and newsletter tools including BrandOps, Taplio, Typefully, Canva, Gamma, Jasper, Buffer, and more.",
+      "Compare the best AI LinkedIn carousel and newsletter tools for 2026. Features, pricing, and best use cases.",
     category: "Guides",
     publishedAt: "2026-08-12",
     updatedAt: "2026-08-21",
@@ -135,7 +135,7 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "one-topic-many-formats-content-system",
-    title: "One-Topic-to-Many-Formats Content System for Personal Brands",
+    title: "One-Topic-to-Many-Formats Content System",
     description:
       "Turn one research topic into a LinkedIn carousel, newsletter, short posts, and video scripts. A repeatable workflow for solo founders and trainers.",
     category: "Guides",
@@ -171,7 +171,7 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "ai-safety-personal-brands-review-first-publishing",
-    title: "AI Safety for Personal Brands: Publish Fast, Stay in Control",
+    title: "AI Safety for Personal Brands",
     description:
       "A review-first framework for using AI in your personal brand content. Learn what can go wrong, how to review AI output, and how to stay brand-safe at speed.",
     category: "Guides",
@@ -207,7 +207,7 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "newsletter-examples-founders",
-    title: "Newsletter Examples for Founders: 5 Formats That Build Trust",
+    title: "Newsletter Examples for Founders",
     description:
       "Five proven newsletter formats for founders, consultants, and coaches — with real examples, structure, and when to use each one.",
     category: "Guides",
@@ -231,7 +231,7 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "linkedin-automation-safety",
-    title: "LinkedIn Automation Safety: Stay in Control and Avoid Account Risk",
+    title: "LinkedIn Automation Safety",
     description:
       "A practical guide to safe LinkedIn automation for founders, coaches, and consultants — plus the review-first approach that reduces risk.",
     category: "Guides",
@@ -243,7 +243,7 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "ai-linkedin-post-generator",
-    title: "AI LinkedIn Post Generator: Write Faster Without Losing Your Voice",
+    title: "AI LinkedIn Post Generator",
     description:
       "How to use an AI LinkedIn post generator the right way. Keep your voice, add real insight, and publish posts that feel human.",
     category: "Guides",
@@ -291,7 +291,7 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "what-is-cited-ai-content",
-    title: "What Is Cited AI Content? Build Trust With Source-Backed Writing",
+    title: "What Is Cited AI Content?",
     description:
       "Cited AI content includes links to real sources for every claim. Learn why citations matter, how to add them, and how they help SEO and AI search visibility.",
     category: "Glossary",
@@ -303,7 +303,7 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "what-is-geo-search",
-    title: "What Is GEO Search? Generative Engine Optimization Explained",
+    title: "What Is GEO Search?",
     description:
       "GEO search is optimizing content so AI engines cite your site. Learn how generative engine optimization works and how to make your content AI-discoverable.",
     category: "Glossary",
@@ -315,9 +315,9 @@ export const resources: ResourcePost[] = [
   },
   {
     slug: "linkedin-content-statistics-2026",
-    title: "LinkedIn Content Statistics 2026: 25 Data Points for Founders",
+    title: "LinkedIn Content Statistics 2026",
     description:
-      "LinkedIn content statistics for 2026. Data on carousel engagement, post frequency, newsletter growth, AI content adoption, and what drives visibility on LinkedIn.",
+      "LinkedIn content statistics for 2026. Data on carousel engagement, post frequency, newsletter growth, and AI adoption.",
     category: "Reports",
     publishedAt: "2026-08-23",
     updatedAt: "2026-08-23",

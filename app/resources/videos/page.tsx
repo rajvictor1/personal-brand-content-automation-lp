@@ -4,7 +4,7 @@ import { Play, Clock } from "lucide-react";
 import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "BrandOps Video Tutorials | Learn LinkedIn Content Automation",
+  title: "BrandOps Video Tutorials | LinkedIn Content Automation",
   description:
     "Watch tutorials on carousel generation, newsletter workflows, review-first publishing, and setting up the BrandOps content system.",
   alternates: { canonical: "https://www.brandops.site/resources/videos" },
