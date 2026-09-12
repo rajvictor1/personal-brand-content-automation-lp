@@ -24,7 +24,7 @@ import {
 import { LeadCapture } from "@/components/lead-capture";
 
 export const metadata: Metadata = {
-  title: "LinkedIn Automation Tool for Consultants | AI Content Workflow",
+  title: "LinkedIn Automation for Consultants | BrandOps",
   description:
     "BrandOps is a LinkedIn automation tool for consultants. AI researches, writes, and designs content. You review and approve before publishing.",
   alternates: { canonical: "https://www.brandops.site/linkedin-automation-tool-for-consultants" },
