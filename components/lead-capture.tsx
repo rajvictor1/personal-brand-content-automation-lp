@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Download } from "lucide-react";
 import { Reveal } from "@/components/animations";
+import { trackMetaEvent } from "@/components/meta-pixel";
 
 export function LeadCapture() {
   const [email, setEmail] = useState("");
@@ -15,6 +16,18 @@ export function LeadCapture() {
     if (!email || !email.includes("@")) return;
     // Placeholder: hook into your email tool here (EmailJS, Beehiiv, ConvertKit)
     setSubmitted(true);
+    trackMetaEvent("CompleteRegistration", {
+      content_name: "LinkedIn Content System Checklist",
+      content_category: "Lead Magnet",
+      value: 0,
+      currency: "USD",
+    });
+    trackMetaEvent("Lead", {
+      content_name: "LinkedIn Content System Checklist Lead",
+      content_category: "Lead Magnet",
+      value: 0,
+      currency: "USD",
+    });
   };
 
   return (
@@ -72,6 +85,18 @@ export function SmallLeadCapture({ label = "Get early access" }: { label?: strin
     e.preventDefault();
     if (!email || !email.includes("@")) return;
     setSubmitted(true);
+    trackMetaEvent("CompleteRegistration", {
+      content_name: "Early Access",
+      content_category: "Newsletter",
+      value: 0,
+      currency: "USD",
+    });
+    trackMetaEvent("Lead", {
+      content_name: "Early Access Lead",
+      content_category: "Newsletter",
+      value: 0,
+      currency: "USD",
+    });
   };
 
   return (

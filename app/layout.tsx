@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 import { CookieConsent } from "@/components/cookie-consent";
 import { GoogleAnalyticsPageView, GoogleAnalyticsScripts } from "@/components/google-analytics";
+import { MetaPixelPageView, MetaPixelScripts } from "@/components/meta-pixel";
 import { ChatWidget } from "@/components/chat-widget";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -92,9 +93,11 @@ export default function RootLayout({
           }}
         />
         <GoogleAnalyticsScripts />
+        <MetaPixelScripts />
       </head>
       <body className="min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white">
         <GoogleAnalyticsPageView />
+        <MetaPixelPageView />
         <Header />
         <main className="relative overflow-hidden">{children}</main>
         <Footer />

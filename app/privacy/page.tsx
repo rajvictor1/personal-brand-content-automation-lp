@@ -60,7 +60,9 @@ export default function PrivacyPage() {
 
             <h2 className="text-xl font-semibold text-foreground">5. Cookies and analytics</h2>
             <p>
-              We may use essential cookies and analytics tools to understand how visitors use the site.
+              We use essential cookies and analytics tools to understand how visitors use the site.
+              These include Google Analytics, Microsoft Clarity, and Meta Pixel (Facebook Pixel), which help us
+              measure website performance, user engagement, and the effectiveness of our advertising.
               You can disable non-essential tracking through your browser settings.
             </p>
 

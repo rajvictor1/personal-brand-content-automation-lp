@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
+import { trackMetaEvent } from "@/components/meta-pixel";
 
 export function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -53,6 +54,16 @@ export function ContactForm() {
       );
 
       toast.success("Thank you. We will be in touch soon.");
+      trackMetaEvent("Contact", {
+        content_name: "Contact Form",
+        content_category: "Contact",
+      });
+      trackMetaEvent("Lead", {
+        content_name: "Contact Form Lead",
+        content_category: "Contact",
+        value: 0,
+        currency: "USD",
+      });
       form.reset();
     } catch {
       toast.error("Something went wrong. Please try again or email us directly at support@brandops.site.");

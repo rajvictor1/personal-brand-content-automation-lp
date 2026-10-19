@@ -27,7 +27,7 @@ export function CookieConsent() {
     <div className="fixed bottom-4 left-4 right-4 z-50 mx-auto max-w-3xl rounded-2xl border border-white/10 bg-card p-5 shadow-2xl md:left-auto md:right-6 md:w-[420px]">
       <p className="text-sm text-foreground">
         <strong className="block text-base font-semibold mb-1">We use cookies</strong>
-        We may place these for analysis of our visitor data, to improve our website, show personalised content and to give you a great website experience.
+        We use essential cookies and tools like Google Analytics, Microsoft Clarity, and Meta Pixel to understand visitor behaviour, improve our website, and measure marketing effectiveness.
       </p>
       <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-end">
         <Button variant="ghost" size="sm" onClick={handleDecline} className="text-muted-foreground hover:text-foreground">

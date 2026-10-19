@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, Loader2, Mail, Calendar, Shield, Sparkles, Users } from "lucide-react";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
+import { trackMetaEvent } from "@/components/meta-pixel";
 
 // Badge component is not used on this page
 
@@ -60,6 +61,12 @@ export default function DemoPage() {
         templateParams,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "n4OeXbwa_zVHVMPml"
       );
+      trackMetaEvent("Lead", {
+        content_name: "Demo Request",
+        content_category: "Demo",
+        value: 0,
+        currency: "USD",
+      });
       setIsSuccess(true);
       form.reset();
     } catch {
